@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Player/player.gd" id="1_1mw8g"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_r5omf"]
-radius = 0.2
+radius = 0.19
 height = 0.8
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e0jcp"]
@@ -19,14 +19,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.407887, 0)
 mesh = SubResource("CapsuleMesh_r5omf")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62518, -0.177098)
+transform = Transform3D(0.740741, 0, 0, 0, 0.740741, 0, 0, 0, 0.740741, 0, 0.625179, -0.151593)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.10492, -0.0527844)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0702294, -0.0554876, -0.0527844)
 shadow_enabled = true
-spot_range = 5.54975
-spot_angle = 24.0752
+spot_range = 9.45114
+spot_angle = 43.7873
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="Collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.409297, 0)
 shape = SubResource("CapsuleShape3D_e0jcp")

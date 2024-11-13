@@ -1,11 +1,15 @@
 extends CharacterBody3D
 
-
-const SPEED = 5.0
+var lamp_x = 0
+var SPEED = 2.5
+const BASE_SPEED = 2.5
 const JUMP_VELOCITY = 4.5
 var mouse_sensitivity = 0.002
+var lamp_base_y = 0.0
+var squat = false
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	lamp_base_y = $Camera3D/SpotLight3D.position.y
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -23,9 +27,29 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		if not squat:
+			$Camera3D/SpotLight3D.position.y = lamp_base_y+sin(lamp_x)/100
+			$Camera3D/SpotLight3D.rotate_x(sin(lamp_x+randf_range(-0.1,0.1))/(100))
+			print(sin(lamp_x))
+			lamp_x+=delta*2*SPEED
 	else:
+		$Camera3D/SpotLight3D.rotation.x = lerp($Camera3D/SpotLight3D.rotation.x,0.0,delta*5)
+		$Camera3D/SpotLight3D.position.y = lamp_base_y+sin(lamp_x)/500
+		lamp_x+=delta*2
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+	if Input.is_action_pressed("squat"):
+		$Collision.scale.y = lerp($Collision.scale.y,0.2,delta*5)
+		$Camera3D/SpotLight3D.position.y = lamp_base_y+sin(lamp_x)/500
+		SPEED=BASE_SPEED/4
+		$Camera3D/SpotLight3D.rotation.x = lerp($Camera3D/SpotLight3D.rotation.x,0.0,delta*5)
+		squat =true
+	if not Input.is_action_pressed("squat"):
+		$Collision.scale.y = lerp($Collision.scale.y,1.0,delta*5)
+		SPEED= BASE_SPEED
+		squat=false
+
+		
 
 	move_and_slide()
 func _input(event):
