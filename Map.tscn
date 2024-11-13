@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bqy7kyhh7hw0o"]
+[gd_scene load_steps=56 format=3 uid="uid://bqy7kyhh7hw0o"]
 
 [ext_resource type="Texture2D" uid="uid://cy0sndh6ka7pq" path="res://Texture/Sol/tixmdgdcw_2K_Basecolor.jpg" id="1_y0o7k"]
 [ext_resource type="Texture2D" uid="uid://c8nkhmgehjh2b" path="res://Texture/Sol/tixmdgdcw_2K_AO.jpg" id="2_tlons"]
@@ -18,6 +18,30 @@
 [ext_resource type="PackedScene" uid="uid://dcsw77fyfbyab" path="res://Player/Player.tscn" id="16_s1u8d"]
 [ext_resource type="PackedScene" uid="uid://1tip5an0nbrt" path="res://asset textured/deco_elec_2.tscn" id="17_b0bfu"]
 [ext_resource type="PackedScene" uid="uid://d3h1ygn8aavij" path="res://asset textured/deco_elec_4.tscn" id="18_06568"]
+[ext_resource type="PackedScene" uid="uid://7onxvk7l8ojp" path="res://asset textured/cable.tscn" id="19_27l7c"]
+[ext_resource type="PackedScene" uid="uid://basnemhlw67oj" path="res://asset textured/conteneur liquide.tscn" id="20_blb28"]
+[ext_resource type="PackedScene" uid="uid://ylq8e845jjp0" path="res://asset textured/diable.tscn" id="21_cog8r"]
+[ext_resource type="PackedScene" uid="uid://kwevsuw4ytoi" path="res://asset textured/boite2.tscn" id="22_s4ajk"]
+[ext_resource type="PackedScene" uid="uid://j6tt8c3ig8k8" path="res://asset textured/boite3.tscn" id="23_m2d5h"]
+[ext_resource type="PackedScene" uid="uid://d1ijj5do0jc8a" path="res://asset textured/boite a outil.tscn" id="24_yoarq"]
+[ext_resource type="PackedScene" uid="uid://ct11jliapop6p" path="res://asset textured/bouteille de gaz.tscn" id="25_3ofw0"]
+[ext_resource type="PackedScene" uid="uid://c8ocwwk0t30pd" path="res://asset textured/chaise.tscn" id="26_i6onr"]
+[ext_resource type="PackedScene" uid="uid://bxxal0x281ivv" path="res://asset textured/enroulleur.tscn" id="27_escei"]
+[ext_resource type="PackedScene" uid="uid://4mqeamhq1u1u" path="res://asset textured/placart.tscn" id="28_y3340"]
+[ext_resource type="PackedScene" uid="uid://c5yxct66131ga" path="res://asset textured/structure étagère.tscn" id="29_asn26"]
+[ext_resource type="PackedScene" uid="uid://bgq8v7dsub8xn" path="res://asset textured/table.tscn" id="30_torms"]
+[ext_resource type="PackedScene" uid="uid://cira2364c8cp4" path="res://asset textured/tissue.tscn" id="31_bvgkq"]
+[ext_resource type="PackedScene" uid="uid://8mhw5fjj2l5t" path="res://asset textured/échele2.tscn" id="32_tqogm"]
+[ext_resource type="PackedScene" uid="uid://bmt42v6rx1185" path="res://asset textured/échele.tscn" id="33_v5yhh"]
+[ext_resource type="PackedScene" uid="uid://77ma035hde2i" path="res://asset textured/étagère industrielle.tscn" id="34_fu1i2"]
+[ext_resource type="PackedScene" uid="uid://hfqbh8nl5wsn" path="res://asset textured/cable2.tscn" id="35_7yw10"]
+[ext_resource type="PackedScene" uid="uid://cg38the8rx1uc" path="res://asset textured/barril ouvert.tscn" id="36_rq0my"]
+[ext_resource type="PackedScene" uid="uid://da01ol8nm6tpo" path="res://asset textured/barril4.tscn" id="37_14n5t"]
+[ext_resource type="PackedScene" uid="uid://cvcdo7xpxtc76" path="res://asset textured/barril3.tscn" id="38_ha0d1"]
+[ext_resource type="PackedScene" uid="uid://cl83cdyse2ijx" path="res://asset textured/barril2.tscn" id="39_ndwwi"]
+[ext_resource type="PackedScene" uid="uid://bac1llwkxoquw" path="res://asset textured/pallete.tscn" id="40_i86i0"]
+[ext_resource type="PackedScene" uid="uid://c3douicfok0fj" path="res://asset textured/pallete2.tscn" id="41_34wc0"]
+[ext_resource type="PackedScene" uid="uid://7lm1to58re6m" path="res://asset textured/cartonplat.tscn" id="42_nksth"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_c25gl"]
 
@@ -78,6 +102,12 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lojo7"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_u4i6d"]
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dxbtc"]
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
 [node name="Map" type="Node3D"]
 
 [node name="Sol" type="StaticBody3D" parent="."]
@@ -91,12 +121,6 @@ transform = Transform3D(8.59466, 0, 0, 0, 8.10548, 0, 0, 0, 6.56748, -0.0020175,
 mesh = SubResource("PlaneMesh_pce1h")
 skeleton = NodePath("../..")
 
-[node name="Poubelle" parent="." instance=ExtResource("5_t0igp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.746866, 0, 2)
-
-[node name="Barrille" parent="." instance=ExtResource("6_wmhta")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.280478, 0, 3.0849)
-
 [node name="Porte" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.3965, 0, 0, 0, 1.94533, 0, 0, 0, 0.122893, -3.31887, 0.933891, -6.4186)
 mesh = SubResource("BoxMesh_3g01o")
@@ -107,19 +131,11 @@ transform = Transform3D(2.38073e-08, -1, -8.74228e-08, -0.544648, -4.37114e-08, 
 [node name="Poutre2" parent="." instance=ExtResource("15_f2ca8")]
 transform = Transform3D(2.38073e-08, -1, -8.74228e-08, -0.544648, -4.37114e-08, 0, -2.0813e-15, 8.74228e-08, -1, -2.05541, 0.93604, -6.4115)
 
-[node name="Porte2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.11076e-07, 0, 0.0231821, 0, 1.14434, 0, -2.54113, 0, -1.01332e-09, 0.374738, 1.33368, 3.35347)
-mesh = SubResource("BoxMesh_3g01o")
-
 [node name="Poutre3" parent="." instance=ExtResource("15_f2ca8")]
 transform = Transform3D(-3.12195e-15, 1.31134e-07, -1, -0.544648, -4.37114e-08, 0, -2.38073e-08, 1, 1.31134e-07, 0.37652, 0.93604, 4.61087)
 
 [node name="Poutre4" parent="." instance=ExtResource("15_f2ca8")]
 transform = Transform3D(-3.12195e-15, 1.31134e-07, -1, -0.544648, -4.37114e-08, 0, -2.38073e-08, 1, 1.31134e-07, 0.37644, 0.93604, 2.09001)
-
-[node name="Porte3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.15507e-07, 0, 0.0231821, 0, 0.500011, 0, -2.6425, 0, -1.01332e-09, 0.374738, 1.65151, -3.35018)
-mesh = SubResource("BoxMesh_3g01o")
 
 [node name="Poutre5" parent="." instance=ExtResource("15_f2ca8")]
 transform = Transform3D(-3.12195e-15, 1.31134e-07, -1, -0.544648, -4.37114e-08, 0, -2.38073e-08, 1, 1.31134e-07, 0.37652, 0.93604, -2.09278)
@@ -128,7 +144,7 @@ transform = Transform3D(-3.12195e-15, 1.31134e-07, -1, -0.544648, -4.37114e-08, 
 transform = Transform3D(-3.12195e-15, 1.31134e-07, -1, -0.544648, -4.37114e-08, 0, -2.38073e-08, 1, 1.31134e-07, 0.37644, 0.93604, -4.61364)
 
 [node name="Player" parent="." instance=ExtResource("16_s1u8d")]
-transform = Transform3D(1.795, 0, 0, 0, 1.795, 0, 0, 0, 1.795, -0.79879, 0.00911999, -0.69922)
+transform = Transform3D(1.795, 0, 0, 0, 1.795, 0, 0, 0, 1.795, 4.2059, 0.260754, -0.69922)
 
 [node name="Mur" type="StaticBody3D" parent="."]
 
@@ -210,8 +226,111 @@ skeleton = NodePath("../..")
 transform = Transform3D(0.125625, 0, 0, 0, 1.95038, 0, 0, 0, 13.4256, 8.45008, 0.946639, 0.00393343)
 shape = SubResource("ConvexPolygonShape3D_ih5dx")
 
+[node name="Porte3bis" type="StaticBody3D" parent="."]
+
+[node name="Porte3" type="MeshInstance3D" parent="Porte3bis"]
+transform = Transform3D(-1.15507e-07, 0, 0.0231821, 0, 0.500011, 0, -2.6425, 0, -1.01332e-09, 0.374738, 1.65151, -3.35018)
+mesh = SubResource("BoxMesh_3g01o")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Porte3bis"]
+transform = Transform3D(-1.15507e-07, 0, 0.0231821, 0, 0.500011, 0, -2.6425, 0, -1.01332e-09, 0.374738, 1.71336, -3.35018)
+shape = SubResource("ConvexPolygonShape3D_u4i6d")
+
+[node name="Porte2bis" type="StaticBody3D" parent="."]
+
+[node name="Porte2" type="MeshInstance3D" parent="Porte2bis"]
+transform = Transform3D(-1.11076e-07, 0, 0.0231821, 0, 1.14434, 0, -2.54113, 0, -1.01332e-09, 0.374738, 1.33368, 3.35347)
+mesh = SubResource("BoxMesh_3g01o")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Porte2bis"]
+transform = Transform3D(-1.11076e-07, 0, 0.0231821, 0, 1.14434, 0, -2.54113, 0, -1.01332e-09, 0.374738, 1.33266, 3.35347)
+shape = SubResource("ConvexPolygonShape3D_dxbtc")
+
+[node name="Barrille2" parent="." instance=ExtResource("6_wmhta")]
+transform = Transform3D(0.99878, -0.0493902, 0, 0.0493902, 0.99878, 0, 0, 0, 1, -7.62302, 0.0536645, 3.70424)
+
+[node name="Barrille" parent="." instance=ExtResource("6_wmhta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.12457, 0, 3.0849)
+
+[node name="Poubelle" parent="." instance=ExtResource("5_t0igp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15918, 0, 2)
+
 [node name="Deco_elec" parent="." instance=ExtResource("17_b0bfu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.38794, 0.834936, -6.35157)
 
 [node name="Deco_elec2" parent="." instance=ExtResource("18_06568")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.38062, -0.0624167, -4.29584)
+
+[node name="Cable" parent="." instance=ExtResource("19_27l7c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.13149, 0.853673, 3.13384)
+
+[node name="Jerricane" parent="." instance=ExtResource("20_blb28")]
+transform = Transform3D(-0.518385, 0, 0.855147, 0, 1, 0, -0.855147, 0, -0.518385, -8.0548, 0.00911999, 2.516)
+
+[node name="Diable" parent="." instance=ExtResource("21_cog8r")]
+transform = Transform3D(-0.851013, 0, -0.525145, 0, 1, 0, 0.525145, 0, -0.851013, -7.44096, 0.00391567, 4.04117)
+
+[node name="Caisse" parent="." instance=ExtResource("22_s4ajk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04286, 0.00912011, 6.15004)
+
+[node name="Cajette" parent="." instance=ExtResource("23_m2d5h")]
+transform = Transform3D(-0.663665, 0, 0.74803, 0, 1, 0, -0.74803, 0, -0.663665, -8.05289, 0.723892, 6.10289)
+
+[node name="Boîte a outil" parent="." instance=ExtResource("24_yoarq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.73216, 0.00912023, 6.29622)
+
+[node name="Bouteille de gaz" parent="." instance=ExtResource("25_3ofw0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.59982, 0.00911999, 3.07711)
+
+[node name="Tabouret" parent="." instance=ExtResource("26_i6onr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.25551, 0.00911999, 6.13444)
+
+[node name="Enroulleur" parent="." instance=ExtResource("27_escei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.72289, 0.0463991, 6.32628)
+
+[node name="Casier" parent="." instance=ExtResource("28_y3340")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.0322874, 0.00911999, 6.19627)
+
+[node name="Etagère" parent="." instance=ExtResource("29_asn26")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.35091, 0.00911951, 4.35535)
+
+[node name="Table" parent="." instance=ExtResource("30_torms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68175, 0.00911999, 2.63771)
+
+[node name="Tissuu" parent="." instance=ExtResource("31_bvgkq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.62822, 0.00911951, 3.05809)
+
+[node name="Echelle2" parent="." instance=ExtResource("32_tqogm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50836, 0.00911999, 1.26135)
+
+[node name="Echelle" parent="." instance=ExtResource("33_v5yhh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15278, 0.190177, 1.66216)
+
+[node name="Etagère inc" parent="." instance=ExtResource("34_fu1i2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.36791, 0.00911999, 0.353267)
+
+[node name="CableV2" parent="." instance=ExtResource("35_7yw10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.14723, 0.00911999, 1.09575)
+
+[node name="BarrilleV2" parent="." instance=ExtResource("36_rq0my")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.73568, 0.00911999, 1.18925)
+
+[node name="Barrille a liquide" parent="." instance=ExtResource("37_14n5t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97338, 0.00911999, 2.72598)
+
+[node name="BarrilleV4" parent="." instance=ExtResource("38_ha0d1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0303, 0.00911999, 4.1726)
+
+[node name="BarrilleV3" parent="." instance=ExtResource("39_ndwwi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.71935, 0.00911999, 2.46181)
+
+[node name="Pallette moche (Cedric)" parent="." instance=ExtResource("40_i86i0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.67965, 0.00911999, -0.938521)
+
+[node name="Pallette belle (moi)" parent="." instance=ExtResource("41_34wc0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.56284, 0.00911999, 0.100499)
+
+[node name="Cartonplat" parent="." instance=ExtResource("42_nksth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.29993, 0.00911999, 1.11082)
