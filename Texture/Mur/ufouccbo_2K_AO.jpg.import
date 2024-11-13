@@ -2,26 +2,27 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2qr2uhr2tpnu"
-path="res://.godot/imported/ufouccbo_2K_Roughness.jpg-5316a27d597722a5e264f5fa5a9679ed.ctex"
+uid="uid://xecvkeu1hhnk"
+path.s3tc="res://.godot/imported/ufouccbo_2K_AO.jpg-c7c18c63b435ca3aa948413fd34f70a0.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://asset/ufouccbo/ufouccbo_2K_Roughness.jpg"
-dest_files=["res://.godot/imported/ufouccbo_2K_Roughness.jpg-5316a27d597722a5e264f5fa5a9679ed.ctex"]
+source_file="res://Texture/Mur/ufouccbo_2K_AO.jpg"
+dest_files=["res://.godot/imported/ufouccbo_2K_AO.jpg-c7c18c63b435ca3aa948413fd34f70a0.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +32,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy0sndh6ka7pq"
-path="res://.godot/imported/tixmdgdcw_2K_Basecolor.jpg-261e2c8f722276495f5d687d2f724429.ctex"
+uid="uid://b0ts082et2ow0"
+path="res://.godot/imported/tixmdgdcw_2K_Gloss.jpg-675eb5c8d5d096f34f49cc9fb95379af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/tixmdgdcw/tixmdgdcw_2K_Basecolor.jpg"
-dest_files=["res://.godot/imported/tixmdgdcw_2K_Basecolor.jpg-261e2c8f722276495f5d687d2f724429.ctex"]
+source_file="res://Texture/Sol/tixmdgdcw_2K_Gloss.jpg"
+dest_files=["res://.godot/imported/tixmdgdcw_2K_Gloss.jpg-675eb5c8d5d096f34f49cc9fb95379af.ctex"]
 
 [params]
 

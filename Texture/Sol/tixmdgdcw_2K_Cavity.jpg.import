@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds75euvhx778c"
-path="res://.godot/imported/ufouccbo_2K_Bump.jpg-c3d22391f8f8868f1fdfdfb45bd0c2d5.ctex"
+uid="uid://nrtuat7bxw5p"
+path="res://.godot/imported/tixmdgdcw_2K_Cavity.jpg-bcb646ca93d1f76b71ac741a7a4fed1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/ufouccbo/ufouccbo_2K_Bump.jpg"
-dest_files=["res://.godot/imported/ufouccbo_2K_Bump.jpg-c3d22391f8f8868f1fdfdfb45bd0c2d5.ctex"]
+source_file="res://Texture/Sol/tixmdgdcw_2K_Cavity.jpg"
+dest_files=["res://.godot/imported/tixmdgdcw_2K_Cavity.jpg-bcb646ca93d1f76b71ac741a7a4fed1d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwss6j633ycwf"
-path="res://.godot/imported/ufouccbo_2K_Basecolor.jpg-d6608a4d28e88d2e977a1bb8fad8b19e.ctex"
+uid="uid://dekxoga3ogm2t"
+path="res://.godot/imported/ufouccbo_2K_Cavity.jpg-966ee7f245acf5a126466225bc058bb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/ufouccbo/ufouccbo_2K_Basecolor.jpg"
-dest_files=["res://.godot/imported/ufouccbo_2K_Basecolor.jpg-d6608a4d28e88d2e977a1bb8fad8b19e.ctex"]
+source_file="res://Texture/Mur/ufouccbo_2K_Cavity.jpg"
+dest_files=["res://.godot/imported/ufouccbo_2K_Cavity.jpg-966ee7f245acf5a126466225bc058bb3.ctex"]
 
 [params]
 

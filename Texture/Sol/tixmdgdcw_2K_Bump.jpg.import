@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buu3ov1w6p4ix"
-path="res://.godot/imported/tixmdgdcw_2K_Roughness.jpg-7023962d22567c98009b8fc4734ab215.ctex"
+uid="uid://bi3uvda63bvrd"
+path="res://.godot/imported/tixmdgdcw_2K_Bump.jpg-5168da37908643799851596160397daf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/tixmdgdcw/tixmdgdcw_2K_Roughness.jpg"
-dest_files=["res://.godot/imported/tixmdgdcw_2K_Roughness.jpg-7023962d22567c98009b8fc4734ab215.ctex"]
+source_file="res://Texture/Sol/tixmdgdcw_2K_Bump.jpg"
+dest_files=["res://.godot/imported/tixmdgdcw_2K_Bump.jpg-5168da37908643799851596160397daf.ctex"]
 
 [params]
 

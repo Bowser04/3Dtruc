@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nrtuat7bxw5p"
-path="res://.godot/imported/tixmdgdcw_2K_Cavity.jpg-73f6dbbd00d19e60cd009a9d5acc7ef1.ctex"
+uid="uid://dhhotr57sbt5t"
+path="res://.godot/imported/ufouccbo_2K_Specular.jpg-f8324b5d1b346749f7a0d82b2d41986b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/tixmdgdcw/tixmdgdcw_2K_Cavity.jpg"
-dest_files=["res://.godot/imported/tixmdgdcw_2K_Cavity.jpg-73f6dbbd00d19e60cd009a9d5acc7ef1.ctex"]
+source_file="res://Texture/Mur/ufouccbo_2K_Specular.jpg"
+dest_files=["res://.godot/imported/ufouccbo_2K_Specular.jpg-f8324b5d1b346749f7a0d82b2d41986b.ctex"]
 
 [params]
 

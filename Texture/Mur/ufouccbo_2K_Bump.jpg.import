@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xecvkeu1hhnk"
-path="res://.godot/imported/ufouccbo_2K_AO.jpg-2317ecb01153dd4206bdce0f60ee392a.ctex"
+uid="uid://ds75euvhx778c"
+path="res://.godot/imported/ufouccbo_2K_Bump.jpg-75db4e140c50a1b803000ad1f5a3d934.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/ufouccbo/ufouccbo_2K_AO.jpg"
-dest_files=["res://.godot/imported/ufouccbo_2K_AO.jpg-2317ecb01153dd4206bdce0f60ee392a.ctex"]
+source_file="res://Texture/Mur/ufouccbo_2K_Bump.jpg"
+dest_files=["res://.godot/imported/ufouccbo_2K_Bump.jpg-75db4e140c50a1b803000ad1f5a3d934.ctex"]
 
 [params]
 

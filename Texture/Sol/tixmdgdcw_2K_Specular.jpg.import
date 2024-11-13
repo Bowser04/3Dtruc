@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dysladaw2w3nx"
-path="res://.godot/imported/tixmdgdcw_2K_Displacement.jpg-7ae118b27e9bcc12a4d84e02544a1a44.ctex"
+uid="uid://clddqbjf1pr7l"
+path="res://.godot/imported/tixmdgdcw_2K_Specular.jpg-80c401bae8c457f9da2f03d2512a83fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/tixmdgdcw/tixmdgdcw_2K_Displacement.jpg"
-dest_files=["res://.godot/imported/tixmdgdcw_2K_Displacement.jpg-7ae118b27e9bcc12a4d84e02544a1a44.ctex"]
+source_file="res://Texture/Sol/tixmdgdcw_2K_Specular.jpg"
+dest_files=["res://.godot/imported/tixmdgdcw_2K_Specular.jpg-80c401bae8c457f9da2f03d2512a83fa.ctex"]
 
 [params]
 

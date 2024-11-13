@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi3uvda63bvrd"
-path="res://.godot/imported/tixmdgdcw_2K_Bump.jpg-f67b4ad6ead405a44289f7fdf805b477.ctex"
+uid="uid://dysladaw2w3nx"
+path="res://.godot/imported/tixmdgdcw_2K_Displacement.jpg-c86ca60efcff5755316f03aa660f9b94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/tixmdgdcw/tixmdgdcw_2K_Bump.jpg"
-dest_files=["res://.godot/imported/tixmdgdcw_2K_Bump.jpg-f67b4ad6ead405a44289f7fdf805b477.ctex"]
+source_file="res://Texture/Sol/tixmdgdcw_2K_Displacement.jpg"
+dest_files=["res://.godot/imported/tixmdgdcw_2K_Displacement.jpg-c86ca60efcff5755316f03aa660f9b94.ctex"]
 
 [params]
 
