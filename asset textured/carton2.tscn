@@ -29,7 +29,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.975649, 0, 0.346971)
 surface_material_override/0 = SubResource("StandardMaterial3D_uvkuh")
 
 [node name="tlbjdbova_LOD0_TIER2_003" parent="." index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66003, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.664272, 0, 0)
 surface_material_override/0 = SubResource("StandardMaterial3D_uvkuh")
 
 [node name="tlbjdbova_LOD0_TIER2_004" parent="." index="4"]
