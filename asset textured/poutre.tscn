@@ -1,5 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://1pktomef11sr"]
+[gd_scene load_steps=7 format=3 uid="uid://1pktomef11sr"]
 
 [ext_resource type="PackedScene" uid="uid://bb13ikyohrx1o" path="res://asset/wdkmabe/wdkmabe.fbx" id="1_t67h1"]
+[ext_resource type="Texture2D" uid="uid://4io7p4qq160h" path="res://asset/wdkmabe/wdkmabe_2K_Basecolor.JPG" id="2_n50ec"]
+[ext_resource type="Texture2D" uid="uid://hs502sjf5aet" path="res://asset/wdkmabe/wdkmabe_2K_AO.JPG" id="3_maavv"]
+[ext_resource type="Texture2D" uid="uid://ptk4dx6a5nl1" path="res://asset/wdkmabe/wdkmabe_2K_Normal.JPG" id="4_8lwr7"]
+[ext_resource type="Texture2D" uid="uid://d284wcqdp36di" path="res://asset/wdkmabe/wdkmabe_2K_Roughness.JPG" id="5_tdot5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yx46x"]
+albedo_texture = ExtResource("2_n50ec")
+roughness_texture = ExtResource("5_tdot5")
+normal_enabled = true
+normal_texture = ExtResource("4_8lwr7")
+ao_enabled = true
+ao_texture = ExtResource("3_maavv")
 
 [node name="wdkmabe" instance=ExtResource("1_t67h1")]
+
+[node name="wdkmabe_LOD0_TIER2_000" parent="world_root" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_yx46x")
