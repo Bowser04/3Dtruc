@@ -30,7 +30,6 @@ func _physics_process(delta):
 		if not squat:
 			$Camera3D/SpotLight3D.position.y = lamp_base_y+sin(lamp_x)/100
 			$Camera3D/SpotLight3D.rotate_x(sin(lamp_x+randf_range(-0.1,0.1))/(100))
-			print(sin(lamp_x))
 			lamp_x+=delta*2*SPEED
 	else:
 		$Camera3D/SpotLight3D.rotation.x = lerp($Camera3D/SpotLight3D.rotation.x,0.0,delta*5)

@@ -16,11 +16,20 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 [autoload]
 
+<<<<<<< Updated upstream
+=======
+[autoload]
+
+>>>>>>> Stashed changes
 Network_Conection="*res://Menu/network.gd"
 
 [debug]
 
 file_logging/enable_file_logging=true
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 [input]
 
 z={
