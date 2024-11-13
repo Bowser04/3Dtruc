@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgq8v7dsub8xn"]
+
+[ext_resource type="PackedScene" uid="uid://dfnjmdvp3pky3" path="res://asset/wbuidixga/wbuidixga.fbx" id="1_myuqy"]
+
+[node name="wbuidixga" instance=ExtResource("1_myuqy")]

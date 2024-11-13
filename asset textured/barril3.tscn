@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvcdo7xpxtc76"]
+
+[ext_resource type="PackedScene" uid="uid://f5su16ca6sfe" path="res://asset/ui1maewga/ui1maewga.fbx" id="1_kckuf"]
+[ext_resource type="Texture2D" uid="uid://xa3b0cwvmy78" path="res://asset/ui1maewga/ui1maewga_2K_Basecolor.JPG" id="2_yjt1r"]
+[ext_resource type="Texture2D" uid="uid://bntt27dhuf6m2" path="res://asset/ui1maewga/ui1maewga_2K_AO.JPG" id="3_ijh0j"]
+[ext_resource type="Texture2D" uid="uid://2uytxoxvsyfo" path="res://asset/ui1maewga/ui1maewga_2K_Normal.JPG" id="4_rueeg"]
+[ext_resource type="Texture2D" uid="uid://bg8i71km1ld6g" path="res://asset/ui1maewga/ui1maewga_2K_Roughness.JPG" id="5_glumb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ret8v"]
+albedo_texture = ExtResource("2_yjt1r")
+roughness_texture = ExtResource("5_glumb")
+normal_enabled = true
+normal_texture = ExtResource("4_rueeg")
+ao_enabled = true
+ao_texture = ExtResource("3_ijh0j")
+
+[node name="ui1maewga" instance=ExtResource("1_kckuf")]
+
+[node name="ui1maewga_LOD0_TIER2_000" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ret8v")

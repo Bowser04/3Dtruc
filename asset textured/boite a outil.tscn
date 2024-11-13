@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1ijj5do0jc8a"]
+
+[ext_resource type="PackedScene" uid="uid://c276ccr20g2ct" path="res://asset/ukwteiiaw/ukwteiiaw.fbx" id="1_oe76j"]
+
+[node name="ukwteiiaw" instance=ExtResource("1_oe76j")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck6p5ms6kjkqy"]
+
+[ext_resource type="PackedScene" uid="uid://cgekasthfsp6y" path="res://asset/vidrear/vidrear.fbx" id="1_isjmn"]
+
+[node name="vidrear" instance=ExtResource("1_isjmn")]

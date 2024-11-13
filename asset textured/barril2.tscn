@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl83cdyse2ijx"]
+
+[ext_resource type="PackedScene" uid="uid://dpq7xt7v166ij" path="res://asset/tewscfuda/tewscfuda.fbx" id="1_mu65r"]
+
+[node name="tewscfuda" instance=ExtResource("1_mu65r")]

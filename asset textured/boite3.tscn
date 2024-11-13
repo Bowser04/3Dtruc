@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://j6tt8c3ig8k8"]
+
+[ext_resource type="PackedScene" uid="uid://bcr2su32q4ir2" path="res://asset/vifpcdyaw/vifpcdyaw.fbx" id="1_xrco6"]
+
+[node name="vifpcdyaw" instance=ExtResource("1_xrco6")]

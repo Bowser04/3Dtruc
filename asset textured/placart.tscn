@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://4mqeamhq1u1u"]
+
+[ext_resource type="PackedScene" uid="uid://h41kyam5tbpp" path="res://asset/vjhledeaw/vjhledeaw.fbx" id="1_ub87t"]
+
+[node name="vjhledeaw" instance=ExtResource("1_ub87t")]

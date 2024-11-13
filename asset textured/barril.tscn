@@ -1,0 +1,23 @@
+[gd_scene load_steps=8 format=3 uid="uid://5sgbwchcvkxg"]
+
+[ext_resource type="PackedScene" uid="uid://dyoq1s0lkfltm" path="res://asset/teraccgda/teraccgda.fbx" id="1_lrbr6"]
+[ext_resource type="Texture2D" uid="uid://c4fkax27j27p2" path="res://asset/teraccgda/teraccgda_2K_Basecolor.JPG" id="2_ihkxu"]
+[ext_resource type="Texture2D" uid="uid://f02t757rn1l0" path="res://asset/teraccgda/teraccgda_2K_AO.JPG" id="3_54h6n"]
+[ext_resource type="Texture2D" uid="uid://dr3hcc8nbh8q" path="res://asset/teraccgda/teraccgda_2K_Bump.JPG" id="4_rsygj"]
+[ext_resource type="Texture2D" uid="uid://7i5fcdsm5v0h" path="res://asset/teraccgda/teraccgda_2K_Normal.JPG" id="5_a8n2d"]
+[ext_resource type="Texture2D" uid="uid://dks2q43gmi3ym" path="res://asset/teraccgda/teraccgda_2K_Roughness.JPG" id="6_01jrb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xf5m4"]
+albedo_texture = ExtResource("2_ihkxu")
+metallic = 1.0
+metallic_texture = ExtResource("4_rsygj")
+roughness_texture = ExtResource("6_01jrb")
+normal_enabled = true
+normal_texture = ExtResource("5_a8n2d")
+ao_enabled = true
+ao_texture = ExtResource("3_54h6n")
+
+[node name="teraccgda" instance=ExtResource("1_lrbr6")]
+
+[node name="teraccgda_LOD0_TIER2_000" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_xf5m4")

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct11jliapop6p"]
+
+[ext_resource type="PackedScene" uid="uid://dmcfa40hsvttt" path="res://asset/vizqehw/vizqehw.fbx" id="1_7mra3"]
+
+[node name="vizqehw" instance=ExtResource("1_7mra3")]

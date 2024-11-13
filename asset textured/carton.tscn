@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://cunsnaa41vfq3"]
+
+[ext_resource type="PackedScene" uid="uid://1uwhdipyc64h" path="res://asset/tkwmdexva/tkwmdexva.fbx" id="1_1d4tt"]
+[ext_resource type="Texture2D" uid="uid://clnunoctfta01" path="res://asset/tkwmdexva/tkwmdexva_2K_Basecolor.JPG" id="2_aqup3"]
+[ext_resource type="Texture2D" uid="uid://b7jqd0hbvxqya" path="res://asset/tkwmdexva/tkwmdexva_2K_Normal.JPG" id="3_e7m27"]
+[ext_resource type="Texture2D" uid="uid://cxskoga8725y4" path="res://asset/tkwmdexva/tkwmdexva_2K_Roughness.JPG" id="4_6igv2"]
+[ext_resource type="Texture2D" uid="uid://bhegrihuvoh5i" path="res://asset/tkwmdexva/tkwmdexva_2K_AO.JPG" id="5_qjgge"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cxyr5"]
+albedo_texture = ExtResource("2_aqup3")
+roughness_texture = ExtResource("4_6igv2")
+normal_enabled = true
+normal_texture = ExtResource("3_e7m27")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54asy"]
+albedo_texture = ExtResource("2_aqup3")
+roughness_texture = ExtResource("4_6igv2")
+normal_enabled = true
+normal_texture = ExtResource("3_e7m27")
+ao_enabled = true
+ao_texture = ExtResource("5_qjgge")
+
+[node name="tkwmdexva" instance=ExtResource("1_1d4tt")]
+
+[node name="tkwmdexva_LOD0_TIER2_000" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.300385)
+surface_material_override/0 = SubResource("StandardMaterial3D_cxyr5")
+
+[node name="tkwmdexva_LOD0_TIER2_001" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.9151)
+surface_material_override/0 = SubResource("StandardMaterial3D_54asy")
+
+[node name="tkwmdexva_LOD0_TIER2_002" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0177795, 0, -0.318693)
+surface_material_override/0 = SubResource("StandardMaterial3D_54asy")
+
+[node name="tkwmdexva_LOD0_TIER2_003" parent="." index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_54asy")
+
+[node name="tkwmdexva_LOD0_TIER2_004" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.605896)
+surface_material_override/0 = SubResource("StandardMaterial3D_54asy")

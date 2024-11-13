@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://8mhw5fjj2l5t"]
+
+[ext_resource type="PackedScene" uid="uid://cs3oop381d2g8" path="res://asset/vh2jfjes/vh2jfjes.fbx" id="1_wi0ri"]
+
+[node name="vh2jfjes" instance=ExtResource("1_wi0ri")]

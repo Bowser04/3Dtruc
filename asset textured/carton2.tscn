@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://brjpxquen6ewy"]
+
+[ext_resource type="PackedScene" uid="uid://rkfbybbf3hx" path="res://asset/tlbjdbova/tlbjdbova.fbx" id="1_8ke8j"]
+[ext_resource type="Texture2D" uid="uid://3st1mk8h32mt" path="res://asset/tlbjdbova/tlbjdbova_2K_Basecolor.JPG" id="2_llfk8"]
+[ext_resource type="Texture2D" uid="uid://d1hcvn38unuon" path="res://asset/tlbjdbova/tlbjdbova_2K_AO.JPG" id="3_davvd"]
+[ext_resource type="Texture2D" uid="uid://poknawwk2kfw" path="res://asset/tlbjdbova/tlbjdbova_2K_Normal.JPG" id="4_bayen"]
+[ext_resource type="Texture2D" uid="uid://b4e5sfn72bj6u" path="res://asset/tlbjdbova/tlbjdbova_2K_Roughness.JPG" id="5_lst6k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uvkuh"]
+albedo_texture = ExtResource("2_llfk8")
+roughness_texture = ExtResource("5_lst6k")
+normal_enabled = true
+normal_texture = ExtResource("4_bayen")
+ao_enabled = true
+ao_texture = ExtResource("3_davvd")
+
+[node name="tlbjdbova" instance=ExtResource("1_8ke8j")]
+
+[node name="tlbjdbova_LOD0_TIER2_000" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.326841, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_uvkuh")
+
+[node name="tlbjdbova_LOD0_TIER2_001" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.289627)
+surface_material_override/0 = SubResource("StandardMaterial3D_uvkuh")
+
+[node name="tlbjdbova_LOD0_TIER2_002" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.975649, 0, 0.346971)
+surface_material_override/0 = SubResource("StandardMaterial3D_uvkuh")
+
+[node name="tlbjdbova_LOD0_TIER2_003" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66003, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_uvkuh")
+
+[node name="tlbjdbova_LOD0_TIER2_004" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_uvkuh")
+
+[node name="tlbjdbova_LOD0_TIER2_005" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.314865, 0, 0.299211)
+surface_material_override/0 = SubResource("StandardMaterial3D_uvkuh")
+
+[node name="tlbjdbova_LOD0_TIER2_006" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.587979, 0, 0.357863)
+surface_material_override/0 = SubResource("StandardMaterial3D_uvkuh")

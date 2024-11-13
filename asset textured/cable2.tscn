@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://hfqbh8nl5wsn"]
+
+[ext_resource type="PackedScene" uid="uid://bfereusg22tqn" path="res://asset/wdqqeae/wdqqeae.fbx" id="1_mankr"]
+
+[node name="wdqqeae" instance=ExtResource("1_mankr")]

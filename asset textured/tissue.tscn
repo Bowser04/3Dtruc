@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cira2364c8cp4"]
+
+[ext_resource type="PackedScene" uid="uid://c61267ms1u4g5" path="res://asset/vieldbo/vieldbo.fbx" id="1_je8fm"]
+
+[node name="vieldbo" instance=ExtResource("1_je8fm")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxxal0x281ivv"]
+
+[ext_resource type="PackedScene" uid="uid://dwxdtckv2kp12" path="res://asset/villceo/villceo.fbx" id="1_pdekn"]
+
+[node name="villceo" instance=ExtResource("1_pdekn")]

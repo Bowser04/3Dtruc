@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://1pktomef11sr"]
+
+[ext_resource type="PackedScene" uid="uid://bb13ikyohrx1o" path="res://asset/wdkmabe/wdkmabe.fbx" id="1_t67h1"]
+
+[node name="wdkmabe" instance=ExtResource("1_t67h1")]

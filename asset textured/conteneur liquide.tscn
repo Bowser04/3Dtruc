@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://basnemhlw67oj"]
+
+[ext_resource type="PackedScene" uid="uid://b7pwm1heafsa" path="res://asset/vktifj1ga/vktifj1ga.fbx" id="1_5d8lo"]
+
+[node name="vktifj1ga" instance=ExtResource("1_5d8lo")]

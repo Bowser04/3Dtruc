@@ -1,0 +1,23 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdpkeyd37wol4"]
+
+[ext_resource type="PackedScene" uid="uid://dyc5vj1c1sl8j" path="res://asset/tdgecegda/tdgecegda.fbx" id="1_xrgff"]
+[ext_resource type="Texture2D" uid="uid://cygtxcxxd6dwo" path="res://asset/tdgecegda/tdgecegda_2K_Basecolor.JPG" id="2_8sl3q"]
+[ext_resource type="Texture2D" uid="uid://x1wkjkxv5p6g" path="res://asset/tdgecegda/tdgecegda_2K_AO.JPG" id="3_sj8m7"]
+[ext_resource type="Texture2D" uid="uid://ba7pws8bgtwk6" path="res://asset/tdgecegda/tdgecegda_2K_Normal.JPG" id="4_gyjky"]
+[ext_resource type="Texture2D" uid="uid://cotymw13j1025" path="res://asset/tdgecegda/tdgecegda_2K_Gloss.JPG" id="5_o86ow"]
+[ext_resource type="Texture2D" uid="uid://dbqmx8qybicl8" path="res://asset/tdgecegda/tdgecegda_2K_Roughness.JPG" id="6_6wee5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dn0pq"]
+albedo_texture = ExtResource("2_8sl3q")
+metallic = 1.0
+metallic_texture = ExtResource("4_gyjky")
+roughness_texture = ExtResource("6_6wee5")
+normal_enabled = true
+ao_enabled = true
+ao_texture = ExtResource("3_sj8m7")
+refraction_texture = ExtResource("5_o86ow")
+
+[node name="Root Scene" instance=ExtResource("1_xrgff")]
+
+[node name="tdgecegda_LOD0_TIER2_000" parent="RootNode" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_dn0pq")
