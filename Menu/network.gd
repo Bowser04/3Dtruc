@@ -35,8 +35,8 @@ func initialize_steam():
 	print("Did Steam initialize?: %s " % initialize_response)
 	var is_online: bool = Steam.loggedOn()
 	var is_owned: bool = Steam.isSubscribed()
-	var steam_id: int = Steam.getSteamID()
-	var steam_username: String = Steam.getPersonaName()
+	steam_id = Steam.getSteamID()
+	steam_username = Steam.getPersonaName()
 	print(steam_username)
 func create_lobby():
 	if lobby_id == 0:
