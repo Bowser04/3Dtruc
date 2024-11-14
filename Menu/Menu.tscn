@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cj8uchem8a4fk"]
+[gd_scene load_steps=3 format=3 uid="uid://cj8uchem8a4fk"]
 
-[ext_resource type="Script" path="res://Menu/menu.gd" id="1_i4tr5"]
+[ext_resource type="Script" path="res://Menu/Menu.gd" id="1_i4tr5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x1bde"]
+font_size = 40
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -150,6 +153,8 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(0.611765, 0.611765, 0.611765, 1)
 theme_override_font_sizes/font_size = 50
 text = "Waiting For Players ..."
+label_settings = SubResource("LabelSettings_x1bde")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Quitter" to="." method="_on_quitter_pressed"]
 [connection signal="pressed" from="Jouer" to="." method="_on_jouer_pressed"]

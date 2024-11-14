@@ -31,7 +31,7 @@ func _process(delta):
 	if lobby_id > 0:
 		read_all_p2p_packets()
 func initialize_steam():
-	var initialize_response: Dictionary = Steam.steamInitEx()
+	var initialize_response: Dictionary = Steam.steamInitEx(true,480)
 	print("Did Steam initialize?: %s " % initialize_response)
 	var is_online: bool = Steam.loggedOn()
 	var is_owned: bool = Steam.isSubscribed()
