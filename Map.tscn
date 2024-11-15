@@ -169,9 +169,10 @@ mesh = SubResource("BoxMesh_hb3ew")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Mur"]
-transform = Transform3D(0.125625, 0, 0, 0, 1.95038, 0, 0, 0, 13.4256, 0.379625, 1.88699, 0.00393343)
+transform = Transform3D(0.125625, 0, 0, 0, 0.97519, 0, 0, 0, 13.4256, 0.379625, 2.38699, 0.00393343)
 mesh = SubResource("BoxMesh_hb3ew")
 skeleton = NodePath("../..")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mur"]
 transform = Transform3D(0.125625, 0, 0, 0, 1.95038, 0, 0, 0, 13.4256, -8.50137, 0.946639, 0.00393343)
