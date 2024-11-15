@@ -133,6 +133,9 @@ func _on_lobby_joined(this_lobby_id:int, _permissions: int, _locked : bool, resp
 				print(error)
 				return
 			multiplayer.set_multiplayer_peer(steam_peer)
+			await get_tree().create_timer(5).timeout
+			self_id = steam_id
+			SendPlayerInformation.rpc_id(1, str(steam_username), steam_id)
 		
 		
 		
@@ -177,6 +180,7 @@ func read_p2p_packet():
 func add_players_to_game():
 	var parrent = get_node_or_null(_players_spawn_node)
 	var spawner = get_node_or_null(_players_spawn_node+"/Spawns")
+	print(lobby_members)
 	if parrent:
 		var spawns = spawner.get_children()
 		for player in lobby_members:
