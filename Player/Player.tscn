@@ -30,7 +30,7 @@ shader_parameter/scan_line_strength = -8.0
 shader_parameter/pixel_strength = -2.0
 
 [node name="Player" type="CharacterBody3D"]
-transform = Transform3D(1.35, 0, 0, 0, 1.35, 0, 0, 0, 1.35, 0, 0, 0)
+transform = Transform3D(2.51, 0, 0, 0, 2.51, 0, 0, 0, 2.51, 0, 0, 0)
 script = ExtResource("1_1mw8g")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -59,6 +59,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="Shader"]
+visible = false
 material = SubResource("ShaderMaterial_njla2")
 layout_mode = 1
 anchors_preset = 15
