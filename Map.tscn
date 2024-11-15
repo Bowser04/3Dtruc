@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://bqy7kyhh7hw0o"]
+[gd_scene load_steps=59 format=3 uid="uid://bqy7kyhh7hw0o"]
 
 [ext_resource type="Texture2D" uid="uid://cy0sndh6ka7pq" path="res://Texture/Sol/tixmdgdcw_2K_Basecolor.jpg" id="1_y0o7k"]
 [ext_resource type="Texture2D" uid="uid://c8nkhmgehjh2b" path="res://Texture/Sol/tixmdgdcw_2K_AO.jpg" id="2_tlons"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://bwveokxwmla8c" path="res://asset/tmnobhhya/tmnobhhya_2K_Normal.jpg" id="13_lrlh7"]
 [ext_resource type="Texture2D" uid="uid://mgb42kjeu4qs" path="res://asset/tmnobhhya/tmnobhhya_2K_Roughness.jpg" id="14_1xksu"]
 [ext_resource type="PackedScene" uid="uid://1pktomef11sr" path="res://asset textured/poutre.tscn" id="15_f2ca8"]
-[ext_resource type="PackedScene" uid="uid://dcsw77fyfbyab" path="res://Player/Player.tscn" id="16_s1u8d"]
 [ext_resource type="PackedScene" uid="uid://1tip5an0nbrt" path="res://asset textured/deco_elec_2.tscn" id="17_b0bfu"]
 [ext_resource type="PackedScene" uid="uid://d3h1ygn8aavij" path="res://asset textured/deco_elec_4.tscn" id="18_06568"]
 [ext_resource type="PackedScene" uid="uid://7onxvk7l8ojp" path="res://asset textured/cable.tscn" id="19_27l7c"]
@@ -152,9 +151,6 @@ transform = Transform3D(-3.12195e-15, 1.31134e-07, -1, -0.544648, -4.37114e-08, 
 
 [node name="Poutre6" parent="." instance=ExtResource("15_f2ca8")]
 transform = Transform3D(-3.12195e-15, 1.31134e-07, -1, -0.544648, -4.37114e-08, 0, -2.38073e-08, 1, 1.31134e-07, 0.37644, 0.93604, -4.61364)
-
-[node name="Player" parent="." instance=ExtResource("16_s1u8d")]
-transform = Transform3D(1.795, 0, 0, 0, 1.795, 0, 0, 0, 1.795, 4.2059, 0.260754, -0.69922)
 
 [node name="Mur" type="StaticBody3D" parent="."]
 
@@ -404,3 +400,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34582, 1.86132, 0.356183)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dd4n8")
+
+[node name="Spawns" type="Node3D" parent="."]
+
+[node name="Marker3D" type="Marker3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.98567, 0.127131, -4.69241)
+
+[node name="Marker3D2" type="Marker3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12613, 0.127131, -4.69241)
+
+[node name="Marker3D3" type="Marker3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12613, 0.127131, 4.83141)
+
+[node name="Marker3D4" type="Marker3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.94065, 0.127131, 4.83141)

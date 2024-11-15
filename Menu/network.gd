@@ -1,7 +1,8 @@
 extends Node
 var ip = "127.0.0.1"
 var PORT = 8910
-var Players = {}
+@onready var Player_scene = preload("res://Player/Player.tscn")
+var _players_spawn_node = "/root/Map"
 const PACKET_READ_LIMIT = 32
 var is_host = false
 var lobby_id = 0
@@ -9,6 +10,7 @@ var lobby_members = []
 var lobby_member_max = 10
 var steam_username= ""
 var steam_id: int = 0
+var self_id: int = 0
 var multiplayer_type = "null"
 var host_ip = "{IP}"
 var peer:ENetMultiplayerPeer
@@ -45,6 +47,7 @@ func peer_disconnected(id):
 # called only from clients
 func connected_to_server():
 	print("connected To Sever!")
+	self_id = multiplayer.get_unique_id()
 	SendPlayerInformation.rpc_id(1, str(multiplayer.get_unique_id()), multiplayer.get_unique_id())
 @rpc("any_peer")
 func SendPlayerInformation(name, id):
@@ -52,7 +55,6 @@ func SendPlayerInformation(name, id):
 		lobby_members.append({
 			"name" : name,
 			"id" : id,
-			"score": 0
 		}
 		)
 	
@@ -100,6 +102,7 @@ func create_lobby():
 		if error != OK:
 			print("cannot host: " + error)
 			return
+		self_id = 0
 		peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
 		multiplayer.set_multiplayer_peer(peer)
 		is_host = true
@@ -123,28 +126,16 @@ func join_lobby(this_lobby_id):
 func _on_lobby_joined(this_lobby_id:int, _permissions: int, _locked : bool, response: int):
 	if response == Steam.CHAT_ROOM_ENTER_RESPONSE_SUCCESS:
 		lobby_id = this_lobby_id
-		get_lobby_members()
 		print("JOIN LOBBY: ",lobby_id)
-		make_p2p_handshake()
 		if steam_id != Steam.getLobbyOwner(lobby_id):
 			var error = steam_peer.create_client(Steam.getLobbyOwner(lobby_id),0)
 			if error != OK:
 				print(error)
 				return
 			multiplayer.set_multiplayer_peer(steam_peer)
+			SendPlayerInformation.rpc_id(1, str(steam_username), steam_id)
 		
 		
-func get_lobby_members():
-	lobby_members.clear()
-	var num_of_lobby_members: int = Steam.getNumLobbyMembers(lobby_id)
-	
-	for member in range(num_of_lobby_members):
-		var member_steam_id: int = Steam.getLobbyMemberByIndex(lobby_id,member)
-		var member_steam_name: String = Steam.getFriendPersonaName(member_steam_id)
-		lobby_members.append({
-			"steam_id":member_steam_id,
-			"steam_name":member_steam_name
-		})
 		
 func make_p2p_handshake():
 	send_p2p_packet(0,{"message":"handshake", "steam_id":steam_id,"username":steam_username})
@@ -184,4 +175,28 @@ func read_p2p_packet():
 			match readable_data["message"]:
 				"handshake":
 					print("PLAYER: ",readable_data["username"], " HAS JOINED!!")
-					get_lobby_members()
+func add_players_to_game():
+	var parrent = get_node_or_null(_players_spawn_node)
+	var spawner = get_node_or_null(_players_spawn_node+"/Spawns")
+	if parrent:
+		var spawns = spawner.get_children()
+		for player in lobby_members:
+			print("Player %s has been spawn!" % player.id)
+			var player_to_add = Player_scene.instantiate()
+			player_to_add.player_id = player.id
+			player_to_add.is_you = self_id==player.id
+			player_to_add.name = str(player.id)
+			var spawn = randi_range(0,spawns.size()-1)
+			player_to_add.global_position = spawns[spawn].global_position
+			spawns.remove_at(spawn)
+			parrent.add_child(player_to_add, true)
+		print("Player %s has been spawn!" % "host")
+		var player_to_add = Player_scene.instantiate()
+		player_to_add.player_id = 1
+		player_to_add.name = "1"
+		player_to_add.is_you = is_host
+		var spawn = randi_range(0,spawns.size()-1)
+		player_to_add.global_position = spawns[spawn].global_position
+		spawns.remove_at(spawn)
+		parrent.add_child(player_to_add, true)
+	

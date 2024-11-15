@@ -46,6 +46,7 @@ func _process(delta):
 func StartGame():
 	var scene = load("res://Map.tscn").instantiate()
 	get_tree().root.add_child(scene)
+	Network_Conection.add_players_to_game()
 	self.hide()
 
 func _on_quitter_pressed():
