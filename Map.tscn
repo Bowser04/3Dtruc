@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://bqy7kyhh7hw0o"]
+[gd_scene load_steps=58 format=3 uid="uid://bqy7kyhh7hw0o"]
 
 [ext_resource type="Texture2D" uid="uid://cy0sndh6ka7pq" path="res://Texture/Sol/tixmdgdcw_2K_Basecolor.jpg" id="1_y0o7k"]
 [ext_resource type="Texture2D" uid="uid://c8nkhmgehjh2b" path="res://Texture/Sol/tixmdgdcw_2K_AO.jpg" id="2_tlons"]
@@ -32,7 +32,6 @@
 [ext_resource type="PackedScene" uid="uid://cira2364c8cp4" path="res://asset textured/tissue.tscn" id="31_bvgkq"]
 [ext_resource type="PackedScene" uid="uid://8mhw5fjj2l5t" path="res://asset textured/échele2.tscn" id="32_tqogm"]
 [ext_resource type="PackedScene" uid="uid://bmt42v6rx1185" path="res://asset textured/échele.tscn" id="33_v5yhh"]
-[ext_resource type="PackedScene" uid="uid://77ma035hde2i" path="res://asset textured/étagère industrielle.tscn" id="34_fu1i2"]
 [ext_resource type="PackedScene" uid="uid://hfqbh8nl5wsn" path="res://asset textured/cable2.tscn" id="35_7yw10"]
 [ext_resource type="PackedScene" uid="uid://cg38the8rx1uc" path="res://asset textured/barril ouvert.tscn" id="36_rq0my"]
 [ext_resource type="PackedScene" uid="uid://da01ol8nm6tpo" path="res://asset textured/barril4.tscn" id="37_14n5t"]
@@ -40,10 +39,10 @@
 [ext_resource type="PackedScene" uid="uid://cl83cdyse2ijx" path="res://asset textured/barril2.tscn" id="39_ndwwi"]
 [ext_resource type="PackedScene" uid="uid://bac1llwkxoquw" path="res://asset textured/pallete.tscn" id="40_i86i0"]
 [ext_resource type="PackedScene" uid="uid://c3douicfok0fj" path="res://asset textured/pallete2.tscn" id="41_34wc0"]
+[ext_resource type="PackedScene" uid="uid://dhyq6fpynnugn" path="res://asset textured/Etagère3.tscn" id="42_3bx2o"]
 [ext_resource type="PackedScene" uid="uid://7lm1to58re6m" path="res://asset textured/cartonplat.tscn" id="42_nksth"]
-[ext_resource type="PackedScene" uid="uid://dh2byd3pgroj1" path="res://asset textured/CartonRV1.tscn" id="43_jcsy7"]
-[ext_resource type="PackedScene" uid="uid://bnb6f8tr7lxrn" path="res://asset textured/CartonRV2.tscn" id="44_1l0rg"]
-[ext_resource type="PackedScene" uid="uid://d0hqgut8mhxgf" path="res://asset textured/CartonRV3.tscn" id="45_5sadq"]
+[ext_resource type="PackedScene" uid="uid://c826hod7jqqch" path="res://asset textured/Etagère2.tscn" id="43_bbpat"]
+[ext_resource type="PackedScene" uid="uid://bitacr4o1vbxr" path="res://asset textured/Etagère.tscn" id="45_dbn3t"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_c25gl"]
 
@@ -299,6 +298,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.59982, 0.00911999, 3.19824
 [node name="Bouteille de gaz3" parent="." instance=ExtResource("25_3ofw0")]
 transform = Transform3D(0.999767, -0.0216055, 0, 0.0216055, 0.999767, 0, 0, 0, 1, -8.11095, -0.00249082, -4.80133)
 
+[node name="Bouteille de gaz5" parent="." instance=ExtResource("25_3ofw0")]
+transform = Transform3D(0.999767, -0.0216055, 0, 0.0216055, 0.999767, 0, 0, 0, 1, 0.611337, -0.00249082, -5.07084)
+
+[node name="Bouteille de gaz6" parent="." instance=ExtResource("25_3ofw0")]
+transform = Transform3D(0.999767, -0.0216055, 0, 0.0216055, 0.999767, 0, 0, 0, 1, 8.25559, -0.00249082, -5.07084)
+
 [node name="Bouteille de gaz4" parent="." instance=ExtResource("25_3ofw0")]
 transform = Transform3D(0.514973, 0.857056, -0.0160426, 0.0750626, -0.0637296, -0.99514, -0.853913, 0.511266, -0.0971519, -8.37234, 0.1662, -5.27944)
 
@@ -329,20 +334,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.441961, 0.00911999, -5.930
 [node name="Tissuu" parent="." instance=ExtResource("31_bvgkq")]
 transform = Transform3D(0.814268, 0, -0.58049, 0, 1, 0, 0.58049, 0, 0.814268, -4.29342, 0.00911951, 1.37931)
 
+[node name="Tissuu" parent="Tissuu" instance=ExtResource("31_bvgkq")]
+transform = Transform3D(-0.324198, 0, -0.94599, 0, 1, 0, 0.94599, 0, -0.324198, 4.70728, 0.00911951, -5.03727)
+
+[node name="Tissuu" parent="Tissuu/Tissuu" instance=ExtResource("31_bvgkq")]
+transform = Transform3D(-0.324198, 0, -0.94599, 0, 1, 0, 0.94599, 0, -0.324198, -0.235354, 0.00911951, -6.01877)
+
 [node name="Echelle2" parent="." instance=ExtResource("32_tqogm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3356, 0.00911999, 1.33769)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.694556, 0.00911999, 0.935572)
 
 [node name="Echelle" parent="." instance=ExtResource("33_v5yhh")]
 transform = Transform3D(-0.0367596, 0.999266, -0.0107872, 0.0270017, -0.00979741, -0.999587, -0.998959, -0.0370358, -0.0266217, -8.22117, 0.181001, 5.16259)
-
-[node name="Etagère inc" parent="." instance=ExtResource("34_fu1i2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.36791, 0.00911999, 0.353267)
 
 [node name="CableV2" parent="." instance=ExtResource("35_7yw10")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04451, 0.00911999, 1.82199)
 
 [node name="BarrilleV2" parent="." instance=ExtResource("36_rq0my")]
 transform = Transform3D(0.996445, 0, -0.0842518, 0, 1, 0, 0.0842518, 0, 0.996445, -0.12222, 0.00911999, -1.18726)
+
+[node name="BarrilleV2" parent="BarrilleV2" instance=ExtResource("36_rq0my")]
+transform = Transform3D(0.998824, 0, 0.0485011, 0, 1, 0, -0.0485011, 0, 0.998824, 1.17886, 0.00911999, 2.23445)
+
+[node name="BarrilleV6" parent="BarrilleV2" instance=ExtResource("36_rq0my")]
+transform = Transform3D(0.998824, 0, 0.0485011, 0, 1, 0, -0.0485011, 0, 0.998824, 1.26195, 0.00911999, 2.85611)
 
 [node name="BarrilleV6" parent="." instance=ExtResource("36_rq0my")]
 transform = Transform3D(0.996445, 0, -0.0842518, 0, 1, 0, 0.0842518, 0, 0.996445, -0.12222, 0.00911999, -0.560068)
@@ -362,41 +376,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.0285, 0.00911999, 2.39841)
 [node name="BarrilleV5" parent="." instance=ExtResource("39_ndwwi")]
 transform = Transform3D(-0.19983, 0, 0.979831, 0, 1, 0, -0.979831, 0, -0.19983, -8.0971, 0.00911999, -2.36706)
 
-[node name="Pallette moche (Maxence)" parent="." instance=ExtResource("40_i86i0")]
+[node name="BarrilleV7" parent="." instance=ExtResource("39_ndwwi")]
+transform = Transform3D(-0.19983, 0, 0.979831, 0, 1, 0, -0.979831, 0, -0.19983, 8.02075, 0.00911999, 0.376404)
+
+[node name="Pallette2_1" parent="." instance=ExtResource("40_i86i0")]
 transform = Transform3D(1, 0, 0, 0, 0.295024, -0.95549, 0, 0.95549, 0.295024, -6.27705, 0.370572, -6.23566)
 
-[node name="Pallette moche (Maxence)2" parent="." instance=ExtResource("40_i86i0")]
+[node name="Pallette2_2" parent="." instance=ExtResource("40_i86i0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.75801, 0.832583, -0.00346696)
 
-[node name="Pallette belle (moi->cédric)" parent="." instance=ExtResource("41_34wc0")]
+[node name="Pallette belle1" parent="." instance=ExtResource("41_34wc0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.71345, 0.00911999, 0.100499)
 
-[node name="Pallette belle (moi)2" parent="." instance=ExtResource("41_34wc0")]
+[node name="Pallette belle2" parent="." instance=ExtResource("41_34wc0")]
 transform = Transform3D(0.999009, 0, -0.0445086, 0, 1, 0, 0.0445086, 0, 0.999009, -7.72767, 0.142107, 0.100499)
 
-[node name="Pallette belle (moi)3" parent="." instance=ExtResource("41_34wc0")]
+[node name="Pallette belle3" parent="." instance=ExtResource("41_34wc0")]
 transform = Transform3D(0.98472, 0, -0.174147, 0, 1, 0, 0.174147, 0, 0.98472, -7.72326, 0.273553, 0.100499)
 
-[node name="Pallette belle (moi)4" parent="." instance=ExtResource("41_34wc0")]
+[node name="Pallette belle4" parent="." instance=ExtResource("41_34wc0")]
 transform = Transform3D(0.998912, 0, 0.0466357, 0, 1, 0, -0.0466357, 0, 0.998912, -7.7356, 0.407645, 0.081397)
 
-[node name="Pallette belle (moi)5" parent="." instance=ExtResource("41_34wc0")]
+[node name="Pallette belle5" parent="." instance=ExtResource("41_34wc0")]
 transform = Transform3D(0.998769, 0, 0.0495994, 0, 1, 0, -0.0495994, 0, 0.998769, -7.71298, 0.543364, 0.134765)
 
-[node name="Pallette belle (moi)6" parent="." instance=ExtResource("41_34wc0")]
+[node name="Pallette belle6" parent="." instance=ExtResource("41_34wc0")]
 transform = Transform3D(0.988652, 0, -0.150226, 0, 1, 0, 0.150226, 0, 0.988652, -7.75005, 0.673693, 0.134765)
 
 [node name="Cartonplat" parent="." instance=ExtResource("42_nksth")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.86608, 0.00911999, 1.11082)
-
-[node name="CartonRV1" parent="." instance=ExtResource("43_jcsy7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35775, 0.535435, 0.394118)
-
-[node name="CartonRV2" parent="." instance=ExtResource("44_1l0rg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41036, 1.1742, 0.369858)
-
-[node name="CartonRV3" parent="." instance=ExtResource("45_5sadq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34582, 1.86132, 0.356183)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dd4n8")
@@ -414,3 +422,63 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12613, 0.127131, 4.83141)
 
 [node name="Marker3D4" type="Marker3D" parent="Spawns"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.94065, 0.127131, 4.83141)
+
+[node name="Etagère2" parent="." instance=ExtResource("45_dbn3t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.93742, 0.00911999, 4.30563)
+
+[node name="Etagère3" parent="." instance=ExtResource("42_3bx2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.80248, 0.00911999, 0.345869)
+
+[node name="Etagère4" parent="." instance=ExtResource("43_bbpat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.00245, 0.00911999, 4.65907)
+
+[node name="Etagère5" parent="." instance=ExtResource("42_3bx2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.77628, 0.00911999, 0.162373)
+
+[node name="Etagère6" parent="." instance=ExtResource("42_3bx2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.38832, 0.00911999, -1.62066)
+
+[node name="Etagère7" parent="." instance=ExtResource("45_dbn3t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.32346, 0.00911999, 2.38756)
+
+[node name="Etagère8" parent="." instance=ExtResource("43_bbpat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.65716, 0.00911999, 2.34864)
+
+[node name="Etagère9" parent="." instance=ExtResource("42_3bx2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.40265, 0.00911999, -2.15547)
+
+[node name="Etagère10" parent="." instance=ExtResource("43_bbpat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.83309, 0.00911999, -4.09064)
+
+[node name="Etagère2" parent="Etagère10" instance=ExtResource("45_dbn3t")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 7.15385, 0.00911999, 0.983344)
+
+[node name="Etagère3" parent="Etagère10" instance=ExtResource("42_3bx2o")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 7.27103, 0.00911999, 4.79904)
+
+[node name="Etagère4" parent="Etagère10" instance=ExtResource("43_bbpat")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 10.2189, 0.00911999, 1.0261)
+
+[node name="Etagère5" parent="Etagère10" instance=ExtResource("42_3bx2o")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.99271, 0.00911999, 4.73041)
+
+[node name="Etagère6" parent="Etagère10" instance=ExtResource("42_3bx2o")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.60475, 0.00911999, 6.90963)
+
+[node name="Etagère7" parent="Etagère10" instance=ExtResource("45_dbn3t")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.53989, 0.00911999, 2.90142)
+
+[node name="Etagère8" parent="Etagère10" instance=ExtResource("43_bbpat")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 11.8736, 0.00911999, 2.94033)
+
+[node name="Etagère9" parent="Etagère10" instance=ExtResource("42_3bx2o")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 11.6191, 0.00911999, 6.85016)
+
+[node name="Etagère10" parent="Etagère10" instance=ExtResource("43_bbpat")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 10.0495, 0.00911999, 9.37962)
+
+[node name="Etagère11" parent="Etagère10" instance=ExtResource("45_dbn3t")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 7.04012, 0.00911999, 9.18504)
+
+[node name="Etagère11" parent="." instance=ExtResource("45_dbn3t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82369, 0.00911999, -3.89607)

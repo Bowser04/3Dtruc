@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bitacr4o1vbxr"]
+
+[ext_resource type="PackedScene" uid="uid://77ma035hde2i" path="res://asset textured/étagère industrielle.tscn" id="1_ebq75"]
+[ext_resource type="PackedScene" uid="uid://dh2byd3pgroj1" path="res://asset textured/CartonRV1.tscn" id="2_7wugp"]
+[ext_resource type="PackedScene" uid="uid://bnb6f8tr7lxrn" path="res://asset textured/CartonRV2.tscn" id="3_qukiu"]
+[ext_resource type="PackedScene" uid="uid://d0hqgut8mhxgf" path="res://asset textured/CartonRV3.tscn" id="4_onhqy"]
+
+[node name="Etagère" type="Node3D"]
+
+[node name="Etagère inc" parent="." instance=ExtResource("1_ebq75")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0102246, 0.00911999, 0.353267)
+
+[node name="CartonRV1" parent="." instance=ExtResource("2_7wugp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.46114e-05, 0.535435, 0.394118)
+
+[node name="CartonRV2" parent="." instance=ExtResource("3_qukiu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0526745, 1.1742, 0.369858)
+
+[node name="CartonRV3" parent="." instance=ExtResource("4_onhqy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0118655, 1.86132, 0.356183)
