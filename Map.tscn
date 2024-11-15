@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://bqy7kyhh7hw0o"]
+[gd_scene load_steps=60 format=3 uid="uid://bqy7kyhh7hw0o"]
 
 [ext_resource type="Texture2D" uid="uid://cy0sndh6ka7pq" path="res://Texture/Sol/tixmdgdcw_2K_Basecolor.jpg" id="1_y0o7k"]
 [ext_resource type="Texture2D" uid="uid://c8nkhmgehjh2b" path="res://Texture/Sol/tixmdgdcw_2K_AO.jpg" id="2_tlons"]
@@ -110,6 +110,13 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dxbtc"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="Environment" id="Environment_dd4n8"]
+background_energy_multiplier = 0.31
+ambient_light_energy = 0.0
+ssao_enabled = true
+ssil_enabled = true
+glow_enabled = true
 
 [node name="Map" type="Node3D"]
 
@@ -359,13 +366,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.0285, 0.00911999, 2.39841)
 [node name="BarrilleV5" parent="." instance=ExtResource("39_ndwwi")]
 transform = Transform3D(-0.19983, 0, 0.979831, 0, 1, 0, -0.979831, 0, -0.19983, -8.0971, 0.00911999, -2.36706)
 
-[node name="Pallette moche (Cedric)" parent="." instance=ExtResource("40_i86i0")]
+[node name="Pallette moche (Maxence)" parent="." instance=ExtResource("40_i86i0")]
 transform = Transform3D(1, 0, 0, 0, 0.295024, -0.95549, 0, 0.95549, 0.295024, -6.27705, 0.370572, -6.23566)
 
-[node name="Pallette moche (Cedric)2" parent="." instance=ExtResource("40_i86i0")]
+[node name="Pallette moche (Maxence)2" parent="." instance=ExtResource("40_i86i0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.75801, 0.832583, -0.00346696)
 
-[node name="Pallette belle (moi)" parent="." instance=ExtResource("41_34wc0")]
+[node name="Pallette belle (moi->cédric)" parent="." instance=ExtResource("41_34wc0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.71345, 0.00911999, 0.100499)
 
 [node name="Pallette belle (moi)2" parent="." instance=ExtResource("41_34wc0")]
@@ -394,3 +401,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41036, 1.1742, 0.369858)
 
 [node name="CartonRV3" parent="." instance=ExtResource("45_5sadq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34582, 1.86132, 0.356183)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dd4n8")

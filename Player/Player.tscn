@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcsw77fyfbyab"]
+[gd_scene load_steps=7 format=3 uid="uid://dcsw77fyfbyab"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_1mw8g"]
+[ext_resource type="Shader" path="res://Player/Player.gdshader" id="2_js6e0"]
+[ext_resource type="Texture2D" uid="uid://cuavydi5b1awb" path="res://icon.svg" id="3_wpuvl"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_r5omf"]
 radius = 0.19
@@ -9,6 +11,23 @@ height = 0.8
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e0jcp"]
 radius = 0.2
 height = 0.8
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_njla2"]
+shader = ExtResource("2_js6e0")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 1.0
+shader_parameter/warp_amount = 0.1
+shader_parameter/noise_amount = 0.03
+shader_parameter/interference_amount = 0.2
+shader_parameter/grille_amount = 0.1
+shader_parameter/grille_size = 1.0
+shader_parameter/vignette_amount = 0.6
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/aberation_amount = 0.5
+shader_parameter/roll_line_amount = 0.3
+shader_parameter/roll_speed = 1.0
+shader_parameter/scan_line_strength = -8.0
+shader_parameter/pixel_strength = -2.0
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1.35, 0, 0, 0, 1.35, 0, 0, 0, 1.35, 0, 0, 0)
@@ -30,3 +49,22 @@ spot_angle = 43.7873
 [node name="Collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.409297, 0)
 shape = SubResource("CapsuleShape3D_e0jcp")
+
+[node name="Shader" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Shader"]
+material = SubResource("ShaderMaterial_njla2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_wpuvl")
+expand_mode = 1

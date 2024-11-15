@@ -1,6 +1,8 @@
 extends CharacterBody3D
 
+var lamp=true
 var lamp_x = 0
+var lamp_energy = 2
 var SPEED = 2.5
 const BASE_SPEED = 2.5
 const JUMP_VELOCITY = 4.5
@@ -10,6 +12,7 @@ var squat = false
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	lamp_base_y = $Camera3D/SpotLight3D.position.y
+	$Camera3D/SpotLight3D.light_energy=lamp_energy
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -47,6 +50,12 @@ func _physics_process(delta):
 		$Collision.scale.y = lerp($Collision.scale.y,1.0,delta*5)
 		SPEED= BASE_SPEED
 		squat=false
+	if Input.is_action_just_pressed("clic"):
+		if lamp:
+			$Camera3D/SpotLight3D.light_energy = 0
+		else:
+			$Camera3D/SpotLight3D.light_energy = lamp_energy
+		lamp = not lamp
 
 		
 
