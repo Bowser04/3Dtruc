@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="3D truc"
-run/main_scene="res://Map.tscn"
+run/main_scene="res://Menu/Menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
