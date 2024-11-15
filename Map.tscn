@@ -308,10 +308,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54792, 0.00912011, -5.89427
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74307, 0.00912011, -5.89427)
 
 [node name="Caisse8" parent="." instance=ExtResource("22_s4ajk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96927, 0.799222, -5.89427)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96927, 0.774347, -5.89427)
 
 [node name="Caisse9" parent="." instance=ExtResource("22_s4ajk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16442, 0.799222, -5.89427)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16442, 0.774347, -5.89427)
 
 [node name="Caisse7" parent="." instance=ExtResource("22_s4ajk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.897966, 0.00912011, -5.89427)
