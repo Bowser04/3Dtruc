@@ -122,7 +122,6 @@ func join_lobby(this_lobby_id):
 		peer.create_client(this_lobby_id, PORT)
 		peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
 		multiplayer.set_multiplayer_peer(peer)	
-	
 func _on_lobby_joined(this_lobby_id:int, _permissions: int, _locked : bool, response: int):
 	if response == Steam.CHAT_ROOM_ENTER_RESPONSE_SUCCESS:
 		lobby_id = this_lobby_id
@@ -134,8 +133,6 @@ func _on_lobby_joined(this_lobby_id:int, _permissions: int, _locked : bool, resp
 				print(error)
 				return
 			multiplayer.set_multiplayer_peer(steam_peer)
-			await get_tree().create_timer(1).timeout
-			SendPlayerInformation.rpc_id(1, str(steam_username), steam_id)
 		
 		
 		
