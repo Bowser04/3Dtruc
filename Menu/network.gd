@@ -12,6 +12,7 @@ var steam_id: int = 0
 var multiplayer_type = "null"
 var host_ip = "{IP}"
 var peer:ENetMultiplayerPeer
+var steam_peer: SteamMultiplayerPeer = SteamMultiplayerPeer.new()
 
 #“call_local” means it will only run locally on the machine the script itself is on.
 #“call_remote” is to only run it remotely on other machines.
@@ -88,6 +89,11 @@ func create_lobby():
 		if lobby_id == 0:
 			is_host = true
 			Steam.createLobby(Steam.LOBBY_TYPE_INVISIBLE,lobby_member_max)
+			var error = steam_peer.create_host(0)
+			if error != OK:
+				print("cannot host: " + error)
+				return
+			multiplayer.set_multiplayer_peer(steam_peer)
 	elif multiplayer_type == "Lan":
 		peer = ENetMultiplayerPeer.new()
 		var error = peer.create_server(PORT, 2)
@@ -120,6 +126,9 @@ func _on_lobby_joined(this_lobby_id:int, _permissions: int, _locked : bool, resp
 		get_lobby_members()
 		print("JOIN LOBBY: ",lobby_id)
 		make_p2p_handshake()
+		if steam_id != Steam.getLobbyOwner(lobby_id):
+			steam_peer.create_client(steam_id,0)
+			multiplayer.set_multiplayer_peer(steam_peer)
 		
 		
 func get_lobby_members():
