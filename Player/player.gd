@@ -14,12 +14,15 @@ var squat = false
 var i=0
 var posi = Vector3.ZERO
 var rota = 0
+var is_ennemy = true
 func _ready():
 	$Camera3D.current = is_you
 	if !is_you:return
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	lamp_base_y = $Camera3D/SpotLight3D.position.y
 	$Camera3D/SpotLight3D.light_energy=lamp_energy
+	if is_ennemy:
+		$Shader/TextureRect.show()
 
 func _physics_process(delta):
 	if !is_you:

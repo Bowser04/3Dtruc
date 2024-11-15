@@ -1,16 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcsw77fyfbyab"]
+[gd_scene load_steps=8 format=3 uid="uid://dcsw77fyfbyab"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_1mw8g"]
 [ext_resource type="Shader" path="res://Player/Player.gdshader" id="2_js6e0"]
 [ext_resource type="Texture2D" uid="uid://cuavydi5b1awb" path="res://icon.svg" id="3_wpuvl"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_r5omf"]
-radius = 0.19
-height = 0.8
+radius = 0.361
+height = 1.52
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_p0dbi"]
+exposure_multiplier = 0.157
+dof_blur_far_enabled = true
+dof_blur_far_distance = 0.01
+dof_blur_far_transition = -1.0
+dof_blur_near_enabled = true
+dof_blur_near_distance = 0.01
+dof_blur_near_transition = -1.0
+dof_blur_amount = 1.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e0jcp"]
-radius = 0.2
-height = 0.8
+radius = 0.37
+height = 1.428
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_njla2"]
 shader = ExtResource("2_js6e0")
@@ -34,11 +44,13 @@ transform = Transform3D(2.575, 0, 0, 0, 2.575, 0, 0, 0, 2.575, 0, 0, 0)
 script = ExtResource("1_1mw8g")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.407887, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.799094, 0)
 mesh = SubResource("CapsuleMesh_r5omf")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.740741, 0, 0, 0, 0.740741, 0, 0, 0, 0.740741, 0, 0.625179, -0.151593)
+transform = Transform3D(0.38835, 0, 0, 0, 0.38835, 0, 0, 0, 0.38835, 0, 1.16499, -0.376376)
+attributes = SubResource("CameraAttributesPractical_p0dbi")
+fov = 37.8493
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0702294, -0.0554876, -0.0527844)
@@ -47,7 +59,7 @@ spot_range = 9.45114
 spot_angle = 43.7873
 
 [node name="Collision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.409297, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.820406, 0)
 shape = SubResource("CapsuleShape3D_e0jcp")
 
 [node name="Shader" type="Control" parent="."]
@@ -59,7 +71,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="Shader"]
-visible = false
 material = SubResource("ShaderMaterial_njla2")
 layout_mode = 1
 anchors_preset = 15
