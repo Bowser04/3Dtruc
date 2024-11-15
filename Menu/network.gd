@@ -9,6 +9,8 @@ var lobby_members = []
 var lobby_member_max = 10
 var steam_username= ""
 var steam_id: int = 0
+var multiplayer_type = "null"
+var host_ip = "{IP}"
 
 #“call_local” means it will only run locally on the machine the script itself is on.
 #“call_remote” is to only run it remotely on other machines.

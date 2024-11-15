@@ -3,12 +3,39 @@ extends Control
 var player_list = []
 var peer:ENetMultiplayerPeer
 func _ready():
+	show_menu()
+func show_menu():
 	$Quitter.show()
 	$Option.show()
 	$Multi.hide()
 	$Jouer.show()
 	$Waiting.hide()
-
+	$Type.hide()
+func show_type():
+	$Quitter.hide()
+	$Option.hide()
+	$Multi.hide()
+	$Jouer.hide()
+	$Waiting.hide()
+	$Type.show()
+func show_multi():
+	if Network_Conection.multiplayer_type == "Steam":
+		$Multi/VBoxContainer/Label3.text = "lobby id:"
+	elif Network_Conection.multiplayer_type == "Lan":
+		$Multi/VBoxContainer/Label3.text = "host ip:"
+	$Quitter.hide()
+	$Option.hide()
+	$Multi.show()
+	$Jouer.hide()
+	$Waiting.hide()
+	$Type.hide()
+func show_Waiting():
+	$Quitter.hide()
+	$Option.hide()
+	$Multi.hide()
+	$Jouer.hide()
+	$Waiting.show()
+	$Type.hide()
 func _process(delta):
 	pass
 	
@@ -23,35 +50,34 @@ func _on_quitter_pressed():
 
 
 func _on_jouer_pressed():
-	$Jouer.hide()
-	$Multi.show()
+	show_type()
 
 
 func _on_join_pressed():
-	Network_Conection.join_lobby(decode_base35($Multi/VBoxContainer/TextEdit3.text))
-	$Quitter.hide()
-	$Option.hide()
-	$Jouer.hide()
-	$Multi.hide()
-	$Waiting.show()
+	if Network_Conection.multiplayer_type == "Steam":
+		Network_Conection.join_lobby(decode_base35($Multi/VBoxContainer/TextEdit3.text))
+	show_Waiting()
 	when_lobby.call_deferred(false)
 	
 func _on_host_pressed():
-	Network_Conection.create_lobby.call_deferred()
-	$Quitter.hide()
-	$Option.hide()
-	$Jouer.hide()
-	$Multi.hide()
-	$Waiting.show()
+	if Network_Conection.multiplayer_type == "Steam":
+		Network_Conection.create_lobby.call_deferred()
+	show_Waiting()
 	when_lobby.call_deferred(true)
 	pass
 func when_lobby(is_server):
-	$Waiting/Label.text = "waiting steam ..."
-	while Network_Conection.lobby_id == 0:
-		await get_tree().create_timer(0.1).timeout
-	$Waiting/Label.text = "Steam lobby id: "+encode_base35(Network_Conection.lobby_id)+"\nwaiting for player ..."
+	if Network_Conection.multiplayer_type == "Steam":
+		$Waiting/Label.text = "waiting steam ..."
+	elif Network_Conection.multiplayer_type == "Lan":
+		$Waiting/Label.text = "connecting ..."
+	if Network_Conection.multiplayer_type == "Steam":
+		while Network_Conection.lobby_id == 0:
+			await get_tree().create_timer(0.1).timeout
+	if Network_Conection.multiplayer_type == "Steam":
+		$Waiting/Label.text = "Steam lobby id: "+encode_base35(Network_Conection.lobby_id)+"\nwaiting for player ..."
+	elif Network_Conection.multiplayer_type == "Lan":
+		$Waiting/Label.text = "Ip: "+Network_Conection.host_ip+"\nwaiting for player ..."
 	while Network_Conection.Players.size() < 1:
-		print(Network_Conection.Players.size())
 		await get_tree().create_timer(0.1).timeout
 	while true:
 		if is_server:
@@ -87,3 +113,13 @@ func decode_base35(base35_str: String) -> int:
 			return -1
 		result = result * 35 + value
 	return result
+
+
+func _on_lan_pressed() -> void:
+	Network_Conection.multiplayer_type = "Lan"
+	show_multi()
+
+
+func _on_steam_pressed() -> void:
+	Network_Conection.multiplayer_type = "Steam"
+	show_multi()
