@@ -145,6 +145,12 @@ transform = Transform3D(-3.12195e-15, 1.31134e-07, -1, -0.544648, -4.37114e-08, 
 [node name="Poutre4" parent="." instance=ExtResource("15_f2ca8")]
 transform = Transform3D(-3.12195e-15, 1.31134e-07, -1, -0.544648, -4.37114e-08, 0, -2.38073e-08, 1, 1.31134e-07, 0.37644, 0.93604, 2.09001)
 
+[node name="Poutre7" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-4.14767e-15, 1.31134e-07, -1, 6.32584e-08, -1, -1.31134e-07, -0.723592, -8.74228e-08, -5.73205e-15, 0.37644, 1.96564, 3.3603)
+
+[node name="Poutre8" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-4.14767e-15, 1.31134e-07, -1, 6.32584e-08, -1, -1.31134e-07, -0.723592, -8.74228e-08, -5.73205e-15, 0.37644, 1.96564, -3.34026)
+
 [node name="Poutre5" parent="." instance=ExtResource("15_f2ca8")]
 transform = Transform3D(-3.12195e-15, 1.31134e-07, -1, -0.544648, -4.37114e-08, 0, -2.38073e-08, 1, 1.31134e-07, 0.37652, 0.93604, -2.09278)
 
@@ -158,6 +164,22 @@ transform = Transform3D(0.125625, 0, 0, 0, 1.95038, 0, 0, 0, 13.4256, -8.50137, 
 mesh = SubResource("BoxMesh_hb3ew")
 skeleton = NodePath("../..")
 
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Mur"]
+transform = Transform3D(0.125625, 0, 0, 0, 1.95038, 0, 0, 0, 13.4256, -8.50137, 0.946639, 0.00393343)
+mesh = SubResource("BoxMesh_hb3ew")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Mur"]
+transform = Transform3D(0.125625, 0, 0, 0, 1.95038, 0, 0, 0, 13.4256, -8.50137, 1.88699, 0.00393343)
+mesh = SubResource("BoxMesh_hb3ew")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Mur"]
+transform = Transform3D(0.125625, 0, 0, 0, 0.97519, 0, 0, 0, 13.4256, 0.379625, 2.38699, 0.00393343)
+mesh = SubResource("BoxMesh_hb3ew")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mur"]
 transform = Transform3D(0.125625, 0, 0, 0, 1.95038, 0, 0, 0, 13.4256, -8.50137, 0.946639, 0.00393343)
 shape = SubResource("ConvexPolygonShape3D_7ubet")
@@ -166,6 +188,11 @@ shape = SubResource("ConvexPolygonShape3D_7ubet")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Mur2"]
 transform = Transform3D(0.125625, 0, 0, 0, 1.95038, 0, 0, 0, 13.4256, 8.45008, 0.946639, 0.00393343)
+mesh = SubResource("BoxMesh_hb3ew")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Mur2"]
+transform = Transform3D(0.125625, 0, 0, 0, 1.95038, 0, 0, 0, 13.4256, 8.45008, 1.86256, 0.00393343)
 mesh = SubResource("BoxMesh_hb3ew")
 skeleton = NodePath("../..")
 
@@ -180,6 +207,11 @@ transform = Transform3D(-5.49125e-09, 0, -17.6459, 0, 1.95038, 0, 0.125625, 0, -
 mesh = SubResource("BoxMesh_hb3ew")
 skeleton = NodePath("../..")
 
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Mur3"]
+transform = Transform3D(-5.49125e-09, 0, -17.6459, 0, 1.95038, 0, 0.125625, 0, -7.71325e-07, -0.13831, 1.85672, 6.50917)
+mesh = SubResource("BoxMesh_hb3ew")
+skeleton = NodePath("../..")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Mur3"]
 transform = Transform3D(-5.49125e-09, 0, -17.6459, 0, 1.95038, 0, 0.125625, 0, -7.71325e-07, -0.13831, 0.946639, 6.50917)
 shape = SubResource("ConvexPolygonShape3D_vdyuu")
@@ -188,6 +220,11 @@ shape = SubResource("ConvexPolygonShape3D_vdyuu")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Mur4"]
 transform = Transform3D(-5.49125e-09, 0, -17.6459, 0, 1.95038, 0, 0.125625, 0, -7.71325e-07, -0.13831, 0.946639, -6.4245)
+mesh = SubResource("BoxMesh_hb3ew")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Mur4"]
+transform = Transform3D(-5.49125e-09, 0, -17.6459, 0, 1.95038, 0, 0.125625, 0, -7.71325e-07, -0.13831, 1.77162, -6.4245)
 mesh = SubResource("BoxMesh_hb3ew")
 skeleton = NodePath("../..")
 
@@ -349,6 +386,9 @@ transform = Transform3D(0.999963, 0.00867419, 0, -0.00867419, 0.999963, 0, 0, 0,
 [node name="Casier" parent="." instance=ExtResource("28_y3340")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.0322874, 0.00911999, 6.19627)
 
+[node name="Casier9" parent="." instance=ExtResource("28_y3340")]
+transform = Transform3D(-0.848575, -0.529075, -7.41848e-08, -0.529075, 0.848575, -4.62532e-08, 8.74228e-08, 0, -1, 4.88601, 0.00911999, 2.42101)
+
 [node name="Casier2" parent="." instance=ExtResource("28_y3340")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.774368, 0.00911999, 6.19627)
 
@@ -397,6 +437,9 @@ transform = Transform3D(0.622023, 0, 0.782999, 0, 1, 0, -0.782999, 0, 0.622023, 
 [node name="Echelle" parent="." instance=ExtResource("33_v5yhh")]
 transform = Transform3D(-0.0367596, 0.999266, -0.0107872, 0.0270017, -0.00979741, -0.999587, -0.998959, -0.0370358, -0.0266217, -8.22117, 0.181001, 5.16259)
 
+[node name="Echelle4" parent="." instance=ExtResource("33_v5yhh")]
+transform = Transform3D(-0.268829, 0.963044, -0.016701, 0.962809, 0.269169, 0.02337, 0.0270017, -0.00979741, -0.999587, 0.887805, 0.803852, 0.419117)
+
 [node name="CableV2" parent="." instance=ExtResource("35_7yw10")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.04451, 0.00911999, 1.82199)
 
@@ -426,9 +469,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.22092, 0.00911999, -0.93265
 
 [node name="Barrille a liquide5" parent="." instance=ExtResource("37_14n5t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.22092, 0.00911999, -0.390392)
-
-[node name="Barrille a liquide6" parent="." instance=ExtResource("37_14n5t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.22092, 0.679913, -0.644392)
 
 [node name="BarrilleV4" parent="." instance=ExtResource("38_ha0d1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.0285, 0.00911999, 2.39841)
@@ -566,3 +606,90 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 7.6492
 
 [node name="Etagère11" parent="." instance=ExtResource("45_dbn3t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82369, 0.00911999, -3.89607)
+
+[node name="wdkmabe" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-4.83931, 0, -2.62895e-07, 0, 3.00717, 0, 4.23066e-07, 0, -3.00717, -0.135606, 2.97654, 6.64884)
+
+[node name="wdkmabe21" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-4.83931, 0, -2.62895e-07, 0, 3.00717, 0, 4.23066e-07, 0, -3.00717, -0.135606, 2.97654, -6.53411)
+
+[node name="wdkmabe22" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-4.83931, 0, -2.62895e-07, 0, 3.00717, 0, 4.23066e-07, 0, -3.00717, -0.135606, 4.78298, 0.0125904)
+
+[node name="wdkmabe23" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-4.8667, 0, -1.73112e-07, -4.10963e-07, 0.512507, 1.9127, 1.10117e-07, 1.9127, -0.512507, -0.135606, 4.53086, -1.21201)
+
+[node name="wdkmabe24" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-4.8667, 0, -1.73112e-07, -4.10963e-07, -0.512507, 1.9127, -1.10117e-07, 1.9127, 0.512507, -0.135606, 4.53086, 1.19658)
+
+[node name="wdkmabe25" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-4.8667, 0, -1.73112e-07, -4.10963e-07, -0.512507, 1.9127, -1.10117e-07, 1.9127, 0.512507, -0.135606, 4.09855, 2.84862)
+
+[node name="wdkmabe26" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-4.8667, 0, -1.73112e-07, -4.10963e-07, 0.512507, 1.9127, 1.10117e-07, 1.9127, -0.512507, -0.135606, 4.09855, -2.81773)
+
+[node name="wdkmabe27" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-4.8667, 0, -1.73112e-07, -4.10963e-07, 0.512507, 1.9127, 1.10117e-07, 1.9127, -0.512507, -0.135606, 3.48096, -4.96384)
+
+[node name="wdkmabe28" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-4.8667, 0, -1.73112e-07, -4.10963e-07, -0.512507, 1.9127, -1.10117e-07, 1.9127, 0.512507, -0.135606, 3.48096, 5.16457)
+
+[node name="wdkmabe4" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-2.13932e-08, 0, 1.73634, 0.489418, -7.58978e-08, 7.58978e-08, 2.13932e-08, 1.73634, 3.3176e-15, -8.66887, 3.9338, 0.00476611)
+
+[node name="wdkmabe2" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-8.77163e-08, 0, 2.05266, 0.519376, 1.98272, 2.32225e-08, -1.93834, 0.531269, -8.66675e-08, -8.66887, 3.88248, 3.50698)
+
+[node name="wdkmabe3" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-8.97383e-08, -1.67225e-15, 2.09998, -0.531348, 2.02843, -2.37578e-08, -1.98302, -0.543515, -8.86653e-08, -8.66887, 3.88248, -3.53349)
+
+[node name="wdkmabe5" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-1.636e-07, 0, 3.00717, 0, 3.00717, 0, -3.74274, 0, -1.31447e-07, 8.56233, 2.97654, 0.00476611)
+
+[node name="wdkmabe6" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-2.13932e-08, 0, 1.73634, 0.489418, -7.58978e-08, 7.58978e-08, 2.13932e-08, 1.73634, 3.3176e-15, 8.56233, 3.9338, 0.00476611)
+
+[node name="wdkmabe7" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-8.77163e-08, 0, 2.05266, 0.519376, 1.98272, 2.32225e-08, -1.93834, 0.531269, -8.66675e-08, 8.56233, 3.88248, 3.50698)
+
+[node name="wdkmabe8" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-8.97383e-08, -1.67225e-15, 2.09998, -0.531348, 2.02843, -2.37578e-08, -1.98302, -0.543515, -8.86653e-08, 8.56233, 3.88248, -3.53349)
+
+[node name="wdkmabe9" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-1.636e-07, 0, 3.00717, 0, 3.00717, 0, -3.74274, 0, -1.31447e-07, 0.349174, 2.97654, 0.00476611)
+
+[node name="wdkmabe10" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-2.13932e-08, 0, 1.73634, 0.489418, -7.58978e-08, 7.58978e-08, 2.13932e-08, 1.73634, 3.3176e-15, 0.349174, 3.9338, 0.00476611)
+
+[node name="wdkmabe11" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-8.77163e-08, 0, 2.05266, 0.519376, 1.98272, 2.32225e-08, -1.93834, 0.531269, -8.66675e-08, 0.349174, 3.88248, 3.50698)
+
+[node name="wdkmabe12" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-8.97383e-08, -1.67225e-15, 2.09998, -0.531348, 2.02843, -2.37578e-08, -1.98302, -0.543515, -8.86653e-08, 0.349174, 3.88248, -3.53349)
+
+[node name="wdkmabe13" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-1.636e-07, 0, 3.00717, 0, 3.00717, 0, -3.74274, 0, -1.31447e-07, 4.21022, 2.97654, 0.00476611)
+
+[node name="wdkmabe14" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-2.13932e-08, 0, 1.73634, 0.489418, -7.58978e-08, 7.58978e-08, 2.13932e-08, 1.73634, 3.3176e-15, 4.21022, 3.9338, 0.00476611)
+
+[node name="wdkmabe15" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-8.77163e-08, 0, 2.05266, 0.519376, 1.98272, 2.32225e-08, -1.93834, 0.531269, -8.66675e-08, 4.21022, 3.88248, 3.50698)
+
+[node name="wdkmabe16" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-8.97383e-08, -1.67225e-15, 2.09998, -0.531348, 2.02843, -2.37578e-08, -1.98302, -0.543515, -8.86653e-08, 4.21022, 3.88248, -3.53349)
+
+[node name="wdkmabe17" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-1.636e-07, 0, 3.00717, 0, 3.00717, 0, -3.74274, 0, -1.31447e-07, -4.29166, 2.97654, 0.00476611)
+
+[node name="wdkmabe29" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-1.636e-07, 0, 3.00717, 0, 3.00717, 0, -3.74274, 0, -1.31447e-07, -8.64889, 2.97654, 0.00476611)
+
+[node name="wdkmabe18" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-2.13932e-08, 0, 1.73634, 0.489418, -7.58978e-08, 7.58978e-08, 2.13932e-08, 1.73634, 3.3176e-15, -4.29166, 3.9338, 0.00476611)
+
+[node name="wdkmabe19" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-8.77163e-08, 0, 2.05266, 0.519376, 1.98272, 2.32225e-08, -1.93834, 0.531269, -8.66675e-08, -4.29166, 3.88248, 3.50698)
+
+[node name="wdkmabe20" parent="." instance=ExtResource("15_f2ca8")]
+transform = Transform3D(-8.97383e-08, -1.67225e-15, 2.09998, -0.531348, 2.02843, -2.37578e-08, -1.98302, -0.543515, -8.86653e-08, -4.29166, 3.88248, -3.53349)
