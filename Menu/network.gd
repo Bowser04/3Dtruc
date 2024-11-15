@@ -96,6 +96,7 @@ func create_lobby():
 			return
 		peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
 		multiplayer.set_multiplayer_peer(peer)
+		is_host = true
 		print("Waiting For Players!")
 func _on_lobby_created(connect: int, this_lobby_id: int):
 	if connect == 1:
