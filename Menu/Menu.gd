@@ -1,7 +1,6 @@
 extends Control
 
-var player_list = []
-var peer:ENetMultiplayerPeer
+
 func _ready():
 	show_menu()
 func show_menu():
@@ -56,12 +55,13 @@ func _on_jouer_pressed():
 func _on_join_pressed():
 	if Network_Conection.multiplayer_type == "Steam":
 		Network_Conection.join_lobby(decode_base35($Multi/VBoxContainer/TextEdit3.text))
+	elif Network_Conection.multiplayer_type == "Lan":
+		Network_Conection.join_lobby($Multi/VBoxContainer/TextEdit3.text)
 	show_Waiting()
 	when_lobby.call_deferred(false)
 	
 func _on_host_pressed():
-	if Network_Conection.multiplayer_type == "Steam":
-		Network_Conection.create_lobby.call_deferred()
+	Network_Conection.create_lobby.call_deferred()
 	show_Waiting()
 	when_lobby.call_deferred(true)
 	pass
@@ -117,9 +117,11 @@ func decode_base35(base35_str: String) -> int:
 
 func _on_lan_pressed() -> void:
 	Network_Conection.multiplayer_type = "Lan"
+	Network_Conection.init_lan()
 	show_multi()
 
 
 func _on_steam_pressed() -> void:
 	Network_Conection.multiplayer_type = "Steam"
+	Network_Conection.init_steam()
 	show_multi()
