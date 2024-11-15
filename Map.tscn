@@ -39,10 +39,10 @@
 [ext_resource type="PackedScene" uid="uid://cl83cdyse2ijx" path="res://asset textured/barril2.tscn" id="39_ndwwi"]
 [ext_resource type="PackedScene" uid="uid://bac1llwkxoquw" path="res://asset textured/pallete.tscn" id="40_i86i0"]
 [ext_resource type="PackedScene" uid="uid://c3douicfok0fj" path="res://asset textured/pallete2.tscn" id="41_34wc0"]
-[ext_resource type="PackedScene" uid="uid://dhyq6fpynnugn" path="res://asset textured/Etagère3.tscn" id="42_3bx2o"]
+[ext_resource type="PackedScene" path="res://asset textured/Etagère3.tscn" id="42_3bx2o"]
 [ext_resource type="PackedScene" uid="uid://7lm1to58re6m" path="res://asset textured/cartonplat.tscn" id="42_nksth"]
-[ext_resource type="PackedScene" uid="uid://c826hod7jqqch" path="res://asset textured/Etagère2.tscn" id="43_bbpat"]
-[ext_resource type="PackedScene" uid="uid://bitacr4o1vbxr" path="res://asset textured/Etagère.tscn" id="45_dbn3t"]
+[ext_resource type="PackedScene" path="res://asset textured/Etagère2.tscn" id="43_bbpat"]
+[ext_resource type="PackedScene" path="res://asset textured/Etagère.tscn" id="45_dbn3t"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_c25gl"]
 

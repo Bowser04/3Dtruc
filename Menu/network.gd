@@ -127,12 +127,14 @@ func _on_lobby_joined(this_lobby_id:int, _permissions: int, _locked : bool, resp
 	if response == Steam.CHAT_ROOM_ENTER_RESPONSE_SUCCESS:
 		lobby_id = this_lobby_id
 		print("JOIN LOBBY: ",lobby_id)
+		make_p2p_handshake()
 		if steam_id != Steam.getLobbyOwner(lobby_id):
 			var error = steam_peer.create_client(Steam.getLobbyOwner(lobby_id),0)
 			if error != OK:
 				print(error)
 				return
 			multiplayer.set_multiplayer_peer(steam_peer)
+			await get_tree().create_timer(1).timeout
 			SendPlayerInformation.rpc_id(1, str(steam_username), steam_id)
 		
 		
