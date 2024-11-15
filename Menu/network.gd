@@ -127,7 +127,10 @@ func _on_lobby_joined(this_lobby_id:int, _permissions: int, _locked : bool, resp
 		print("JOIN LOBBY: ",lobby_id)
 		make_p2p_handshake()
 		if steam_id != Steam.getLobbyOwner(lobby_id):
-			steam_peer.create_client(steam_id,0)
+			var error = steam_peer.create_client(steam_id,0)
+			if error != OK:
+				print(error)
+				return
 			multiplayer.set_multiplayer_peer(steam_peer)
 		
 		

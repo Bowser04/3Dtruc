@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dyc5vj1c1sl8j"
-path="res://.godot/imported/tdgecegda.fbx-aa6f5e84709db1fa269c95d078c0a5e0.scn"
+valid=false
 
 [deps]
 
 source_file="res://asset/tdgecegda/tdgecegda.fbx"
-dest_files=["res://.godot/imported/tdgecegda.fbx-aa6f5e84709db1fa269c95d078c0a5e0.scn"]
 
 [params]
 

@@ -63,7 +63,7 @@ func _on_join_pressed():
 	elif Network_Conection.multiplayer_type == "Lan":
 		Network_Conection.join_lobby($Multi/VBoxContainer/TextEdit3.text)
 	show_Waiting()
-	when_lobby.call_deferred(false)
+	when_lobby.call_deferred()
 	
 func _on_host_pressed():
 	Network_Conection.create_lobby.call_deferred()
