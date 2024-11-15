@@ -47,8 +47,11 @@ func peer_disconnected(id):
 # called only from clients
 func connected_to_server():
 	print("connected To Sever!")
-	self_id = multiplayer.get_unique_id()
-	SendPlayerInformation.rpc_id(1, str(multiplayer.get_unique_id()), multiplayer.get_unique_id())
+	if multiplayer_type == "Lan":
+		self_id = multiplayer.get_unique_id()
+		SendPlayerInformation.rpc_id(1, str(multiplayer.get_unique_id()), multiplayer.get_unique_id())
+	elif multiplayer_type == "Steam":
+		SendPlayerInformation.rpc_id(1, steam_username, steam_id)
 @rpc("any_peer")
 func SendPlayerInformation(name, id):
 	if !lobby_members.has(id):
@@ -71,6 +74,7 @@ func init_steam():
 	Steam.lobby_created.connect(_on_lobby_created)
 	Steam.lobby_joined.connect(_on_lobby_joined)
 	Steam.p2p_session_request.connect(_on_p2p_session_request)
+	multiplayer.connected_to_server.connect(connected_to_server)
 	initialize_steam()
 	print("Steam initialazed")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -126,16 +130,13 @@ func _on_lobby_joined(this_lobby_id:int, _permissions: int, _locked : bool, resp
 	if response == Steam.CHAT_ROOM_ENTER_RESPONSE_SUCCESS:
 		lobby_id = this_lobby_id
 		print("JOIN LOBBY: ",lobby_id)
-		make_p2p_handshake()
 		if steam_id != Steam.getLobbyOwner(lobby_id):
 			var error = steam_peer.create_client(Steam.getLobbyOwner(lobby_id),0)
 			if error != OK:
 				print(error)
 				return
-			multiplayer.set_multiplayer_peer(steam_peer)
-			await get_tree().create_timer(5).timeout
 			self_id = steam_id
-			SendPlayerInformation.rpc_id(1, str(steam_username), steam_id)
+			multiplayer.set_multiplayer_peer(steam_peer)
 		
 		
 		
