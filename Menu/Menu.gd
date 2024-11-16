@@ -43,10 +43,10 @@ func _process(delta):
 	pass
 
 @rpc("any_peer","call_local")
-func StartGame():
+func StartGame(ennemy):
 	var scene = load("res://Map.tscn").instantiate()
 	get_tree().root.add_child(scene)
-	Network_Conection.add_players_to_game()
+	Network_Conection.add_players_to_game(ennemy)
 	self.hide()
 
 func _on_quitter_pressed():
@@ -146,4 +146,4 @@ func _on_steam_pressed() -> void:
 
 func _on_start_pressed():
 	if Network_Conection.is_host:
-		StartGame.rpc()
+		StartGame.rpc(Network_Conection.chose_ennemy())

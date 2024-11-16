@@ -178,9 +178,18 @@ func read_p2p_packet():
 			match readable_data["message"]:
 				"handshake":
 					print("PLAYER: ",readable_data["username"], " HAS JOINED!!")
-func add_players_to_game():
+func chose_ennemy():
+	var num = randi_range(-1,lobby_members.size())
+	var id:int
+	if num == -1:
+		id = 1
+	else:
+		id = lobby_members[num].id
+	return id
+func add_players_to_game(ennemy):
 	var parrent = get_node_or_null(_players_spawn_node)
 	var spawner = get_node_or_null(_players_spawn_node+"/Spawns")
+	var has_ennemy = false
 	print(lobby_members)
 	if parrent:
 		var spawns = spawner.get_children()
@@ -191,6 +200,8 @@ func add_players_to_game():
 			player_to_add.is_you = self_id==player.id
 			player_to_add.name = str(player.id)
 			var spawn = randi_range(0,spawns.size()-1)
+			if ennemy == player.id:
+				player_to_add.is_ennemy = true
 			player_to_add.global_position = spawns[spawn].global_position
 			spawns.remove_at(spawn)
 			parrent.add_child(player_to_add, true)
@@ -199,6 +210,8 @@ func add_players_to_game():
 		player_to_add.player_id = 1
 		player_to_add.name = "1"
 		player_to_add.is_you = is_host
+		if ennemy == 1:
+			player_to_add.is_ennemy = true
 		var spawn = randi_range(0,spawns.size()-1)
 		player_to_add.global_position = spawns[spawn].global_position
 		spawns.remove_at(spawn)

@@ -8,7 +8,7 @@
 radius = 0.361
 height = 1.52
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_p0dbi"]
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_r450i"]
 exposure_multiplier = 0.157
 dof_blur_far_enabled = true
 dof_blur_far_distance = 0.01
@@ -48,15 +48,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.799094, 0)
 mesh = SubResource("CapsuleMesh_r5omf")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.38835, 0, 0, 0, 0.38835, 0, 0, 0, 0.38835, 0, 1.16499, -0.376376)
-attributes = SubResource("CameraAttributesPractical_p0dbi")
-fov = 37.8493
+transform = Transform3D(0.38835, 0, 0, 0, 0.38835, 0, 0, 0, 0.38835, 0, 1.16499, -0.325369)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0702294, -0.0554876, -0.0527844)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0702294, -0.0554876, -0.127075)
 shadow_enabled = true
 spot_range = 9.45114
 spot_angle = 43.7873
+
+[node name="Ennemy" type="Camera3D" parent="Camera3D"]
+attributes = SubResource("CameraAttributesPractical_r450i")
+fov = 37.8493
 
 [node name="Collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.820406, 0)
