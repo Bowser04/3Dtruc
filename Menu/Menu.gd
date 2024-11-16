@@ -84,8 +84,6 @@ func when_lobby():
 	elif Network_Conection.multiplayer_type == "Lan":
 		$Waiting/Label.text = "waiting for player ..."
 	print(encode_base35(Network_Conection.lobby_id))
-	while Network_Conection.lobby_members.size() < 1:
-		await get_tree().create_timer(0.1).timeout
 	while true:
 		if Network_Conection.multiplayer_type == "Steam":
 			if Network_Conection.is_host:
