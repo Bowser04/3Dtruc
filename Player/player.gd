@@ -23,6 +23,7 @@ func _ready():
 	if is_ennemy:
 		ennemy_cammera.current = is_you
 		cammera.current = false
+		lamp_node.light_energy = 0
 	else:
 		ennemy_cammera.current = false
 		cammera.current = is_you
@@ -48,13 +49,16 @@ func _physics_process(delta):
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and false:
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("q", "d", "z", "s")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var mouvement_speed = direction.length()
+	ennemy_cammera.environment.set("fog_depth_end",lerp(ennemy_cammera.environment.get("fog_depth_end"),(0.1+sqrt(2)-mouvement_speed)*5,delta*4))
+	print(mouvement_speed)
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -69,17 +73,17 @@ func _physics_process(delta):
 		lamp_x+=delta*2
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-	if Input.is_action_pressed("squat"):
+	if Input.is_action_pressed("squat") and not is_ennemy:
 		$Collision.scale.y = lerp($Collision.scale.y,0.2,delta*5)
 		lamp_node.position.y = lamp_base_y+sin(lamp_x)/500
 		SPEED=BASE_SPEED/4
 		lamp_node.rotation.x = lerp(lamp_node.rotation.x,0.0,delta*5)
 		squat =true
-	if not Input.is_action_pressed("squat"):
+	if not Input.is_action_pressed("squat") and not is_ennemy:
 		$Collision.scale.y = lerp($Collision.scale.y,1.0,delta*5)
 		SPEED= BASE_SPEED
 		squat=false
-	if Input.is_action_just_pressed("clic"):
+	if Input.is_action_just_pressed("clic") and not is_ennemy:
 		if lamp:
 			lamp_node.light_energy = 0
 		else:

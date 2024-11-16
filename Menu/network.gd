@@ -179,7 +179,7 @@ func read_p2p_packet():
 				"handshake":
 					print("PLAYER: ",readable_data["username"], " HAS JOINED!!")
 func chose_ennemy():
-	var num = randi_range(-1,lobby_members.size())
+	var num = randi_range(-1,lobby_members.size()-1)
 	var id:int
 	if num == -1:
 		id = 1
