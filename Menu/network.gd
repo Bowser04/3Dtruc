@@ -181,7 +181,7 @@ func chose_ennemy():
 	var num = randi_range(-1,lobby_members.size()-1)
 	var id:int
 	if num == -1:
-		id = 1
+		id = self_id
 	else:
 		id = lobby_members[num].id
 	return id
