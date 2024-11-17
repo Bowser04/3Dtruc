@@ -145,3 +145,12 @@ func _on_steam_pressed() -> void:
 func _on_start_pressed():
 	if Network_Conection.is_host:
 		StartGame.rpc(Network_Conection.chose_ennemy())
+
+
+func _on_solo_pressed():
+	Network_Conection.multiplayer_type = "Lan"
+	Network_Conection.init_lan()
+	Network_Conection.create_lobby()
+	show_Waiting()
+	StartGame.rpc(3)
+	
