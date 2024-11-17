@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bh1nkphhvfr44"]
+[gd_scene load_steps=15 format=3 uid="uid://cbirdhjphmebn"]
 
 [ext_resource type="Texture2D" uid="uid://cy0sndh6ka7pq" path="res://Texture/Sol/tixmdgdcw_2K_Basecolor.jpg" id="1_rih6c"]
 [ext_resource type="Texture2D" uid="uid://c8nkhmgehjh2b" path="res://Texture/Sol/tixmdgdcw_2K_AO.jpg" id="2_bhgad"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://xecvkeu1hhnk" path="res://Texture/Mur/ufouccbo_2K_AO.jpg" id="6_jvu12"]
 [ext_resource type="Texture2D" uid="uid://b4lhaqn4pap5b" path="res://Texture/Mur/ufouccbo_2K_Normal.jpg" id="7_h1t7d"]
 [ext_resource type="Texture2D" uid="uid://d2qr2uhr2tpnu" path="res://Texture/Mur/ufouccbo_2K_Roughness.jpg" id="8_r1j87"]
-[ext_resource type="PackedScene" uid="uid://n3lufn75k8v0" path="res://asset textured/Escalier.tscn" id="9_igrwp"]
+[ext_resource type="PackedScene" path="res://asset textured/Escalier.tscn" id="9_igrwp"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_3a3st"]
 
@@ -65,3 +65,17 @@ skeleton = NodePath("../..")
 
 [node name="Modular_Stairs_Kit_wlombbzdw_Low" parent="Sol/Mur" instance=ExtResource("9_igrwp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.676295, 0.00911999, 1.74961)
+
+[node name="Spawns" type="Node3D" parent="."]
+
+[node name="Marker3D" type="Marker3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.98567, 0.127131, -4.69241)
+
+[node name="Marker3D2" type="Marker3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12613, 0.127131, -4.69241)
+
+[node name="Marker3D3" type="Marker3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12613, 0.127131, 4.83141)
+
+[node name="Marker3D4" type="Marker3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.94065, 0.127131, 4.83141)

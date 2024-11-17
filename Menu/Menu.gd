@@ -44,7 +44,7 @@ func _process(delta):
 
 @rpc("any_peer","call_local")
 func StartGame(ennemy):
-	var scene = load("res://Map.tscn").instantiate()
+	var scene = load("res://map_2.tscn").instantiate()
 	get_tree().root.add_child(scene)
 	Network_Conection.add_players_to_game(ennemy)
 	self.hide()
