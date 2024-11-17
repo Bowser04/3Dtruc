@@ -1,0 +1,67 @@
+[gd_scene load_steps=15 format=3 uid="uid://bh1nkphhvfr44"]
+
+[ext_resource type="Texture2D" uid="uid://cy0sndh6ka7pq" path="res://Texture/Sol/tixmdgdcw_2K_Basecolor.jpg" id="1_rih6c"]
+[ext_resource type="Texture2D" uid="uid://c8nkhmgehjh2b" path="res://Texture/Sol/tixmdgdcw_2K_AO.jpg" id="2_bhgad"]
+[ext_resource type="Texture2D" uid="uid://cvm6cupoyt0vy" path="res://Texture/Sol/tixmdgdcw_2K_Normal.jpg" id="3_oxfiu"]
+[ext_resource type="Texture2D" uid="uid://buu3ov1w6p4ix" path="res://Texture/Sol/tixmdgdcw_2K_Roughness.jpg" id="4_dck3q"]
+[ext_resource type="Texture2D" uid="uid://bwss6j633ycwf" path="res://Texture/Mur/ufouccbo_2K_Basecolor.jpg" id="5_ep7k8"]
+[ext_resource type="Texture2D" uid="uid://xecvkeu1hhnk" path="res://Texture/Mur/ufouccbo_2K_AO.jpg" id="6_jvu12"]
+[ext_resource type="Texture2D" uid="uid://b4lhaqn4pap5b" path="res://Texture/Mur/ufouccbo_2K_Normal.jpg" id="7_h1t7d"]
+[ext_resource type="Texture2D" uid="uid://d2qr2uhr2tpnu" path="res://Texture/Mur/ufouccbo_2K_Roughness.jpg" id="8_r1j87"]
+[ext_resource type="PackedScene" uid="uid://n3lufn75k8v0" path="res://asset textured/Escalier.tscn" id="9_igrwp"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_3a3st"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kfgi4"]
+albedo_texture = ExtResource("1_rih6c")
+albedo_texture_force_srgb = true
+roughness_texture = ExtResource("4_dck3q")
+normal_enabled = true
+normal_texture = ExtResource("3_oxfiu")
+ao_enabled = true
+ao_texture = ExtResource("2_bhgad")
+uv1_scale = Vector3(0.785, 0.785, 0.785)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_world_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_aqg70"]
+material = SubResource("StandardMaterial3D_kfgi4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smslh"]
+albedo_texture = ExtResource("5_ep7k8")
+roughness_texture = ExtResource("8_r1j87")
+normal_enabled = true
+normal_texture = ExtResource("7_h1t7d")
+ao_enabled = true
+ao_texture = ExtResource("6_jvu12")
+uv1_scale = Vector3(0.775, 0.775, 0.775)
+uv1_offset = Vector3(0.025, -0.245, 0)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_6rr8r"]
+material = SubResource("StandardMaterial3D_smslh")
+
+[node name="Map2" type="Node3D"]
+
+[node name="Sol" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sol"]
+transform = Transform3D(8.59466, 0, 0, 0, 8.10548, 0, 0, 0, 6.56748, -0.0020175, 0.00911999, 0.00394154)
+shape = SubResource("WorldBoundaryShape3D_3a3st")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sol"]
+transform = Transform3D(8.59466, 0, 0, 0, 8.10548, 0, 0, 0, 6.56748, -0.0020175, 0.00911999, 0.00394154)
+mesh = SubResource("PlaneMesh_aqg70")
+skeleton = NodePath("../..")
+
+[node name="Mur" type="StaticBody3D" parent="Sol"]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Sol/Mur"]
+transform = Transform3D(0.125625, 0, 0, 0, 2.79054, 0, 0, 0, 13.4256, -8.50137, 1.39513, 0.00393343)
+mesh = SubResource("BoxMesh_6rr8r")
+skeleton = NodePath("../..")
+
+[node name="Modular_Stairs_Kit_wlombbzdw_Low" parent="Sol/Mur" instance=ExtResource("9_igrwp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.676295, 0.00911999, 1.74961)

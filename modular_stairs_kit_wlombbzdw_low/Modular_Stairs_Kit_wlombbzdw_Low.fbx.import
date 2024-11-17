@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dyc5vj1c1sl8j"
-valid=false
+uid="uid://bmtnch51e5v8k"
+path="res://.godot/imported/Modular_Stairs_Kit_wlombbzdw_Low.fbx-41fc2101196bbd8e6abd9ab528234269.scn"
 
 [deps]
 
-source_file="res://asset/tdgecegda/tdgecegda.fbx"
+source_file="res://modular_stairs_kit_wlombbzdw_low/Modular_Stairs_Kit_wlombbzdw_Low.fbx"
+dest_files=["res://.godot/imported/Modular_Stairs_Kit_wlombbzdw_Low.fbx-41fc2101196bbd8e6abd9ab528234269.scn"]
 
 [params]
 
@@ -31,6 +32,6 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-fbx/importer=1
+fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1
