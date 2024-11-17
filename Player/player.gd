@@ -58,7 +58,6 @@ func _physics_process(delta):
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var mouvement_speed = direction.length()
 	ennemy_cammera.environment.set("fog_depth_end",lerp(ennemy_cammera.environment.get("fog_depth_end"),(0.1+sqrt(2)-mouvement_speed)*5,delta*4))
-	print(mouvement_speed)
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED

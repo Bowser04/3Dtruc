@@ -1,5 +1,5 @@
 extends Control
-
+@onready var Map = preload("res://map_2.tscn").instantiate()
 
 
 func _ready():
@@ -43,13 +43,17 @@ func show_Waiting():
 func _process(delta):
 	pass
 
-@rpc("any_peer","call_local")
-func StartGame(ennemy):
-	var scene = load("res://map_2.tscn").instantiate()
-	get_tree().root.add_child(scene)
-	Network_Conection.add_players_to_game(ennemy)
-	self.hide()
 
+func StartGame(ennemy):
+	get_tree().root.add_child(Map)
+	Network_Conection.add_players_to_game.call_deferred(ennemy)
+	UsersStartGame.rpc(ennemy)
+	self.hide()
+@rpc("any_peer")
+func UsersStartGame(ennemy):
+	get_tree().root.add_child(Map)
+	Network_Conection.Player_ready.rpc(Network_Conection.self_id)
+	self.hide()
 func _on_quitter_pressed():
 	get_tree().quit()
 	
@@ -145,7 +149,7 @@ func _on_steam_pressed() -> void:
 
 func _on_start_pressed():
 	if Network_Conection.is_host:
-		StartGame.rpc(Network_Conection.chose_ennemy())
+		StartGame(Network_Conection.chose_ennemy())
 
 
 func _on_solo_pressed():
@@ -153,5 +157,5 @@ func _on_solo_pressed():
 	Network_Conection.init_lan()
 	Network_Conection.create_lobby()
 	show_Waiting()
-	StartGame.rpc(3)
+	StartGame(3)
 	

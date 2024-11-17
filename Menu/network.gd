@@ -13,6 +13,7 @@ var steam_id: int = 0
 var self_id: int = 0
 var multiplayer_type = "null"
 var host_ip = "{IP}"
+var ready_player = []
 var peer:ENetMultiplayerPeer
 var steam_peer: SteamMultiplayerPeer = SteamMultiplayerPeer.new()
 
@@ -54,12 +55,9 @@ func connected_to_server():
 		SendPlayerInformation.rpc_id(1, steam_username, steam_id)
 @rpc("any_peer")
 func SendPlayerInformation(name, id):
-	if !lobby_members.has(id):
-		lobby_members.append({
-			"name" : name,
-			"id" : id,
-		}
-		)
+	var player = {"name" : name,"id" : id}
+	if !lobby_members.has(player):
+		lobby_members.append(player)
 	
 	if multiplayer.is_server():
 		for i in range(len(lobby_members)):
@@ -103,11 +101,11 @@ func create_lobby():
 			multiplayer.set_multiplayer_peer(steam_peer)
 	elif multiplayer_type == "Lan":
 		peer = ENetMultiplayerPeer.new()
-		var error = peer.create_server(PORT, 2)
+		var error = peer.create_server(PORT)
 		if error != OK:
 			print("cannot host: " + error)
 			return
-		self_id = 0
+		self_id = 1
 		peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
 		multiplayer.set_multiplayer_peer(peer)
 		is_host = true
@@ -187,34 +185,36 @@ func chose_ennemy():
 	else:
 		id = lobby_members[num].id
 	return id
+@rpc("any_peer")
+func Player_ready(id):
+	ready_player.append(id)
+	print(id,' is ready')
+@rpc("any_peer","call_local")
+func add_player_to_game(player,spawn,is_ennemy):
+	var parrent = get_node_or_null(_players_spawn_node)
+	print("Player %s has been spawn!" % player.id)
+	var player_to_add = Player_scene.instantiate()
+	player_to_add.player_id = player.id
+	player_to_add.is_you = self_id==player.id
+	player_to_add.name = str(player.id)
+	player_to_add.is_ennemy = is_ennemy
+	player_to_add.global_position = spawn
+	parrent.add_child(player_to_add, true)
 func add_players_to_game(ennemy):
+	print("ennemy is : ",ennemy)
 	var parrent = get_node_or_null(_players_spawn_node)
 	var spawner = get_node_or_null(_players_spawn_node+"/Spawns")
 	var has_ennemy = false
-	print(lobby_members)
+	while ready_player.size() != lobby_members.size():
+		await get_tree().create_timer(0.05).timeout
 	if parrent:
 		var spawns = spawner.get_children()
 		for player in lobby_members:
-			print("Player %s has been spawn!" % player.id)
-			var player_to_add = Player_scene.instantiate()
-			player_to_add.player_id = player.id
-			player_to_add.is_you = self_id==player.id
-			player_to_add.name = str(player.id)
 			var spawn = randi_range(0,spawns.size()-1)
-			if ennemy == player.id:
-				player_to_add.is_ennemy = true
-			player_to_add.global_position = spawns[spawn].global_position
+			add_player_to_game.rpc(player,spawns[spawn].global_position,ennemy==player.id)
 			spawns.remove_at(spawn)
-			parrent.add_child(player_to_add, true)
 		print("Player %s has been spawn!" % "host")
-		var player_to_add = Player_scene.instantiate()
-		player_to_add.player_id = 1
-		player_to_add.name = "1"
-		player_to_add.is_you = is_host
-		if ennemy == 1:
-			player_to_add.is_ennemy = true
 		var spawn = randi_range(0,spawns.size()-1)
-		player_to_add.global_position = spawns[spawn].global_position
+		add_player_to_game.rpc({"name" : str(self_id),"id" : self_id,},spawns[spawn].global_position,ennemy==self_id)
 		spawns.remove_at(spawn)
-		parrent.add_child(player_to_add, true)
 	
