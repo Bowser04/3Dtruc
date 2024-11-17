@@ -110,11 +110,21 @@ transform = Transform3D(8.48295, 0, 0, 0, 8.00013, 0, 0, 0, 9.93381, -0.0020175,
 mesh = SubResource("PlaneMesh_aqg70")
 skeleton = NodePath("../..")
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Sol2"]
+transform = Transform3D(8.48295, 0, 0, 0, -8.00013, -8.68441e-07, 0, 6.99394e-07, -9.93381, -0.0020175, 5.6392, 3.38755)
+mesh = SubResource("PlaneMesh_aqg70")
+skeleton = NodePath("../..")
+
 [node name="Sol2\'" type="StaticBody3D" parent="."]
 transform = Transform3D(0.526361, 0, 0, 0, 1, 0, 0, 0, 0.721316, 12.7773, 0, 3.673)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Sol2\'"]
 transform = Transform3D(8.48295, 0, 0, 0, 8.00013, 0, 0, 0, 9.93381, -0.0020175, 0.00911999, 3.38755)
+mesh = SubResource("PlaneMesh_aqg70")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Sol2\'"]
+transform = Transform3D(8.48295, 0, 0, 0, -8.00013, -8.68441e-07, 0, 6.99394e-07, -9.93381, -0.0020175, 5.6392, 3.38755)
 mesh = SubResource("PlaneMesh_aqg70")
 skeleton = NodePath("../..")
 
