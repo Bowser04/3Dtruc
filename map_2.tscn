@@ -1,14 +1,18 @@
-[gd_scene load_steps=15 format=3 uid="uid://cbirdhjphmebn"]
+[gd_scene load_steps=21 format=3 uid="uid://bh1nkphhvfr44"]
 
 [ext_resource type="Texture2D" uid="uid://cy0sndh6ka7pq" path="res://Texture/Sol/tixmdgdcw_2K_Basecolor.jpg" id="1_rih6c"]
 [ext_resource type="Texture2D" uid="uid://c8nkhmgehjh2b" path="res://Texture/Sol/tixmdgdcw_2K_AO.jpg" id="2_bhgad"]
 [ext_resource type="Texture2D" uid="uid://cvm6cupoyt0vy" path="res://Texture/Sol/tixmdgdcw_2K_Normal.jpg" id="3_oxfiu"]
 [ext_resource type="Texture2D" uid="uid://buu3ov1w6p4ix" path="res://Texture/Sol/tixmdgdcw_2K_Roughness.jpg" id="4_dck3q"]
 [ext_resource type="Texture2D" uid="uid://bwss6j633ycwf" path="res://Texture/Mur/ufouccbo_2K_Basecolor.jpg" id="5_ep7k8"]
+[ext_resource type="Texture2D" uid="uid://cde8fcu4y80s" path="res://asset textured/Sol/river_small_rocks_diff_1k.png" id="5_penu6"]
 [ext_resource type="Texture2D" uid="uid://xecvkeu1hhnk" path="res://Texture/Mur/ufouccbo_2K_AO.jpg" id="6_jvu12"]
+[ext_resource type="Texture2D" uid="uid://h5c0tr0di6qt" path="res://asset textured/Sol/river_small_rocks_ao_1k.png" id="6_twn45"]
+[ext_resource type="Texture2D" uid="uid://bygt0ibluudx6" path="res://asset textured/Sol/river_small_rocks_nor_gl_1k.png" id="7_e3j2q"]
 [ext_resource type="Texture2D" uid="uid://b4lhaqn4pap5b" path="res://Texture/Mur/ufouccbo_2K_Normal.jpg" id="7_h1t7d"]
+[ext_resource type="Texture2D" uid="uid://dyqvcblhj2xt5" path="res://asset textured/Sol/river_small_rocks_rough_1k.png" id="8_m66bi"]
 [ext_resource type="Texture2D" uid="uid://d2qr2uhr2tpnu" path="res://Texture/Mur/ufouccbo_2K_Roughness.jpg" id="8_r1j87"]
-[ext_resource type="PackedScene" path="res://asset textured/Escalier.tscn" id="9_igrwp"]
+[ext_resource type="PackedScene" uid="uid://n3lufn75k8v0" path="res://asset textured/Escalier.tscn" id="9_igrwp"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_3a3st"]
 
@@ -27,6 +31,22 @@ uv2_world_triplanar = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_aqg70"]
 material = SubResource("StandardMaterial3D_kfgi4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7aijc"]
+albedo_texture = ExtResource("5_penu6")
+albedo_texture_force_srgb = true
+roughness_texture = ExtResource("8_m66bi")
+normal_enabled = true
+normal_texture = ExtResource("7_e3j2q")
+ao_enabled = true
+ao_texture = ExtResource("6_twn45")
+uv1_scale = Vector3(0.415, 0.415, 0.415)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_world_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5k307"]
+material = SubResource("StandardMaterial3D_7aijc")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smslh"]
 albedo_texture = ExtResource("5_ep7k8")
@@ -56,15 +76,17 @@ transform = Transform3D(8.59466, 0, 0, 0, 8.10548, 0, 0, 0, 6.56748, -0.0020175,
 mesh = SubResource("PlaneMesh_aqg70")
 skeleton = NodePath("../..")
 
-[node name="Mur" type="StaticBody3D" parent="Sol"]
+[node name="Sol2" type="StaticBody3D" parent="."]
+transform = Transform3D(2.25983, 0, 0, 0, 2.25983, 0, 0, 0, 2.25983, 0, -0.109374, 0)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Sol/Mur"]
-transform = Transform3D(0.125625, 0, 0, 0, 2.79054, 0, 0, 0, 13.4256, -8.50137, 1.39513, 0.00393343)
-mesh = SubResource("BoxMesh_6rr8r")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sol2"]
+transform = Transform3D(8.59466, 0, 0, 0, 8.10548, 0, 0, 0, 6.56748, -0.0020175, 0.00911999, 0.00394154)
+shape = SubResource("WorldBoundaryShape3D_3a3st")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sol2"]
+transform = Transform3D(8.59466, 0, 0, 0, 8.10548, 0, 0, 0, 6.56748, -0.0020175, 0.0475743, 0.00394154)
+mesh = SubResource("PlaneMesh_5k307")
 skeleton = NodePath("../..")
-
-[node name="Modular_Stairs_Kit_wlombbzdw_Low" parent="Sol/Mur" instance=ExtResource("9_igrwp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.676295, 0.00911999, 1.74961)
 
 [node name="Spawns" type="Node3D" parent="."]
 
@@ -79,3 +101,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12613, 0.127131, 4.83141)
 
 [node name="Marker3D4" type="Marker3D" parent="Spawns"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.94065, 0.127131, 4.83141)
+
+[node name="Mur" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Mur"]
+transform = Transform3D(0.125625, 0, 0, 0, 2.79054, 0, 0, 0, 13.4256, -8.50137, 1.39513, 0.00393343)
+mesh = SubResource("BoxMesh_6rr8r")
+skeleton = NodePath("../../Sol")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Mur"]
+transform = Transform3D(0.125625, 0, 0, 0, 2.79054, 0, 0, 0, 13.4256, 8.51688, 1.39513, 0.00393343)
+mesh = SubResource("BoxMesh_6rr8r")
+skeleton = NodePath("../../Sol")
+
+[node name="Modular_Stairs_Kit_wlombbzdw_Low" parent="Mur" instance=ExtResource("9_igrwp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.676295, 0.00911999, 1.74961)

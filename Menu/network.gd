@@ -64,6 +64,7 @@ func SendPlayerInformation(name, id):
 	if multiplayer.is_server():
 		for i in range(len(lobby_members)):
 			SendPlayerInformation.rpc(lobby_members[i].name, lobby_members[i].id)
+			
 
 # called only from clients
 func connection_failed():
