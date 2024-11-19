@@ -18,10 +18,20 @@ config/icon="res://icon.svg"
 [autoload]
 
 Network_Conection="*res://Menu/network.gd"
+Saved="*res://saved.gd"
 
 [debug]
 
 file_logging/enable_file_logging=true
+
+[editor_plugins]
+
+enabled=PackedStringArray()
+
+[gui]
+
+theme/custom="res://ui theme/MinimalUI.tres"
+theme/custom_font="res://ui theme/OpenSans-Regular.ttf"
 
 [input]
 

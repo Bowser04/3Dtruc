@@ -1,0 +1,118 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqca7rs0b7rh8"]
+
+[ext_resource type="Script" path="res://Menu/settings.gd" id="1_6aokd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yslsi"]
+bg_color = Color(0.099986, 0.099986, 0.099986, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jyj3i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1feo0"]
+font_size = 24
+
+[node name="Settings" type="Control" node_paths=PackedStringArray("Window_type", "GraphicPreset")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6aokd")
+Window_type = NodePath("Panel/TabContainer/‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎/VBoxContainer/WindowType/WindowTypeOption")
+GraphicPreset = NodePath("Panel/TabContainer/‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎/VBoxContainer/GraphicPreset/GraphicPresetSettings")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 76.0
+offset_top = 55.0
+offset_right = -112.0
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yslsi")
+
+[node name="TabContainer" type="TabContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = -24.0
+offset_right = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jyj3i")
+tab_alignment = 1
+current_tab = 0
+
+[node name="‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎" type="Control" parent="Panel/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/TabContainer/‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/TabContainer/‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎/VBoxContainer"]
+layout_mode = 2
+text = "Visual"
+label_settings = SubResource("LabelSettings_1feo0")
+horizontal_alignment = 1
+
+[node name="WindowType" type="HBoxContainer" parent="Panel/TabContainer/‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/TabContainer/‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎/VBoxContainer/WindowType"]
+layout_mode = 2
+text = "Window mode "
+
+[node name="WindowTypeOption" type="OptionButton" parent="Panel/TabContainer/‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎/VBoxContainer/WindowType"]
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Windowed"
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+
+[node name="GraphicPreset" type="HBoxContainer" parent="Panel/TabContainer/‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/TabContainer/‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎/VBoxContainer/GraphicPreset"]
+layout_mode = 2
+text = "Graphic preset"
+
+[node name="GraphicPresetSettings" type="OptionButton" parent="Panel/TabContainer/‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎/VBoxContainer/GraphicPreset"]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "Ultra"
+popup/item_1/text = "High"
+popup/item_1/id = 1
+popup/item_2/text = "Medium"
+popup/item_2/id = 2
+popup/item_3/text = "Low"
+popup/item_3/id = 3
+
+[node name="‎ ‎ ‎ ‎ ‎ ‎ Gameplay‎ ‎ ‎‎ ‎ ‎" type="Control" parent="Panel/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 89.0
+offset_bottom = 49.0
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_back_pressed"]

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ggsSetting" load_steps=2 format=3 uid="uid://uylccng8biqs"]
+
+[ext_resource type="Script" path="res://addons/ggs/plugin/classes/ggs_setting.gd" id="1_kikjc"]
+
+[resource]
+resource_name = "fdgdgf"
+script = ExtResource("1_kikjc")
+read_only_properties = PackedStringArray()
+default = false
+section = ""
+key = "fdgdgf"
+value_type = 1
+value_hint = 0
+value_hint_string = ""

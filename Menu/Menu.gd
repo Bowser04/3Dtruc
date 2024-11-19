@@ -159,3 +159,10 @@ func _on_solo_pressed():
 	show_Waiting()
 	StartGame(3)
 	
+
+
+func _on_option_pressed() -> void:
+	var settings = load("res://Menu/settings.tscn").instantiate()
+	get_tree().root.add_child(settings)
+	self.hide()
+	

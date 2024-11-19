@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cj8uchem8a4fk"]
+[gd_scene load_steps=4 format=3 uid="uid://cj8uchem8a4fk"]
 
 [ext_resource type="Script" path="res://Menu/Menu.gd" id="1_i4tr5"]
+[ext_resource type="Theme" uid="uid://b3kq74llqlv3x" path="res://ui theme/MinimalUI.tres" id="2_unpnr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x1bde"]
 font_size = 40
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_unpnr")
 script = ExtResource("1_i4tr5")
 
 [node name="Label" type="Label" parent="."]
@@ -23,6 +25,7 @@ offset_left = -63.0
 offset_right = 63.0
 offset_bottom = 69.0
 grow_horizontal = 2
+theme = ExtResource("2_unpnr")
 theme_override_colors/font_color = Color(0.611765, 0.611765, 0.611765, 1)
 theme_override_font_sizes/font_size = 50
 text = "TRUC"
@@ -41,6 +44,7 @@ offset_right = 60.0
 offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_unpnr")
 theme_override_colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
 theme_override_font_sizes/font_size = 30
 text = "Quitter"
@@ -59,6 +63,7 @@ offset_right = 56.0
 offset_bottom = -115.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_unpnr")
 theme_override_colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
 theme_override_font_sizes/font_size = 30
 text = "Option"
@@ -77,6 +82,7 @@ offset_right = 51.0
 offset_bottom = 121.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_unpnr")
 theme_override_colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
 theme_override_font_sizes/font_size = 30
 text = "Jouer"
@@ -94,6 +100,7 @@ offset_right = 51.0
 offset_bottom = 289.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_unpnr")
 theme_override_colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
 theme_override_font_sizes/font_size = 30
 text = "Solo"
@@ -112,6 +119,7 @@ offset_right = 315.0
 offset_bottom = 173.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_unpnr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Multi"]
 layout_mode = 1
@@ -123,30 +131,36 @@ offset_right = -193.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_unpnr")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Multi/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme = ExtResource("2_unpnr")
 alignment = 1
 
 [node name="Join" type="Button" parent="Multi/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme = ExtResource("2_unpnr")
 text = "Join"
 
 [node name="Host" type="Button" parent="Multi/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme = ExtResource("2_unpnr")
 text = "Host"
 
 [node name="Label3" type="Label" parent="Multi/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_unpnr")
 text = "lobby id:"
 horizontal_alignment = 1
 
 [node name="TextEdit3" type="TextEdit" parent="Multi/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme = ExtResource("2_unpnr")
 theme_override_font_sizes/font_size = 24
 text = "127.0.0.1"
 
@@ -164,6 +178,7 @@ offset_right = 315.0
 offset_bottom = 173.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_unpnr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Type"]
 layout_mode = 1
@@ -175,21 +190,25 @@ offset_right = -193.0
 offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_unpnr")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Type/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme = ExtResource("2_unpnr")
 alignment = 1
 
 [node name="Lan" type="Button" parent="Type/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme = ExtResource("2_unpnr")
 text = "Lan
 "
 
 [node name="Steam" type="Button" parent="Type/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+theme = ExtResource("2_unpnr")
 text = "Steam"
 
 [node name="Waiting" type="Control" parent="."]
@@ -200,6 +219,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_unpnr")
 
 [node name="Label" type="Label" parent="Waiting"]
 layout_mode = 1
@@ -211,6 +231,7 @@ offset_top = 102.0
 offset_right = 64.5
 offset_bottom = 171.0
 grow_horizontal = 2
+theme = ExtResource("2_unpnr")
 theme_override_colors/font_color = Color(0.611765, 0.611765, 0.611765, 1)
 theme_override_font_sizes/font_size = 50
 text = "Waiting For Players ..."
@@ -230,9 +251,11 @@ offset_right = 23.0
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_unpnr")
 text = "Start"
 
 [connection signal="pressed" from="Quitter" to="." method="_on_quitter_pressed"]
+[connection signal="pressed" from="Option" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="Jouer" to="." method="_on_jouer_pressed"]
 [connection signal="pressed" from="Solo" to="." method="_on_solo_pressed"]
 [connection signal="pressed" from="Multi/VBoxContainer/HBoxContainer/Join" to="." method="_on_join_pressed"]
