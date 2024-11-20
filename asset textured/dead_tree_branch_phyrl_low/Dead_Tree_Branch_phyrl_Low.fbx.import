@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dyc5vj1c1sl8j"
-valid=false
+uid="uid://3qmonpuuo1vi"
+path="res://.godot/imported/Dead_Tree_Branch_phyrl_Low.fbx-089bad8c3fb1659ac1289732c5bb1bfd.scn"
 
 [deps]
 
-source_file="res://asset/tdgecegda/tdgecegda.fbx"
+source_file="res://asset textured/dead_tree_branch_phyrl_low/Dead_Tree_Branch_phyrl_Low.fbx"
+dest_files=["res://.godot/imported/Dead_Tree_Branch_phyrl_Low.fbx-089bad8c3fb1659ac1289732c5bb1bfd.scn"]
 
 [params]
 
@@ -31,6 +32,6 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-fbx/importer=1
+fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

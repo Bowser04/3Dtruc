@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dyc5vj1c1sl8j"
-valid=false
+uid="uid://cyh2msb6qtjpp"
+path="res://.godot/imported/Dead_Tree_Stump_okfch_Low.fbx-8f57ee60b4f2dd5b4e24303749317e8b.scn"
 
 [deps]
 
-source_file="res://asset/tdgecegda/tdgecegda.fbx"
+source_file="res://asset textured/dead_tree_stump_okfch_low/Dead_Tree_Stump_okfch_Low.fbx"
+dest_files=["res://.godot/imported/Dead_Tree_Stump_okfch_Low.fbx-8f57ee60b4f2dd5b4e24303749317e8b.scn"]
 
 [params]
 
@@ -31,6 +32,6 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-fbx/importer=1
+fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1
