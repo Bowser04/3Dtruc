@@ -1,4 +1,5 @@
 extends Node
+const SAVE_FILE_NAME:String = "user://settings.save"
 var _settings = {
 	"WorldEnvironment":{
 		"SSR":{
@@ -20,9 +21,26 @@ var _settings = {
 	"Preset":"Ultra",
 	"Window_type":0
 }
+func save_save():
+	var file = FileAccess.open(SAVE_FILE_NAME, FileAccess.WRITE)
+	file.store_string(JSON.stringify(_settings))
+	file.close()
+
+func load_save():
+	if FileAccess.file_exists(SAVE_FILE_NAME):
+		var file = FileAccess.open(SAVE_FILE_NAME, FileAccess.READ)
+		var data = JSON.parse_string(file.get_as_text())
+		file.close()
+		if typeof(data) == TYPE_DICTIONARY:
+			_settings = data
+			apply()
+		else:
+			printerr("Corrupted data!")
+	else:
+		printerr("No saved data!")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	load_save()
 
 func set_setting(setting:String,value):
 	var current_path = _settings
@@ -73,4 +91,5 @@ func apply():
 	if _settings["Window_type"] == 1:
 		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS,false)
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	save_save()
 	print("settings applied")
