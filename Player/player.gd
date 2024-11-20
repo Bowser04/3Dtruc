@@ -15,16 +15,27 @@ var i=0
 var posi = Vector3.ZERO
 var rota = 0
 var is_ennemy = false
+var caught = false
+var is_dead = false
+@export var RayCastCaught:RayCast3D
 @export var cammera:Camera3D
 @export var ennemy_cammera:Camera3D
 @export var lamp_node:SpotLight3D
+@export var Ennemy_squeleton:Skeleton3D
+@export var Player_squeleton:Skeleton3D
 func _ready():
 	print(is_ennemy)
 	if is_ennemy:
+		Player_squeleton.name = "Player"
+		Ennemy_squeleton.name = "GeneralSkeleton"
+		Player_squeleton.hide()
 		ennemy_cammera.current = is_you
 		cammera.current = false
 		lamp_node.light_energy = 0
 	else:
+		Ennemy_squeleton.name = "Ennemy"
+		Player_squeleton.name = "GeneralSkeleton"
+		Ennemy_squeleton.hide()
 		ennemy_cammera.current = false
 		cammera.current = is_you
 	if !is_you:return
@@ -38,7 +49,7 @@ func _physics_process(delta):
 	set_anim("walk",false)
 	set_anim("right",false)
 	set_anim("left",false)
-	if !is_you:
+	if !is_you or is_dead:
 		position = lerp(position,posi,delta*6)
 		rotation.y = lerp_angle(rotation.y,rota,delta*6)
 		#velocity = last_velo
@@ -89,6 +100,24 @@ func _physics_process(delta):
 			lamp_node.light_energy = lamp_energy
 		set_lamp.rpc(lamp)
 		lamp = not lamp
+	if RayCastCaught.is_colliding():
+		var collider = RayCastCaught.get_collider()
+		if collider.is_in_group("Player") and not collider == self:
+			caught = collider
+			print(collider)
+		else:
+			caught = null
+	else:
+		caught = null
+	if Input.is_action_just_pressed("caught"):
+		set_anim.rpc("caught",true)
+		if caught != null:
+			var player =  caught
+			await get_tree().create_timer(0.7).timeout
+			player.dead.rpc()
+	if Input.is_action_just_released("caught"):
+		set_anim.rpc("caught",false)
+	
 	if input_dir == Vector2.ZERO:
 		set_anim.rpc("idle",true)
 	else:
@@ -107,12 +136,21 @@ func _physics_process(delta):
 		set_pos.rpc(position)
 		set_rot.rpc(rotation.y,cammera.rotation)
 		i=0
+@rpc("any_peer","call_local")
+func dead():
+	set_anim("alive",false)
+	set_anim("dead",true)
+	is_dead = true
 func _input(event):
-	if !is_you:return
+	if !is_you or is_dead:return
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		cammera.rotate_x(event.relative.y * mouse_sensitivity)
 		cammera.rotation.x = clampf(cammera.rotation.x, -deg_to_rad(70), deg_to_rad(70))
+		print(cammera.rotation_degrees.x)
+		ennemy_cammera.rotate_x(event.relative.y * mouse_sensitivity)
+		ennemy_cammera.rotation.x = clampf(cammera.rotation.x, -deg_to_rad(70), deg_to_rad(70))
+		
 @rpc("any_peer","call_local")
 func set_anim(anim,state):
 	$AnimationTree.set("parameters/conditions/"+anim, state)
@@ -128,7 +166,10 @@ func set_lamp(status):
 @rpc("any_peer")
 func set_rot(roty,rot_cam):
 	rota = roty
-	cammera.rotation = rot_cam
+	if is_ennemy:
+		ennemy_cammera.rotation = rot_cam
+	else:
+		cammera.rotation = rot_cam
 #@rpc("any_peer")
 #func set_velo(velo):
 	#last_velo = velo
