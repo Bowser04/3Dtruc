@@ -386,8 +386,17 @@ environment = SubResource("Environment_ccv58")
 [node name="Node3D" parent="." instance=ExtResource("21_imfdl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -11)
 
+[node name="Node3D24" parent="." instance=ExtResource("21_imfdl")]
+transform = Transform3D(0.846751, 0, -0.53199, 0, 1, 0, 0.53199, 0, 0.846751, -17.8767, 0, 13.135)
+
+[node name="Node3D25" parent="." instance=ExtResource("21_imfdl")]
+transform = Transform3D(0.846751, 0, -0.53199, 0, 1, 0, 0.53199, 0, 0.846751, -17.8767, 0, 13.135)
+
 [node name="Node3D2" parent="." instance=ExtResource("22_p5jqw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8926, 0, -12)
+
+[node name="Node3D23" parent="." instance=ExtResource("22_p5jqw")]
+transform = Transform3D(0.948233, 0, 0.664453, 0, 1.15786, 0, -0.664453, 0, 0.948233, -12.792, 0, 15)
 
 [node name="Node3D3" parent="." instance=ExtResource("23_a2i25")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -13)
@@ -402,7 +411,7 @@ transform = Transform3D(2.23016, 0, 2.84075, 0, 3.61157, 0, -2.84075, 0, 2.23016
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 17)
 
 [node name="Node3D7" parent="." instance=ExtResource("22_p5jqw")]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -18, 0, 19)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -16.5765, 0, 20.5385)
 
 [node name="Node3D8" parent="." instance=ExtResource("22_p5jqw")]
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 17, 0, 17)
