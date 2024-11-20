@@ -33,6 +33,7 @@ func _ready():
 		ennemy_cammera.current = is_you
 		cammera.current = false
 		lamp_node.light_energy = 0
+		lamp_node.hide()
 	else:
 		Ennemy_squeleton.name = "Ennemy"
 		Player_squeleton.name = "GeneralSkeleton"
@@ -45,7 +46,7 @@ func _ready():
 	lamp_base_y = lamp_node.position.y
 	lamp_node.light_energy=lamp_energy
 	if is_ennemy:
-		$Shader/TextureRect.show()
+		$Shader/TextureRect.hide()
 func _physics_process(delta):
 	set_anim("idle",false)
 	set_anim("walk",false)
@@ -70,7 +71,7 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("q", "d", "z", "s")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var mouvement_speed = direction.length()
-	ennemy_cammera.environment.set("fog_depth_end",lerp(ennemy_cammera.environment.get("fog_depth_end"),(0.1+sqrt(2)-mouvement_speed)*5,delta*4))
+	ennemy_cammera.environment.set("fog_density",lerp(ennemy_cammera.environment.get("fog_density"),1-((0.1+sqrt(2)-mouvement_speed)/2),delta*4))
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
