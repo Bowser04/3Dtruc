@@ -1,5 +1,6 @@
-[gd_scene load_steps=31 format=3 uid="uid://bh1nkphhvfr44"]
+[gd_scene load_steps=33 format=3 uid="uid://bh1nkphhvfr44"]
 
+[ext_resource type="Script" path="res://map.gd" id="1_1w7qq"]
 [ext_resource type="Texture2D" uid="uid://cy0sndh6ka7pq" path="res://Texture/Sol/tixmdgdcw_2K_Basecolor.jpg" id="1_rih6c"]
 [ext_resource type="Texture2D" uid="uid://c8nkhmgehjh2b" path="res://Texture/Sol/tixmdgdcw_2K_AO.jpg" id="2_bhgad"]
 [ext_resource type="Texture2D" uid="uid://cvm6cupoyt0vy" path="res://Texture/Sol/tixmdgdcw_2K_Normal.jpg" id="3_oxfiu"]
@@ -12,8 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://b4lhaqn4pap5b" path="res://Texture/Mur/ufouccbo_2K_Normal.jpg" id="7_h1t7d"]
 [ext_resource type="Texture2D" uid="uid://dyqvcblhj2xt5" path="res://asset textured/Sol/river_small_rocks_rough_1k.png" id="8_m66bi"]
 [ext_resource type="Texture2D" uid="uid://d2qr2uhr2tpnu" path="res://Texture/Mur/ufouccbo_2K_Roughness.jpg" id="8_r1j87"]
-[ext_resource type="PackedScene" uid="uid://n3lufn75k8v0" path="res://asset textured/Escalier.tscn" id="9_igrwp"]
-[ext_resource type="PackedScene" uid="uid://e3k0jl0s7vf1" path="res://asset textured/barriere.tscn" id="14_xwnwa"]
+[ext_resource type="PackedScene" path="res://asset textured/Escalier.tscn" id="9_igrwp"]
+[ext_resource type="PackedScene" path="res://asset textured/barriere.tscn" id="14_xwnwa"]
 [ext_resource type="PackedScene" uid="uid://1pktomef11sr" path="res://asset textured/poutre.tscn" id="15_0chnt"]
 [ext_resource type="Texture2D" uid="uid://d0fufrsnvdjcw" path="res://asset/tmnobhhya/tmnobhhya_2K_Basecolor.jpg" id="16_04ot0"]
 [ext_resource type="Texture2D" uid="uid://cwjyj0ibxp4x6" path="res://asset/tmnobhhya/tmnobhhya_2K_AO.jpg" id="17_5naw6"]
@@ -89,7 +90,15 @@ uv1_world_triplanar = true
 [sub_resource type="BoxMesh" id="BoxMesh_m3ygj"]
 material = SubResource("StandardMaterial3D_5ye53")
 
+[sub_resource type="Environment" id="Environment_ccv58"]
+background_energy_multiplier = 0.31
+ambient_light_energy = 0.0
+ssao_enabled = true
+ssil_enabled = true
+glow_enabled = true
+
 [node name="Map2" type="Node3D"]
+script = ExtResource("1_1w7qq")
 
 [node name="Sol1" type="StaticBody3D" parent="."]
 transform = Transform3D(2.25983, 0, 0, 0, 2.25983, 0, 0, 0, 2.25983, 0, -0.109374, 0)
@@ -366,3 +375,6 @@ transform = Transform3D(-2.90276e-15, 4.37114e-08, 1.42188, 0.86314, -4.37114e-0
 [node name="Porte3" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1.67663e-07, 0, 0.0231821, 0, 0.857913, 0, -3.83568, 0, -1.01332e-09, -8.40021, 2.41537, 8.52701)
 mesh = SubResource("BoxMesh_m3ygj")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ccv58")
