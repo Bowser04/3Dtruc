@@ -28,6 +28,7 @@ func _ready():
 	if is_ennemy:
 		Player_squeleton.name = "Player"
 		Ennemy_squeleton.name = "GeneralSkeleton"
+		Ennemy_squeleton.show()
 		Player_squeleton.hide()
 		ennemy_cammera.current = is_you
 		cammera.current = false
@@ -36,6 +37,7 @@ func _ready():
 		Ennemy_squeleton.name = "Ennemy"
 		Player_squeleton.name = "GeneralSkeleton"
 		Ennemy_squeleton.hide()
+		Player_squeleton.show()
 		ennemy_cammera.current = false
 		cammera.current = is_you
 	if !is_you:return
