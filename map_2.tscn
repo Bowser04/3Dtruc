@@ -269,13 +269,16 @@ shape = SubResource("ConvexPolygonShape3D_m41ea")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.98567, 0.127131, -4.69241)
 
 [node name="Marker3D2" type="Marker3D" parent="Spawns"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12613, 0.127131, -4.69241)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0879, 3.40339, 2.94281)
 
 [node name="Marker3D3" type="Marker3D" parent="Spawns"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12613, 0.127131, 4.83141)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9017, 0.127131, 20.838)
 
 [node name="Marker3D4" type="Marker3D" parent="Spawns"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.94065, 0.127131, 4.83141)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.94065, 0.127131, 24.5233)
+
+[node name="Marker3D5" type="Marker3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.66113, 3.46686, 24.5233)
 
 [node name="Mur" type="StaticBody3D" parent="."]
 transform = Transform3D(0.990735, 0, 0, 0, 1.03192, 0, 0, 0, 0.990735, 0, 0, 0)
