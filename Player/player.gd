@@ -110,6 +110,7 @@ func _physics_process(delta):
 	else:
 		caught = null
 	if Input.is_action_just_pressed("caught"):
+		if not is_ennemy:return
 		set_anim.rpc("caught",true)
 		if caught != null:
 			var player =  caught
@@ -145,11 +146,11 @@ func _input(event):
 	if !is_you or is_dead:return
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * mouse_sensitivity)
-		cammera.rotate_x(event.relative.y * mouse_sensitivity)
-		cammera.rotation.x = clampf(cammera.rotation.x, -deg_to_rad(70), deg_to_rad(70))
+		cammera.rotate_x(-event.relative.y * mouse_sensitivity)
+		cammera.rotation.x = clampf(cammera.rotation.x, -deg_to_rad(30), deg_to_rad(70))
 		print(cammera.rotation_degrees.x)
-		ennemy_cammera.rotate_x(event.relative.y * mouse_sensitivity)
-		ennemy_cammera.rotation.x = clampf(cammera.rotation.x, -deg_to_rad(70), deg_to_rad(70))
+		ennemy_cammera.rotate_x(-event.relative.y * mouse_sensitivity)
+		ennemy_cammera.rotation.x = clampf(cammera.rotation.x, -deg_to_rad(30), deg_to_rad(70))
 		
 @rpc("any_peer","call_local")
 func set_anim(anim,state):
