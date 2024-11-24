@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://bh1nkphhvfr44"]
+[gd_scene load_steps=80 format=3 uid="uid://bh1nkphhvfr44"]
 
 [ext_resource type="Script" path="res://map.gd" id="1_1w7qq"]
 [ext_resource type="Texture2D" uid="uid://cy0sndh6ka7pq" path="res://Texture/Sol/tixmdgdcw_2K_Basecolor.jpg" id="1_rih6c"]
@@ -68,7 +68,7 @@ uv2_world_triplanar = true
 [sub_resource type="PlaneMesh" id="PlaneMesh_5k307"]
 material = SubResource("StandardMaterial3D_7aijc")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kfgi4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h6lko"]
 albedo_texture = ExtResource("1_rih6c")
 albedo_texture_force_srgb = true
 roughness_texture = ExtResource("4_dck3q")
@@ -82,10 +82,23 @@ uv1_world_triplanar = true
 uv2_world_triplanar = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_aqg70"]
-material = SubResource("StandardMaterial3D_kfgi4")
+material = SubResource("StandardMaterial3D_h6lko")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fgcfi"]
+albedo_texture = ExtResource("1_rih6c")
+albedo_texture_force_srgb = true
+roughness_texture = ExtResource("4_dck3q")
+normal_enabled = true
+normal_texture = ExtResource("3_oxfiu")
+ao_enabled = true
+ao_texture = ExtResource("2_bhgad")
+uv1_scale = Vector3(0.785, 0.785, 0.785)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_world_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_xae40"]
-material = SubResource("StandardMaterial3D_kfgi4")
+material = SubResource("StandardMaterial3D_fgcfi")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m41ea"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
@@ -99,7 +112,7 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mhw1v"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smslh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hq75e"]
 albedo_texture = ExtResource("5_ep7k8")
 roughness_texture = ExtResource("8_r1j87")
 normal_enabled = true
@@ -112,7 +125,7 @@ uv1_triplanar = true
 uv1_world_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_6rr8r"]
-material = SubResource("StandardMaterial3D_smslh")
+material = SubResource("StandardMaterial3D_hq75e")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0m6qi"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
@@ -156,7 +169,7 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wfu1l"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ye53"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5p85o"]
 albedo_texture = ExtResource("16_04ot0")
 roughness_texture = ExtResource("19_eb8yv")
 normal_enabled = true
@@ -168,7 +181,7 @@ uv1_triplanar = true
 uv1_world_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_m3ygj"]
-material = SubResource("StandardMaterial3D_5ye53")
+material = SubResource("StandardMaterial3D_5p85o")
 
 [sub_resource type="Environment" id="Environment_ccv58"]
 background_energy_multiplier = 0.31

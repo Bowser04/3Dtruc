@@ -1,6 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqca7rs0b7rh8"]
+[gd_scene load_steps=6 format=3 uid="uid://cqca7rs0b7rh8"]
 
 [ext_resource type="Script" path="res://Menu/settings.gd" id="1_6aokd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1rvi"]
+bg_color = Color(0.0646965, 0.0646965, 0.0646965, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yslsi"]
 bg_color = Color(0.099986, 0.099986, 0.099986, 1)
@@ -14,13 +17,13 @@ corner_radius_bottom_left = 25
 [sub_resource type="LabelSettings" id="LabelSettings_1feo0"]
 font_size = 24
 
-[node name="Settings" type="Control" node_paths=PackedStringArray("Window_type", "GraphicPreset")]
-layout_mode = 3
+[node name="Settings" type="Panel" node_paths=PackedStringArray("Window_type", "GraphicPreset")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d1rvi")
 script = ExtResource("1_6aokd")
 Window_type = NodePath("Panel/TabContainer/‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎/VBoxContainer/WindowType/WindowTypeOption")
 GraphicPreset = NodePath("Panel/TabContainer/‎ ‎ ‎ ‎ ‎ ‎ Graphic‎ ‎ ‎ ‎ ‎ ‎/VBoxContainer/GraphicPreset/GraphicPresetSettings")

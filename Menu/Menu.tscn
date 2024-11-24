@@ -1,76 +1,218 @@
-[gd_scene load_steps=10 format=3 uid="uid://cj8uchem8a4fk"]
+[gd_scene load_steps=132 format=3 uid="uid://cj8uchem8a4fk"]
 
 [ext_resource type="Script" path="res://Menu/Menu.gd" id="1_i4tr5"]
 [ext_resource type="Theme" uid="uid://b3kq74llqlv3x" path="res://ui theme/MinimalUI.tres" id="2_unpnr"]
+[ext_resource type="Texture2D" uid="uid://cy0sndh6ka7pq" path="res://Texture/Sol/tixmdgdcw_2K_Basecolor.jpg" id="3_fpw0q"]
+[ext_resource type="Texture2D" uid="uid://c8nkhmgehjh2b" path="res://Texture/Sol/tixmdgdcw_2K_AO.jpg" id="4_do2qj"]
+[ext_resource type="Texture2D" uid="uid://cvm6cupoyt0vy" path="res://Texture/Sol/tixmdgdcw_2K_Normal.jpg" id="5_ekvbf"]
+[ext_resource type="Texture2D" uid="uid://buu3ov1w6p4ix" path="res://Texture/Sol/tixmdgdcw_2K_Roughness.jpg" id="6_udvn4"]
+[ext_resource type="Texture2D" uid="uid://bwss6j633ycwf" path="res://Texture/Mur/ufouccbo_2K_Basecolor.jpg" id="7_q87dm"]
+[ext_resource type="Texture2D" uid="uid://xecvkeu1hhnk" path="res://Texture/Mur/ufouccbo_2K_AO.jpg" id="8_q8h1r"]
+[ext_resource type="Texture2D" uid="uid://b4lhaqn4pap5b" path="res://Texture/Mur/ufouccbo_2K_Normal.jpg" id="9_37a2w"]
+[ext_resource type="Texture2D" uid="uid://d2qr2uhr2tpnu" path="res://Texture/Mur/ufouccbo_2K_Roughness.jpg" id="10_hi0ky"]
+[ext_resource type="PackedScene" uid="uid://1pktomef11sr" path="res://asset textured/poutre.tscn" id="11_ks8jd"]
+[ext_resource type="Texture2D" uid="uid://d0fufrsnvdjcw" path="res://asset/tmnobhhya/tmnobhhya_2K_Basecolor.jpg" id="12_qlavy"]
+[ext_resource type="Texture2D" uid="uid://cwjyj0ibxp4x6" path="res://asset/tmnobhhya/tmnobhhya_2K_AO.jpg" id="13_3cyi8"]
+[ext_resource type="Texture2D" uid="uid://bwveokxwmla8c" path="res://asset/tmnobhhya/tmnobhhya_2K_Normal.jpg" id="14_3jfbi"]
+[ext_resource type="Texture2D" uid="uid://mgb42kjeu4qs" path="res://asset/tmnobhhya/tmnobhhya_2K_Roughness.jpg" id="15_lde4g"]
+[ext_resource type="PackedScene" path="res://asset textured/Etagère3.tscn" id="16_qbyw3"]
+[ext_resource type="PackedScene" uid="uid://bgq8v7dsub8xn" path="res://asset textured/table.tscn" id="17_n2toq"]
+[ext_resource type="PackedScene" uid="uid://j6tt8c3ig8k8" path="res://asset textured/boite3.tscn" id="18_rq0vu"]
+[ext_resource type="PackedScene" uid="uid://kwevsuw4ytoi" path="res://asset textured/boite2.tscn" id="19_pa8o0"]
+[ext_resource type="PackedScene" uid="uid://d1ijj5do0jc8a" path="res://asset textured/boite a outil.tscn" id="20_1hnie"]
+[ext_resource type="PackedScene" uid="uid://5sgbwchcvkxg" path="res://asset textured/barril.tscn" id="21_14yii"]
+[ext_resource type="PackedScene" uid="uid://cg38the8rx1uc" path="res://asset textured/barril ouvert.tscn" id="22_sjfl8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxee8"]
+bg_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_r58x2"]
+viewport_path = NodePath("Node3D/SubViewport")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jl8ko"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7l4uu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3y2da"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5bmic"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yep3g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nubc1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_goxsx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ok3yr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k4cu4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vkg8w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q1opb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3hcll"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gbsjk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_erpfj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76flm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rmkjl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yq5o3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q0x2q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7xjuw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iy4td"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3w663"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wqwtx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rpd48"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qpjpi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jgt4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_trlwi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uhv52"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6uxxa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oqmrt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qr4lx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_elvyu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfgr0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3hdlc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bd8od"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_im6tc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8xawl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gwdo3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s6rql"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sgh8v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qqbtg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mcb4n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_67wx7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mbuqr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ln3ti"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1a7q"]
+bg_color = Color(0.215686, 0.215686, 0.215686, 0.223529)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q15nf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_owjaq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dt5r0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oe0os"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mtp2k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ol21n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_622ip"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_royif"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ondwh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_toy2i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_avc4e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eqj71"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o7w7s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jjox2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fyvrw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ax23c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wxfvi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vhp7p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nbiei"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j4nyu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x00gp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i2tx6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l7irl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7imfp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nywcd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4o8jj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h3lji"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4l0e8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aalc4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fg28t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_413m0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i4uak"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rb27"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x1bde"]
 font_size = 40
+font_color = Color(0.94, 0.94, 0.94, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qgg8g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u2koq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ku4v1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3m6dk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gvgq5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oqn41"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_507qp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f2xxj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ny6dd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujamd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bq70q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u05j4"]
-
-[sub_resource type="Animation" id="Animation_hv5u1"]
-resource_name = "win"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:theme_override_styles/panel:bg_color")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.766667, 2.16667, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0.0823529, 0.0823529, 0.0823529, 0), Color(0.0823529, 0.0823529, 0.0823529, 0.329412), Color(0.0823529, 0.0823529, 0.0823529, 0.584314), Color(0.0823529, 0.0823529, 0.0823529, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Label:label_settings:shadow_color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.766667, 1.2, 2.16667),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0, 0.282353, 0, 0), Color(0, 0.282353, 0, 0), Color(0, 0.282353, 0, 0.670588), Color(0, 0, 0, 0.670588)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Label:label_settings:shadow_offset")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.4, 2.16667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, -50), Vector2(-1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Label:label_settings:font_color")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0.766667, 1.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Label:label_settings:outline_color")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.766667, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_qixt4"]
 length = 0.001
@@ -223,6 +365,70 @@ tracks/5/keys = {
 "values": [30, 13]
 }
 
+[sub_resource type="Animation" id="Animation_hv5u1"]
+resource_name = "win"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:theme_override_styles/panel:bg_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.766667, 2.16667, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.0823529, 0.0823529, 0.0823529, 0), Color(0.0823529, 0.0823529, 0.0823529, 0.329412), Color(0.0823529, 0.0823529, 0.0823529, 0.584314), Color(0.0823529, 0.0823529, 0.0823529, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:label_settings:shadow_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.766667, 1.2, 2.16667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0.282353, 0, 0), Color(0, 0.282353, 0, 0), Color(0, 0.282353, 0, 0.670588), Color(0, 0, 0, 0.670588)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:label_settings:shadow_offset")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4, 2.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -50), Vector2(-1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:label_settings:font_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.766667, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:label_settings:outline_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.766667, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_22i1g"]
 _data = {
 "RESET": SubResource("Animation_qixt4"),
@@ -237,15 +443,108 @@ shadow_size = 13
 shadow_color = Color(0, 0, 0, 0.670588)
 shadow_offset = Vector2(-3.615, 1)
 
-[node name="Menu" type="Control"]
-layout_mode = 3
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kfgi4"]
+albedo_texture = ExtResource("3_fpw0q")
+albedo_texture_force_srgb = true
+roughness_texture = ExtResource("6_udvn4")
+normal_enabled = true
+normal_texture = ExtResource("5_ekvbf")
+ao_enabled = true
+ao_texture = ExtResource("4_do2qj")
+uv1_scale = Vector3(0.785, 0.785, 0.785)
+uv1_triplanar = true
+uv1_world_triplanar = true
+uv2_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_y2lnb"]
+material = SubResource("StandardMaterial3D_kfgi4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smslh"]
+albedo_texture = ExtResource("7_q87dm")
+roughness_texture = ExtResource("10_hi0ky")
+normal_enabled = true
+normal_texture = ExtResource("9_37a2w")
+ao_enabled = true
+ao_texture = ExtResource("8_q8h1r")
+uv1_scale = Vector3(0.775, 0.775, 0.775)
+uv1_offset = Vector3(0.025, -0.245, 0)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_453go"]
+material = SubResource("StandardMaterial3D_smslh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ye53"]
+albedo_texture = ExtResource("12_qlavy")
+roughness_texture = ExtResource("15_lde4g")
+normal_enabled = true
+normal_texture = ExtResource("14_3jfbi")
+ao_enabled = true
+ao_texture = ExtResource("13_3cyi8")
+uv1_scale = Vector3(0.84, 0.84, 0.84)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_5sev4"]
+material = SubResource("StandardMaterial3D_5ye53")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x2l4k"]
+albedo_texture = ExtResource("7_q87dm")
+roughness_texture = ExtResource("10_hi0ky")
+normal_enabled = true
+normal_texture = ExtResource("9_37a2w")
+ao_enabled = true
+ao_texture = ExtResource("8_q8h1r")
+uv1_scale = Vector3(0.775, 0.775, 0.775)
+uv1_offset = Vector3(0.025, -0.245, 0)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_cv126"]
+material = SubResource("StandardMaterial3D_x2l4k")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cl0oj"]
+material = SubResource("StandardMaterial3D_kfgi4")
+
+[sub_resource type="Environment" id="Environment_0kdts"]
+background_energy_multiplier = 0.16
+ambient_light_energy = 0.0
+
+[sub_resource type="GDScript" id="GDScript_11p2c"]
+resource_name = "cum"
+script/source = "extends Camera3D
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	rotate_x(sin(Time.get_unix_time_from_system())/1000)
+	rotate_y(sin(Time.get_unix_time_from_system()*3)/4000)
+"
+
+[node name="Menu" type="Panel"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_unpnr")
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxee8")
 script = ExtResource("1_i4tr5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_r58x2")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -265,58 +564,79 @@ text = "TRUC"
 [node name="Quitter" type="Button" parent="."]
 visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -53.0
-offset_top = -87.0
-offset_right = 60.0
-offset_bottom = -34.0
-grow_horizontal = 2
+offset_top = 105.0
+offset_right = 113.0
+offset_bottom = 158.0
 grow_vertical = 2
 theme = ExtResource("2_unpnr")
 theme_override_colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
 theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jl8ko")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7l4uu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3y2da")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5bmic")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yep3g")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_nubc1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_goxsx")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ok3yr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k4cu4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vkg8w")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_q1opb")
 text = "Quitter"
 
 [node name="Option" type="Button" parent="."]
 visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -52.0
-offset_top = -166.0
-offset_right = 56.0
-offset_bottom = -115.0
-grow_horizontal = 2
+offset_top = -15.0
+offset_right = 108.0
+offset_bottom = 36.0
 grow_vertical = 2
 theme = ExtResource("2_unpnr")
 theme_override_colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
 theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3hcll")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_gbsjk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_erpfj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_76flm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_rmkjl")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_yq5o3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_q0x2q")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_7xjuw")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_iy4td")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_3w663")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wqwtx")
 text = "Option"
 
 [node name="Jouer" type="Button" parent="."]
 visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = 68.0
-offset_right = 51.0
-offset_bottom = 121.0
-grow_horizontal = 2
+offset_top = -133.0
+offset_right = 101.0
+offset_bottom = -80.0
 grow_vertical = 2
 theme = ExtResource("2_unpnr")
 theme_override_colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
 theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rpd48")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_qpjpi")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_5jgt4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_trlwi")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_uhv52")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6uxxa")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_oqmrt")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_qr4lx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_elvyu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_bfgr0")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3hdlc")
 text = "Jouer"
 
 [node name="Solo" type="Button" parent="."]
@@ -341,75 +661,97 @@ text = "Solo"
 [node name="Multi" type="Control" parent="."]
 visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -309.0
-offset_top = 68.0
-offset_right = 315.0
-offset_bottom = 173.0
-grow_horizontal = 2
+offset_top = -110.0
+offset_right = 624.0
+offset_bottom = 110.0
 grow_vertical = 2
 theme = ExtResource("2_unpnr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Multi"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 200.0
-offset_right = -193.0
-offset_bottom = 64.0
-grow_horizontal = 2
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = -104.0
+offset_right = 224.0
+offset_bottom = 105.0
 grow_vertical = 2
 theme = ExtResource("2_unpnr")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Multi/VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+[node name="Host" type="Button" parent="Multi/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 theme = ExtResource("2_unpnr")
-alignment = 1
-
-[node name="Join" type="Button" parent="Multi/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme = ExtResource("2_unpnr")
-text = "Join"
-
-[node name="Host" type="Button" parent="Multi/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme = ExtResource("2_unpnr")
+theme_override_colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bd8od")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_im6tc")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8xawl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_gwdo3")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_s6rql")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sgh8v")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qqbtg")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_mcb4n")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_67wx7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_mbuqr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ln3ti")
 text = "Host"
+alignment = 0
+
+[node name="VSplitContainer2" type="VSplitContainer" parent="Multi/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+dragger_visibility = 1
 
 [node name="Label3" type="Label" parent="Multi/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_unpnr")
+theme_override_colors/font_color = Color(0.94, 0.94, 0.94, 1)
 text = "lobby id:"
-horizontal_alignment = 1
 
 [node name="TextEdit3" type="TextEdit" parent="Multi/VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 43)
 layout_mode = 2
 theme = ExtResource("2_unpnr")
 theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_j1a7q")
 text = "127.0.0.1"
+
+[node name="Join" type="Button" parent="Multi/VBoxContainer"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+theme = ExtResource("2_unpnr")
+theme_override_colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q15nf")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_owjaq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_dt5r0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_oe0os")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_mtp2k")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ol21n")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_622ip")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_royif")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ondwh")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_toy2i")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_avc4e")
+text = "
+Join"
+alignment = 0
 
 [node name="Type" type="Control" parent="."]
 visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -309.0
-offset_top = 68.0
-offset_right = 315.0
-offset_bottom = 173.0
-grow_horizontal = 2
+offset_left = 33.0
+offset_top = -94.0
+offset_right = 230.0
+offset_bottom = 95.0
 grow_vertical = 2
 theme = ExtResource("2_unpnr")
 
@@ -418,34 +760,57 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 200.0
-offset_right = -193.0
-offset_bottom = 64.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_unpnr")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Type/VBoxContainer"]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme = ExtResource("2_unpnr")
-alignment = 1
-
-[node name="Lan" type="Button" parent="Type/VBoxContainer/HBoxContainer"]
+[node name="Lan" type="Button" parent="Type/VBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme = ExtResource("2_unpnr")
+theme_override_colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eqj71")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_o7w7s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jjox2")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_fyvrw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ax23c")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_wxfvi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vhp7p")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_nbiei")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_j4nyu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_x00gp")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i2tx6")
 text = "Lan
 "
+alignment = 0
 
-[node name="Steam" type="Button" parent="Type/VBoxContainer/HBoxContainer"]
+[node name="VSplitContainer2" type="VSplitContainer" parent="Type/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+dragger_visibility = 1
+
+[node name="Steam" type="Button" parent="Type/VBoxContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme = ExtResource("2_unpnr")
+theme_override_colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l7irl")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7imfp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_nywcd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_4o8jj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_h3lji")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_4l0e8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_aalc4")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fg28t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_413m0")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_i4uak")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6rb27")
 text = "Steam"
+alignment = 0
 
 [node name="Waiting" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -485,9 +850,23 @@ offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_unpnr")
+theme_override_colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qgg8g")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_u2koq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ku4v1")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_3m6dk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_gvgq5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_oqn41")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_507qp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_f2xxj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ny6dd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ujamd")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bq70q")
 text = "Start"
 
 [node name="End_Screen" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -523,13 +902,117 @@ text = "You Win"
 label_settings = SubResource("LabelSettings_cqvkx")
 horizontal_alignment = 1
 
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(16.8292, 0, 0, 0, 0.319928, 0, 0, 0, 23.5003, 11.2187, 2.73998, 6.28241)
+mesh = SubResource("BoxMesh_y2lnb")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.125625, 0, 0, 0, 2.79054, 0, 0, 0, 13.4256, 8.51688, 4.14086, 0.00393343)
+mesh = SubResource("BoxMesh_453go")
+skeleton = NodePath("../../Sol2")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.125625, 0, 0, 0, 2.79054, 0, 0, 0, 6.49795, 8.51688, 4.14086, 13.7256)
+mesh = SubResource("BoxMesh_453go")
+skeleton = NodePath("../../Sol2")
+
+[node name="wdkmabe4" parent="Node3D" instance=ExtResource("11_ks8jd")]
+transform = Transform3D(-4.6177e-08, 0, 1.42188, 0, 0.985785, 0, -1.05641, 0, -6.21522e-08, 8.42607, 5.62306, 8.4822)
+
+[node name="wdkmabe6" parent="Node3D" instance=ExtResource("11_ks8jd")]
+transform = Transform3D(-2.8615e-15, 4.37114e-08, 1.42188, 0.850871, -4.37114e-08, 0, 3.71928e-08, 1, -6.21522e-08, 8.42607, 4.20577, 10.3442)
+
+[node name="Porte4" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-1.73592e-07, 0, 0.0240019, 0, 2.58473, 0, -3.97132, 0, -1.04915e-09, 8.43581, 4.6024, 8.46892)
+mesh = SubResource("BoxMesh_5sev4")
+
+[node name="Etagère6" parent="Node3D" instance=ExtResource("16_qbyw3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.9786, 2.89098, 3.63476)
+
+[node name="Etagère7" parent="Node3D" instance=ExtResource("16_qbyw3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.8632, 2.89098, 5.27595)
+
+[node name="Etagère8" parent="Node3D" instance=ExtResource("16_qbyw3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.9786, 2.89098, 5.27595)
+
+[node name="Etagère9" parent="Node3D" instance=ExtResource("16_qbyw3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.8632, 2.89098, 8.27855)
+
+[node name="Etagère10" parent="Node3D" instance=ExtResource("16_qbyw3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.9786, 2.89098, 8.27855)
+
+[node name="Etagère11" parent="Node3D" instance=ExtResource("16_qbyw3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.8632, 2.89098, 9.91723)
+
+[node name="Etagère12" parent="Node3D" instance=ExtResource("16_qbyw3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.9786, 2.89098, 9.91723)
+
+[node name="wbuidixga" parent="Node3D" instance=ExtResource("17_n2toq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.808, 2.89099, -0.422546)
+
+[node name="wbuidixga2" parent="Node3D" instance=ExtResource("17_n2toq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3952, 2.89099, -0.422546)
+
+[node name="vifpcdyaw" parent="Node3D" instance=ExtResource("18_rq0vu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4158, 3.65119, -0.487892)
+
+[node name="vhtibbe109" parent="Node3D" instance=ExtResource("19_pa8o0")]
+transform = Transform3D(0.00396187, 0, -0.999992, 0, 1.22556, 0, 0.999992, 0, 0.00396187, 14.4489, 2.74832, 2.32842)
+
+[node name="ukwteiiaw3" parent="Node3D" instance=ExtResource("20_1hnie")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4637, 3.65356, -0.417073)
+
+[node name="teraccgda" parent="Node3D" instance=ExtResource("21_14yii")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.59235, 2.89098, -0.306545)
+
+[node name="teraccgda2" parent="Node3D" instance=ExtResource("21_14yii")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.84563, 2.89098, 6.098)
+
+[node name="vijnbi3" parent="Node3D" instance=ExtResource("22_sjfl8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8288, 2.89098, 5.36689)
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-5.49124e-09, 0, 8.87125, 0, 2.79054, 0, -0.125625, 0, -3.87775e-07, 12.9591, 4.14086, -0.98078)
+mesh = SubResource("BoxMesh_cv126")
+skeleton = NodePath("../../Sol2")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.125625, 0, 0, 0, 2.79054, 0, 0, 0, 14.345, 17.3202, 4.14086, 6.20152)
+mesh = SubResource("BoxMesh_cv126")
+skeleton = NodePath("../../Sol2")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(8.48295, 0, 0, 0, -8.00013, -8.68441e-07, 0, 6.99394e-07, -9.93381, 14.338, 5.6392, 5.3953)
+cast_shadow = 2
+mesh = SubResource("PlaneMesh_cl0oj")
+skeleton = NodePath("../..")
+
+[node name="SubViewport" type="SubViewport" parent="Node3D"]
+size = Vector2i(1920, 1080)
+
+[node name="Camera3D" type="Camera3D" parent="Node3D/SubViewport"]
+transform = Transform3D(0.882127, 0.0947101, -0.461392, 0, 0.979575, 0.201078, 0.471012, -0.177376, 0.86411, 9.886, 4.673, 12.892)
+environment = SubResource("Environment_0kdts")
+script = SubResource("GDScript_11p2c")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Node3D"]
+transform = Transform3D(0.869495, 0, 0.493942, 0, 1, 0, -0.493942, 0, 0.869495, 14.332, 2.982, 11.87)
+shadow_enabled = true
+spot_range = 11.6084
+spot_attenuation = 1.18
+spot_angle = 60.52
+spot_angle_attenuation = 0.594603
+
 [connection signal="pressed" from="Quitter" to="." method="_on_quitter_pressed"]
 [connection signal="pressed" from="Option" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="Jouer" to="." method="_on_jouer_pressed"]
 [connection signal="pressed" from="Solo" to="." method="_on_solo_pressed"]
-[connection signal="pressed" from="Multi/VBoxContainer/HBoxContainer/Join" to="." method="_on_join_pressed"]
-[connection signal="pressed" from="Multi/VBoxContainer/HBoxContainer/Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="Multi/VBoxContainer/Host" to="." method="_on_host_pressed"]
 [connection signal="gui_input" from="Multi/VBoxContainer/Label3" to="." method="_on_label_gui_input"]
-[connection signal="pressed" from="Type/VBoxContainer/HBoxContainer/Lan" to="." method="_on_lan_pressed"]
-[connection signal="pressed" from="Type/VBoxContainer/HBoxContainer/Steam" to="." method="_on_steam_pressed"]
+[connection signal="pressed" from="Multi/VBoxContainer/Join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="Type/VBoxContainer/Lan" to="." method="_on_lan_pressed"]
+[connection signal="pressed" from="Type/VBoxContainer/Steam" to="." method="_on_steam_pressed"]
 [connection signal="pressed" from="Waiting/Start" to="." method="_on_start_pressed"]
