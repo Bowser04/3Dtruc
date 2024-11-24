@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://bh1nkphhvfr44"]
+[gd_scene load_steps=86 format=3 uid="uid://bh1nkphhvfr44"]
 
 [ext_resource type="Script" path="res://map.gd" id="1_1w7qq"]
 [ext_resource type="Texture2D" uid="uid://cy0sndh6ka7pq" path="res://Texture/Sol/tixmdgdcw_2K_Basecolor.jpg" id="1_rih6c"]
@@ -183,6 +183,32 @@ uv1_world_triplanar = true
 [sub_resource type="BoxMesh" id="BoxMesh_m3ygj"]
 material = SubResource("StandardMaterial3D_5p85o")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sev16"]
+load_path = "res://.godot/imported/tmnobhhya_2K_Basecolor.jpg-f95743a5e503bbd7e949095b4ea1693d.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_terl6"]
+load_path = "res://.godot/imported/tmnobhhya_2K_AO.jpg-43c3f9f811e068a74bb43e6dc7287c52.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6iwct"]
+load_path = "res://.godot/imported/tmnobhhya_2K_Normal.jpg-e1177736d11458896a0af40951052f02.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lva2h"]
+load_path = "res://.godot/imported/tmnobhhya_2K_Roughness.jpg-6edb06833830ba0023a3dccba81b4d33.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2p1x6"]
+albedo_texture = SubResource("CompressedTexture2D_sev16")
+roughness_texture = SubResource("CompressedTexture2D_lva2h")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_6iwct")
+ao_enabled = true
+ao_texture = SubResource("CompressedTexture2D_terl6")
+uv1_scale = Vector3(0.84, 0.84, 0.84)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_6oyr2"]
+material = SubResource("StandardMaterial3D_2p1x6")
+
 [sub_resource type="Environment" id="Environment_ccv58"]
 background_energy_multiplier = 0.31
 ambient_light_energy = 0.0
@@ -221,8 +247,7 @@ mesh = SubResource("PlaneMesh_aqg70")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Sol2"]
-transform = Transform3D(12.8471, 0, 0, 0, -8.00013, -8.68441e-07, 0, 6.99394e-07, -9.93381, 4.3996, 5.6392, 17.2829)
-cast_shadow = 3
+transform = Transform3D(12.8471, 0, 0, 0, -8.00013, -1.49996e-06, 0, 1.20799e-06, -9.93381, 4.3996, 5.6392, 17.2829)
 mesh = SubResource("PlaneMesh_aqg70")
 skeleton = NodePath("../..")
 
@@ -235,7 +260,7 @@ mesh = SubResource("PlaneMesh_aqg70")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Sol2\'"]
-transform = Transform3D(8.48295, 0, 0, 0, -8.00013, -8.68441e-07, 0, 6.99394e-07, -9.93381, -0.0020175, 5.6392, 3.38755)
+transform = Transform3D(8.48295, -0.00664294, -0.00306737, -0.00704418, -8.00012, -0.00145725, -0.00261825, 0.00117584, -9.93381, -0.00201797, 5.6392, 3.38755)
 mesh = SubResource("PlaneMesh_aqg70")
 skeleton = NodePath("../..")
 
@@ -670,8 +695,8 @@ transform = Transform3D(-2.8615e-15, 4.37114e-08, 1.42188, 0.850871, -4.37114e-0
 transform = Transform3D(-2.8615e-15, 4.37114e-08, 1.42188, 0.850871, -4.37114e-08, 0, 3.71928e-08, 1, -6.21522e-08, 8.42607, 4.20577, 10.3442)
 
 [node name="Porte4" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.67663e-07, 0, 0.0231821, 0, 0.845718, 0, -3.83568, 0, -1.01332e-09, 8.43581, 5.17236, 8.46892)
-mesh = SubResource("BoxMesh_m3ygj")
+transform = Transform3D(-1.67663e-07, 0, 0.0231821, 0, 0.852551, 0, -3.83568, 0, -1.01332e-09, 8.43581, 5.17236, 8.46892)
+mesh = SubResource("BoxMesh_6oyr2")
 
 [node name="wdkmabe7" parent="." instance=ExtResource("15_0chnt")]
 transform = Transform3D(-4.6177e-08, 0, 1.42188, 0, 0.985785, 0, -1.05641, 0, -6.21522e-08, 8.42607, 5.62306, 18.7668)
