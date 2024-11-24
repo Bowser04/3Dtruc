@@ -4,6 +4,7 @@ extends Control
 
 func _ready():
 	show_menu()
+	$Solo.show()
 func show_menu():
 	$Quitter.show()
 	$Option.show()
@@ -11,7 +12,17 @@ func show_menu():
 	$Jouer.show()
 	$Waiting.hide()
 	$Type.hide()
-	$Waiting/Start.hide()
+	$End_Screen.hide()
+func show_end():
+	$Quitter.hide()
+	$Option.hide()
+	$Multi.hide()
+	$Jouer.hide()
+	$Waiting.hide()
+	$Type.hide()
+	$Label.hide()
+	$End_Screen.show()
+	$Solo.hide()
 func show_type():
 	$Quitter.hide()
 	$Option.hide()
@@ -19,7 +30,7 @@ func show_type():
 	$Jouer.hide()
 	$Waiting.hide()
 	$Type.show()
-	$Waiting/Start.hide()
+	$End_Screen.hide()
 func show_multi():
 	if Network_Conection.multiplayer_type == "Steam":
 		$Multi/VBoxContainer/Label3.text = "lobby id:"
@@ -31,7 +42,7 @@ func show_multi():
 	$Jouer.hide()
 	$Waiting.hide()
 	$Type.hide()
-	$Waiting/Start.hide()
+	$End_Screen.hide()
 func show_Waiting():
 	$Quitter.hide()
 	$Option.hide()
@@ -40,18 +51,19 @@ func show_Waiting():
 	$Waiting.show()
 	$Type.hide()
 	$Waiting/Start.hide()
+	$End_Screen.hide()
 func _process(delta):
 	pass
 
 
 func StartGame(ennemy):
-	get_tree().root.add_child(Map)
+	get_tree().root.add_child(Map.duplicate(true))
 	Network_Conection.add_players_to_game.call_deferred(ennemy)
 	UsersStartGame.rpc(ennemy)
 	self.hide()
 @rpc("any_peer")
 func UsersStartGame(ennemy):
-	get_tree().root.add_child(Map)
+	get_tree().root.add_child(Map.duplicate(true))
 	Network_Conection.Player_ready.rpc(Network_Conection.self_id)
 	self.hide()
 func _on_quitter_pressed():
@@ -165,4 +177,18 @@ func _on_option_pressed() -> void:
 	var settings = load("res://Menu/settings.tscn").instantiate()
 	get_tree().root.add_child(settings)
 	self.hide()
-	
+@rpc("any_peer","call_local")
+func end_game(winner_id):
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	if winner_id == Network_Conection.self_id:
+		$End_Screen/Label.text = "You Win"
+		$End_Screen/AnimationPlayer.play("win")
+	else:
+		$End_Screen/Label.text = "You Lose"
+		$End_Screen/AnimationPlayer.play("lose")
+	await get_tree().create_timer(0.2).timeout
+	show_end()
+	self.show()
+	await get_tree().create_timer(4).timeout
+	get_node("/root/Map").queue_free()
+	show_Waiting()

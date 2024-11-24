@@ -14,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://b4lhaqn4pap5b" path="res://Texture/Mur/ufouccbo_2K_Normal.jpg" id="7_h1t7d"]
 [ext_resource type="Texture2D" uid="uid://dyqvcblhj2xt5" path="res://asset textured/Sol/river_small_rocks_rough_1k.png" id="8_m66bi"]
 [ext_resource type="Texture2D" uid="uid://d2qr2uhr2tpnu" path="res://Texture/Mur/ufouccbo_2K_Roughness.jpg" id="8_r1j87"]
-[ext_resource type="PackedScene" uid="uid://n3lufn75k8v0" path="res://asset textured/Escalier.tscn" id="9_igrwp"]
-[ext_resource type="PackedScene" uid="uid://e3k0jl0s7vf1" path="res://asset textured/barriere.tscn" id="14_xwnwa"]
+[ext_resource type="PackedScene" path="res://asset textured/Escalier.tscn" id="9_igrwp"]
+[ext_resource type="PackedScene" path="res://asset textured/barriere.tscn" id="14_xwnwa"]
 [ext_resource type="PackedScene" uid="uid://1pktomef11sr" path="res://asset textured/poutre.tscn" id="15_0chnt"]
 [ext_resource type="Texture2D" uid="uid://d0fufrsnvdjcw" path="res://asset/tmnobhhya/tmnobhhya_2K_Basecolor.jpg" id="16_04ot0"]
 [ext_resource type="Texture2D" uid="uid://cwjyj0ibxp4x6" path="res://asset/tmnobhhya/tmnobhhya_2K_AO.jpg" id="17_5naw6"]
@@ -25,11 +25,11 @@
 [ext_resource type="PackedScene" uid="uid://ci3gvpk6t84of" path="res://asset textured/Végé/Arbre2.tscn" id="22_p5jqw"]
 [ext_resource type="PackedScene" uid="uid://c20smcjkcadl2" path="res://asset textured/Végé/Branche.tscn" id="23_a2i25"]
 [ext_resource type="PackedScene" uid="uid://cdjjqdf2k7sb1" path="res://asset textured/Végé/Souche.tscn" id="24_rfpak"]
-[ext_resource type="PackedScene" uid="uid://dqnntj0yi6r3a" path="res://asset textured/barriere_pr_enfant_cc.tscn" id="25_76sk6"]
-[ext_resource type="PackedScene" uid="uid://cuok6kktvbl0y" path="res://asset textured/barrière__pr_enfant.tscn" id="26_txalh"]
-[ext_resource type="PackedScene" uid="uid://c826hod7jqqch" path="res://asset textured/Etagère2.tscn" id="28_km2rs"]
-[ext_resource type="PackedScene" uid="uid://dhyq6fpynnugn" path="res://asset textured/Etagère3.tscn" id="29_x7tx6"]
-[ext_resource type="PackedScene" uid="uid://bitacr4o1vbxr" path="res://asset textured/Etagère.tscn" id="30_0ci7i"]
+[ext_resource type="PackedScene" path="res://asset textured/barriere_pr_enfant_cc.tscn" id="25_76sk6"]
+[ext_resource type="PackedScene" path="res://asset textured/barrière__pr_enfant.tscn" id="26_txalh"]
+[ext_resource type="PackedScene" path="res://asset textured/Etagère2.tscn" id="28_km2rs"]
+[ext_resource type="PackedScene" path="res://asset textured/Etagère3.tscn" id="29_x7tx6"]
+[ext_resource type="PackedScene" path="res://asset textured/Etagère.tscn" id="30_0ci7i"]
 [ext_resource type="PackedScene" uid="uid://bxxal0x281ivv" path="res://asset textured/enroulleur.tscn" id="31_xukto"]
 [ext_resource type="PackedScene" uid="uid://c3douicfok0fj" path="res://asset textured/pallete2.tscn" id="32_rmwdw"]
 [ext_resource type="PackedScene" uid="uid://bg24fgcpl5kip" path="res://asset textured/poubelle.tscn" id="33_ci2vq"]
@@ -177,7 +177,7 @@ ssao_enabled = true
 ssil_enabled = true
 glow_enabled = true
 
-[node name="Map2" type="Node3D"]
+[node name="Map" type="Node3D"]
 script = ExtResource("1_1w7qq")
 
 [node name="Sol1" type="StaticBody3D" parent="."]
@@ -209,6 +209,7 @@ skeleton = NodePath("../..")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Sol2"]
 transform = Transform3D(12.8471, 0, 0, 0, -8.00013, -8.68441e-07, 0, 6.99394e-07, -9.93381, 4.3996, 5.6392, 17.2829)
+cast_shadow = 3
 mesh = SubResource("PlaneMesh_aqg70")
 skeleton = NodePath("../..")
 
@@ -229,7 +230,7 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.455753, 0, 2.88993, -4.03007)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Sol3"]
-transform = Transform3D(16.8292, 0, 0, 0, 0.319928, 0, 0, 0, 12.6839, -0.0020175, -0.15891, 0.626629)
+transform = Transform3D(16.8384, 0, 0, 0, 0.320103, 0, 0, 0, 12.6909, -0.0020175, -0.15891, 0.626629)
 mesh = SubResource("BoxMesh_xae40")
 skeleton = NodePath("../..")
 

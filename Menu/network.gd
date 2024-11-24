@@ -2,7 +2,7 @@ extends Node
 var ip = "127.0.0.1"
 var PORT = 8910
 @onready var Player_scene = preload("res://Player/Player.tscn")
-var _players_spawn_node = "/root/Map2"
+var _players_spawn_node = "/root/Map"
 const PACKET_READ_LIMIT = 32
 var is_host = false
 var lobby_id = 0
@@ -184,6 +184,7 @@ func chose_ennemy():
 		id = self_id
 	else:
 		id = lobby_members[num].id
+	ready_player = []
 	return id
 @rpc("any_peer")
 func Player_ready(id):

@@ -113,12 +113,14 @@ func _physics_process(delta):
 	else:
 		caught = null
 	if Input.is_action_just_pressed("caught"):
-		if not is_ennemy:return
+		if not is_ennemy:
+			dead.rpc(player_id)
+			return
 		set_anim.rpc("caught",true)
 		if caught != null:
 			var player =  caught
 			await get_tree().create_timer(0.7).timeout
-			player.dead.rpc()
+			player.dead.rpc(player_id)
 	if Input.is_action_just_released("caught"):
 		set_anim.rpc("caught",false)
 	
@@ -141,10 +143,19 @@ func _physics_process(delta):
 		set_rot.rpc(rotation.y,cammera.rotation)
 		i=0
 @rpc("any_peer","call_local")
-func dead():
+func dead(from_id):
 	set_anim("alive",false)
 	set_anim("dead",true)
 	is_dead = true
+	if Network_Conection.is_host:
+		var players = get_tree().get_nodes_in_group("Player")
+		var is_all_dead = true
+		for player in players:
+			if not player.is_ennemy and not player.is_dead:
+				is_all_dead = false
+		if is_all_dead:
+			await get_tree().create_timer(3).timeout
+			$/root/Menu.end_game.rpc(from_id)
 func _input(event):
 	if !is_you or is_dead:return
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
