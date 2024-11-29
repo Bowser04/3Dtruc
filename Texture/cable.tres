@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://duin7ipyk8pc7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0budu"]
+load_path = "res://.godot/imported/vgyiea1aw_2K_Basecolor.JPG-44b6a5251a13c35ec4066cca13a22630.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_meyak"]
+load_path = "res://.godot/imported/vgyiea1aw_2K_AO.JPG-e6e071a1c2ae26f4079122cafe089a30.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cigva"]
+load_path = "res://.godot/imported/vgyiea1aw_2K_Normal.JPG-687d60ddb65fedc6db12ee5c9c89cd0e.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2oam4"]
+load_path = "res://.godot/imported/vgyiea1aw_2K_Roughness.JPG-18f9929ca92b5869329afe8073498fa3.s3tc.ctex"
+
+[resource]
+albedo_texture = SubResource("CompressedTexture2D_0budu")
+roughness_texture = SubResource("CompressedTexture2D_2oam4")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_cigva")
+ao_enabled = true
+ao_texture = SubResource("CompressedTexture2D_meyak")

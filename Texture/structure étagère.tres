@@ -1,0 +1,26 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://cefq4ipq3afhc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dh5ps"]
+load_path = "res://.godot/imported/vhtmaifaw_2K_Basecolor.JPG-c95d22a2cd0324dc944c19c817a8a2ec.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5k63y"]
+load_path = "res://.godot/imported/vhtmaifaw_2K_AO.JPG-48710cf1e3e706e18d41127d547f1f70.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7lu58"]
+load_path = "res://.godot/imported/vhtmaifaw_2K_Metalness.JPG-bc88ed09bb628845aaecec5ef8d0328c.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_egd26"]
+load_path = "res://.godot/imported/vhtmaifaw_2K_Normal.JPG-73de64d1411d1d424fce0609e5586069.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_78vsw"]
+load_path = "res://.godot/imported/vhtmaifaw_2K_Roughness.JPG-348ed48123215be85f6d23e7693a4a73.s3tc.ctex"
+
+[resource]
+albedo_texture = SubResource("CompressedTexture2D_dh5ps")
+metallic = 1.0
+metallic_texture = SubResource("CompressedTexture2D_7lu58")
+roughness_texture = SubResource("CompressedTexture2D_78vsw")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_egd26")
+ao_enabled = true
+ao_texture = SubResource("CompressedTexture2D_5k63y")

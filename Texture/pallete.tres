@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://c5ewf0b6l7jcw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ngnrl"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ow2ma"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0k1du"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y46sx"]
+
+[resource]
+albedo_texture = SubResource("CompressedTexture2D_ngnrl")
+roughness_texture = SubResource("CompressedTexture2D_y46sx")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_0k1du")
+ao_enabled = true
+ao_texture = SubResource("CompressedTexture2D_ow2ma")

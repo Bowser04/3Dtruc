@@ -1,7 +1,6 @@
 extends Control
 @onready var Map = preload("res://map_2.tscn").instantiate()
 
-
 func _ready():
 	show_menu()
 	$Solo.show()

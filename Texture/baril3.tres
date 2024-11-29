@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://ugqvkvrdfv4r"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8fgco"]
+load_path = "res://.godot/imported/ui1maewga_2K_Basecolor.JPG-2498852bbd69db22e02062fe8c7e0a1e.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iet2r"]
+load_path = "res://.godot/imported/ui1maewga_2K_AO.JPG-3b9dec4939d59dacff7b5b118514244c.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iphfp"]
+load_path = "res://.godot/imported/ui1maewga_2K_Normal.JPG-6463619d72abfb63bde345c285e57e2c.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bl4p7"]
+load_path = "res://.godot/imported/ui1maewga_2K_Roughness.JPG-a80a213c2afd898dddfb4f0843e39da7.s3tc.ctex"
+
+[resource]
+albedo_texture = SubResource("CompressedTexture2D_8fgco")
+roughness_texture = SubResource("CompressedTexture2D_bl4p7")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_iphfp")
+ao_enabled = true
+ao_texture = SubResource("CompressedTexture2D_iet2r")

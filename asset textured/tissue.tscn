@@ -1,9 +1,6 @@
-[gd_scene load_steps=9 format=4 uid="uid://cira2364c8cp4"]
+[gd_scene load_steps=5 format=4 uid="uid://cira2364c8cp4"]
 
-[ext_resource type="Texture2D" uid="uid://dp1mony7jfb8h" path="res://asset/vieldbo/vieldbo_2K_Basecolor.JPG" id="1_ecm4e"]
-[ext_resource type="Texture2D" uid="uid://ce6vq6hege7d2" path="res://asset/vieldbo/vieldbo_2K_AO.JPG" id="2_lj4i8"]
-[ext_resource type="Texture2D" uid="uid://ck7rqs25s2r6p" path="res://asset/vieldbo/vieldbo_2K_Normal.JPG" id="3_4gflq"]
-[ext_resource type="Texture2D" uid="uid://y5ap41nswha0" path="res://asset/vieldbo/vieldbo_2K_Roughness.JPG" id="4_7lj07"]
+[ext_resource type="Material" uid="uid://dst5s2727s4rt" path="res://Texture/tissue.tres" id="1_vkd26"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x7j46"]
 resource_name = "MatID_1"
@@ -45,17 +42,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_s78w4")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4crkb"]
-albedo_texture = ExtResource("1_ecm4e")
-roughness_texture = ExtResource("4_7lj07")
-normal_enabled = true
-normal_texture = ExtResource("3_4gflq")
-ao_enabled = true
-ao_texture = ExtResource("2_lj4i8")
-
 [node name="vieldbo" type="StaticBody3D"]
 
 [node name="vieldbo_LOD0_TIER2_000" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_2lg7m")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_4crkb")
+surface_material_override/0 = ExtResource("1_vkd26")

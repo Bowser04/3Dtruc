@@ -1,9 +1,6 @@
-[gd_scene load_steps=9 format=4 uid="uid://di4ehr8jvxf6n"]
+[gd_scene load_steps=5 format=4 uid="uid://ddg0fphvfpo7g"]
 
-[ext_resource type="Texture2D" uid="uid://05iefum7ejdm" path="res://modular_stairs_kit_wlombbzdw_low/Modular_Stairs_Kit_wlombbzdw_Low_1K_BaseColor.jpg" id="1_q7tpy"]
-[ext_resource type="Texture2D" uid="uid://dnfbmcjq1mfai" path="res://modular_stairs_kit_wlombbzdw_low/Modular_Stairs_Kit_wlombbzdw_Low_1K_AO.jpg" id="2_wi7fr"]
-[ext_resource type="Texture2D" uid="uid://ljaeahe8nt2v" path="res://modular_stairs_kit_wlombbzdw_low/Modular_Stairs_Kit_wlombbzdw_Low_1K_Normal.jpg" id="3_77bcl"]
-[ext_resource type="Texture2D" uid="uid://dven42dkn0tt5" path="res://modular_stairs_kit_wlombbzdw_low/Modular_Stairs_Kit_wlombbzdw_Low_1K_Roughness.jpg" id="4_h4gfh"]
+[ext_resource type="Material" uid="uid://clxqs6q5k3abo" path="res://Texture/Block.tres" id="1_lmxtd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvpuo"]
 resource_name = "MatID_1"
@@ -45,18 +42,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yrpw4")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gthi2"]
-albedo_texture = ExtResource("1_q7tpy")
-roughness_texture = ExtResource("4_h4gfh")
-normal_enabled = true
-normal_texture = ExtResource("3_77bcl")
-ao_enabled = true
-ao_texture = ExtResource("2_wi7fr")
-uv1_triplanar_sharpness = 6.06287
-uv1_world_triplanar = true
-
 [node name="wlombbzdw_LOD0_TIER3_004" type="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.708199, 0, 0)
 mesh = SubResource("ArrayMesh_88sqv")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_gthi2")
+surface_material_override/0 = ExtResource("1_lmxtd")

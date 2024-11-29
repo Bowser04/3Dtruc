@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://cuok6kktvbl0y"]
+[gd_scene load_steps=10 format=4 uid="uid://d4lah2scvq3mo"]
 
 [ext_resource type="Texture2D" uid="uid://05iefum7ejdm" path="res://modular_stairs_kit_wlombbzdw_low/Modular_Stairs_Kit_wlombbzdw_Low_1K_BaseColor.jpg" id="1_cjna5"]
 [ext_resource type="Texture2D" uid="uid://dnfbmcjq1mfai" path="res://modular_stairs_kit_wlombbzdw_low/Modular_Stairs_Kit_wlombbzdw_Low_1K_AO.jpg" id="2_6qa5t"]

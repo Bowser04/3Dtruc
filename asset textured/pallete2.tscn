@@ -1,10 +1,5 @@
 [gd_scene load_steps=10 format=4 uid="uid://c3douicfok0fj"]
 
-[ext_resource type="Texture2D" uid="uid://chci7cg45dxb" path="res://asset/vh1jeck/vh1jeck_2K_Basecolor.JPG" id="1_y4oqu"]
-[ext_resource type="Texture2D" uid="uid://cfjnilymxxlcq" path="res://asset/vh1jeck/vh1jeck_2K_AO.JPG" id="2_autv2"]
-[ext_resource type="Texture2D" uid="uid://ckflo3ji76qln" path="res://asset/vh1jeck/vh1jeck_2K_Normal.JPG" id="3_tbxe8"]
-[ext_resource type="Texture2D" uid="uid://dy5ysuasym2b5" path="res://asset/vh1jeck/vh1jeck_2K_Roughness.JPG" id="4_65uus"]
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qmay"]
 resource_name = "MatID_1"
 vertex_color_use_as_albedo = true
@@ -45,13 +40,25 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_p3y0l")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dqa7"]
-albedo_texture = ExtResource("1_y4oqu")
-roughness_texture = ExtResource("4_65uus")
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sujqi"]
+load_path = "res://.godot/imported/vh1jeck_2K_Basecolor.JPG-30fe4e029cac7d0bd2701372bdd4cb49.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nfq08"]
+load_path = "res://.godot/imported/vh1jeck_2K_AO.JPG-ad7402380a1c69fe2adced6f0c11b3bd.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fd48t"]
+load_path = "res://.godot/imported/vh1jeck_2K_Normal.JPG-fbb38e713362659e0a434ba17d9b3b57.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ovq3l"]
+load_path = "res://.godot/imported/vh1jeck_2K_Roughness.JPG-349fd390b9d2e7a5e9091f24283e70af.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yguxn"]
+albedo_texture = SubResource("CompressedTexture2D_sujqi")
+roughness_texture = SubResource("CompressedTexture2D_ovq3l")
 normal_enabled = true
-normal_texture = ExtResource("3_tbxe8")
+normal_texture = SubResource("CompressedTexture2D_fd48t")
 ao_enabled = true
-ao_texture = ExtResource("2_autv2")
+ao_texture = SubResource("CompressedTexture2D_nfq08")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_af2b8"]
 points = PackedVector3Array(-0.00755221, 0.0544001, -0.591294, 0.0101022, 0.0335629, -0.590831, -0.00936598, 0.00662296, -0.590136, -0.552902, 0.0464184, -0.588979, -0.553627, 0.107093, -0.588284, 0.527519, 0.108746, -0.59002, 0.522803, 0.000760306, -0.589905, -0.538512, -0.00390156, -0.580992, -0.555683, 0.0035433, -0.584696, -0.554837, 0.0525777, -0.587358, -0.556529, 0.0890674, -0.586548, -0.555078, 0.0914973, -0.58759, -0.555804, 0.113719, -0.585506, -0.554474, 0.124272, -0.584927, -0.23597, 0.128354, -0.586779, 0.610229, 0.130685, -0.587937, 0.613735, 0.0638933, -0.589557, 0.615549, 0.0361764, -0.58921, 0.608899, 0.0222897, -0.588516, 0.579636, 0.00242728, -0.586548, 0.616396, 0.00227188, -0.583886, 0.605634, 0.0016503, -0.584001, 0.559079, 0.000590784, -0.586201, -0.463421, -0.00438188, -0.574857, -0.553506, -0.00412759, -0.579718, -0.561487, -0.00137285, -0.458757, -0.590387, 0.0181364, 0.0401344, -0.561729, 0.0163705, -0.498576, -0.562213, 0.0673262, -0.498345, -0.565719, 0.124413, -0.447414, -0.571765, 0.132804, -0.319508, -0.426419, 0.127139, -0.583886, -0.343589, 0.127606, -0.585853, -0.262452, 0.12875, -0.585622, 0.495234, 0.131392, -0.587358, 0.569962, 0.131208, -0.587705, 0.614824, 0.131547, -0.541173, 0.61567, 0.124681, -0.587127, 0.616516, 0.116431, -0.582265, 0.618088, 0.0550923, -0.499271, 0.617484, 0.0248749, -0.499965, 0.560289, -0.00104793, 0.517033, 0.61035, 0.00156554, -0.470448, 0.613614, 0.000717926, -0.581107, 0.519418, -0.00159888, -0.512814, 0.0584702, -0.00614774, -0.211279, -0.469467, -0.00439601, -0.48457, -0.503687, -0.00308221, 0.207396, -0.595345, -0.00230523, 0.211448, -0.613483, 0.0010711, 0.583244, -0.611064, 0.0242109, 0.485896, -0.611911, 0.104607, 0.437396, -0.608404, 0.104211, 0.364356, -0.605986, 0.102092, 0.315509, -0.59075, 0.04615, 0.0394399, -0.598368, 0.101202, 0.17186, -0.607921, 0.126546, 0.357411, -0.578779, 0.133214, -0.186045, -0.599819, 0.135107, 0.218509, -0.599577, 0.135587, 0.282751, -0.498609, 0.138172, 0.354517, -0.244435, 0.132211, -0.491978, 0.265848, 0.132366, -0.492789, 0.383141, 0.133525, -0.355391, 0.614824, 0.131971, -0.496493, 0.559321, 0.0167519, 0.580234, 0.578789, 0.111487, 0.18031, 0.55787, 0.00359981, 0.581507, 0.573711, -0.00185317, 0.223833, 0.552187, -0.00330824, 0.580234, 0.577217, -0.00165539, 0.150793, 0.581208, -0.00149999, 0.0372406, 0.0369464, -0.00486219, 0.18876, -0.520616, -0.00124571, 0.590768, -0.582285, -0.00131635, 0.477099, -0.588452, -0.000694762, 0.587063, -0.607558, -0.000355717, 0.489484, -0.611669, 0.00343029, 0.586948, -0.613846, 0.0197186, 0.585327, -0.615659, 0.0372359, 0.577919, -0.616264, 0.111882, 0.536017, -0.614087, 0.118042, 0.488558, -0.613241, 0.132635, 0.488211, -0.606711, 0.135474, 0.353707, -0.603809, 0.135079, 0.447698, -0.508403, 0.137071, 0.443184, 0.523771, 0.129866, 0.580697, 0.364882, 0.13587, 0.178111, 0.555936, 0.128566, 0.580581, 0.557991, 0.0145623, 0.582433, 0.556177, 0.118028, 0.583128, 0.548438, -0.00148587, 0.582781, -0.521584, 0.0142797, 0.591231, -0.562938, 0.00156554, 0.58961, -0.613241, 0.127874, 0.581044, -0.614692, 0.112942, 0.581392, -0.574305, 0.0131496, 0.5888, -0.617231, 0.112377, 0.580003, -0.61711, 0.0995213, 0.577572, -0.611306, 0.130671, 0.550023, -0.584704, 0.130276, 0.582433, 0.553517, 0.040923, 0.583128, 0.550615, 0.101259, 0.583475, -0.524123, 0.107701, 0.584401)
@@ -61,7 +68,7 @@ points = PackedVector3Array(-0.00755221, 0.0544001, -0.591294, 0.0101022, 0.0335
 [node name="vh1jeck_LOD0_TIER2_000" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_xhb32")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_4dqa7")
+surface_material_override/0 = SubResource("StandardMaterial3D_yguxn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_af2b8")

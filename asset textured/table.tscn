@@ -1,8 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://bgq8v7dsub8xn"]
+[gd_scene load_steps=10 format=4 uid="uid://bgq8v7dsub8xn"]
 
-[ext_resource type="Texture2D" uid="uid://dbv66ifqaoof0" path="res://asset/wbuidixga/wbuidixga_2K_Basecolor.JPG" id="1_2vvbp"]
-[ext_resource type="Texture2D" uid="uid://bmasabbjukydx" path="res://asset/wbuidixga/wbuidixga_2K_Normal.JPG" id="2_g3oe1"]
-[ext_resource type="Texture2D" uid="uid://bs450iso37aed" path="res://asset/wbuidixga/wbuidixga_2K_Roughness.JPG" id="3_3md4t"]
+[ext_resource type="Material" uid="uid://fbwbncgglw7i" path="res://Texture/table.tres" id="1_ivioy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yfaor"]
 resource_name = "MatID_1"
@@ -43,12 +41,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8vbld")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dy3da"]
-albedo_texture = ExtResource("1_2vvbp")
-roughness_texture = ExtResource("3_3md4t")
-normal_enabled = true
-normal_texture = ExtResource("2_g3oe1")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_56ab6"]
 _surfaces = [{
@@ -127,13 +119,13 @@ shadow_mesh = SubResource("ArrayMesh_681ie")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0164732)
 mesh = SubResource("ArrayMesh_msc08")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_dy3da")
+surface_material_override/0 = ExtResource("1_ivioy")
 
 [node name="wbuidixga_LOD0_TIER2_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00381583)
 mesh = SubResource("ArrayMesh_5p2kx")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_dy3da")
+surface_material_override/0 = ExtResource("1_ivioy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.00381583)
@@ -143,4 +135,4 @@ shape = SubResource("ConvexPolygonShape3D_r80xa")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0738435)
 mesh = SubResource("ArrayMesh_pemuu")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_dy3da")
+surface_material_override/0 = ExtResource("1_ivioy")
