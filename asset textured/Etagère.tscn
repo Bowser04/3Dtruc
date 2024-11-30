@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bitacr4o1vbxr"]
+[gd_scene load_steps=5 format=3 uid="uid://bvg3scaqnb3pt"]
 
 [ext_resource type="PackedScene" uid="uid://77ma035hde2i" path="res://asset textured/étagère industrielle.tscn" id="1_ebq75"]
 [ext_resource type="PackedScene" uid="uid://dh2byd3pgroj1" path="res://asset textured/CartonRV1.tscn" id="2_7wugp"]

@@ -1,9 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://kwevsuw4ytoi"]
+[gd_scene load_steps=6 format=4 uid="uid://kwevsuw4ytoi"]
 
-[ext_resource type="Texture2D" uid="uid://dj1gg2lab2ysj" path="res://asset/vhtibbe/vhtibbe_2K_Basecolor.JPG" id="1_xq6o6"]
-[ext_resource type="Texture2D" uid="uid://51m2b1krif4v" path="res://asset/vhtibbe/vhtibbe_2K_AO.JPG" id="2_he7nh"]
-[ext_resource type="Texture2D" uid="uid://ckqgdqwogobj4" path="res://asset/vhtibbe/vhtibbe_2K_Normal.JPG" id="3_qtyij"]
-[ext_resource type="Texture2D" uid="uid://dk1jv1vplav6" path="res://asset/vhtibbe/vhtibbe_2K_Roughness.JPG" id="4_fyn3c"]
+[ext_resource type="Material" uid="uid://caa5uouxq0ior" path="res://Texture/boite2.tres" id="1_70u2w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nyaih"]
 resource_name = "MatID_1"
@@ -45,14 +42,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_81h6y")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hmyry"]
-albedo_texture = ExtResource("1_xq6o6")
-roughness_texture = ExtResource("4_fyn3c")
-normal_enabled = true
-normal_texture = ExtResource("3_qtyij")
-ao_enabled = true
-ao_texture = ExtResource("2_he7nh")
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_51b36"]
 size = Vector3(0.990967, 0.972168, 0.847656)
 
@@ -62,7 +51,7 @@ size = Vector3(0.990967, 0.972168, 0.847656)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00210428, 0.00803399, -0.00385141)
 mesh = SubResource("ArrayMesh_4qnyn")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_hmyry")
+surface_material_override/0 = ExtResource("1_70u2w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.739105, 0, 0, 0, 0.739105, 0, 0, 0, 0.739105, 0.0203001, 0.359312, -0.0389762)

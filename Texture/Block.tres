@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://clxqs6q5k3abo"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dh35j"]
+load_path = "res://.godot/imported/Modular_Stairs_Kit_wlombbzdw_Low_1K_BaseColor.jpg-5b9f729380fca8c127e2b12844f9e7bd.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ciuc3"]
+load_path = "res://.godot/imported/Modular_Stairs_Kit_wlombbzdw_Low_1K_AO.jpg-9c6b06e998cc0444ac6c6cf4e008128b.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r3y37"]
+load_path = "res://.godot/imported/Modular_Stairs_Kit_wlombbzdw_Low_1K_Normal.jpg-56a2545e52b68051a9f8cf387c65c0f8.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lf8mg"]
+load_path = "res://.godot/imported/Modular_Stairs_Kit_wlombbzdw_Low_1K_Roughness.jpg-48418623d2400c322607509c24d293b1.s3tc.ctex"
+
+[resource]
+albedo_texture = SubResource("CompressedTexture2D_dh35j")
+roughness_texture = SubResource("CompressedTexture2D_lf8mg")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_r3y37")
+ao_enabled = true
+ao_texture = SubResource("CompressedTexture2D_ciuc3")
+uv1_triplanar_sharpness = 6.06287
+uv1_world_triplanar = true

@@ -1,0 +1,26 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://cbm33a1a6ygig"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eveph"]
+load_path = "res://.godot/imported/tewscfuda_2K_Basecolor.JPG-e8af9bd136cd223819acef72b73ef30f.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3lcc4"]
+load_path = "res://.godot/imported/tewscfuda_2K_AO.JPG-5a07f37a0cb911ab1d2a14ab38d389f4.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ayty1"]
+load_path = "res://.godot/imported/tewscfuda_2K_Metalness.JPG-3a8965c8a59e4354d6d1bbff7a9efd33.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_leihm"]
+load_path = "res://.godot/imported/tewscfuda_2K_Normal.JPG-b89863f21286a7a9593bc3ba3c3120b1.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hck23"]
+load_path = "res://.godot/imported/tewscfuda_2K_Roughness.JPG-0acdd9ec6d9a5f7bd41b20821b6463eb.s3tc.ctex"
+
+[resource]
+albedo_texture = SubResource("CompressedTexture2D_eveph")
+metallic = 1.0
+metallic_texture = SubResource("CompressedTexture2D_ayty1")
+roughness_texture = SubResource("CompressedTexture2D_hck23")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_leihm")
+ao_enabled = true
+ao_texture = SubResource("CompressedTexture2D_3lcc4")

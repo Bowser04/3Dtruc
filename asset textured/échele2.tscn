@@ -1,9 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://8mhw5fjj2l5t"]
+[gd_scene load_steps=6 format=4 uid="uid://8mhw5fjj2l5t"]
 
-[ext_resource type="Texture2D" uid="uid://cqgw4nkvhnbxk" path="res://asset/vh2jfjes/vh2jfjes_2K_Basecolor.jpg" id="1_plcxs"]
-[ext_resource type="Texture2D" uid="uid://xrtka7k2ph2t" path="res://asset/vh2jfjes/vh2jfjes_2K_Metalness.jpg" id="2_5o52r"]
-[ext_resource type="Texture2D" uid="uid://1llhrqeh5d0f" path="res://asset/vh2jfjes/vh2jfjes_2K_Normal.jpg" id="3_xf164"]
-[ext_resource type="Texture2D" uid="uid://dd1fmfilgphe" path="res://asset/vh2jfjes/vh2jfjes_2K_Roughness.jpg" id="4_mi0u5"]
+[ext_resource type="Material" uid="uid://bhtju4q7qkwcv" path="res://Texture/échele2.tres" id="1_j05fp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2knt8"]
 resource_name = "default_material"
@@ -45,14 +42,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_lwgq3")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sm8l4"]
-albedo_texture = ExtResource("1_plcxs")
-metallic = 1.0
-metallic_texture = ExtResource("2_5o52r")
-roughness_texture = ExtResource("4_mi0u5")
-normal_enabled = true
-normal_texture = ExtResource("3_xf164")
-
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kfywt"]
 points = PackedVector3Array(-0.227572, 0.00514787, 0.532605, -0.247072, 0.00464324, 0.525181, -0.218372, -0.000907625, 0.523908, 0.213464, 0.00212012, 0.519029, 0.223047, 0.00481145, 0.521575, -0.234471, 0.00968948, 0.531969, -0.240843, 0.00682995, 0.53112, -0.246497, 0.00918486, 0.525499, -0.249803, 0.00531607, 0.521256, -0.249803, 0.00127908, 0.51468, -0.242041, -0.00443999, 0.506195, -0.224888, -0.00629028, 0.508635, 0.211691, -0.00578566, 0.50068, 0.236366, 0.00548428, 0.515847, 0.230665, 0.00682995, 0.520832, 0.177434, 0.213389, 0.456875, 0.085729, 0.211203, 0.459845, -0.188475, 0.208511, 0.466633, -0.19087, 0.211539, 0.465148, -0.232411, 1.70422, -0.216106, -0.237825, 1.70825, -0.222682, -0.241227, 1.7064, -0.229364, -0.24137, 1.70304, -0.238698, -0.231021, 0.00666174, -0.533346, -0.227332, 0.00329758, -0.52624, -0.21291, -0.00427179, -0.5238, -0.204526, -0.00544924, -0.531967, -0.220337, -0.00141225, -0.522209, 0.220172, -0.00629028, 0.493467, 0.232294, -0.00343075, 0.49421, 0.239672, 0.00111087, 0.502695, 0.237372, 0.00767099, 0.51468, 0.187495, 1.71179, -0.224061, 0.177338, 1.70977, -0.221091, -0.223786, 1.70825, -0.217061, -0.227284, 1.71078, -0.21897, -0.232698, 1.70994, -0.219819, -0.238831, 1.7091, -0.229046, -0.238975, 1.70657, -0.240395, -0.238256, 1.70304, -0.24485, -0.230015, 0.00783919, -0.540347, -0.204909, -0.00158046, -0.544695, 0.199569, -0.00427179, -0.524649, 0.207188, -0.00309433, -0.516906, 0.218447, 0.00195191, -0.516694, 0.223334, 0.00548428, -0.520406, 0.224676, 0.0106987, -0.534831, 0.196024, 1.70876, -0.243683, 0.193676, 1.70691, -0.227561, 0.192718, 1.71196, -0.230001, 0.173313, 1.71212, -0.224485, 0.17408, 1.7064, -0.254608, -0.230063, 1.70455, -0.249623, -0.219762, 0.00649353, -0.550423, -0.212958, 0.00397041, -0.550847, 0.203929, 0.00329758, -0.542574, 0.197701, -0.00124404, -0.533452, 0.210206, 0.00598891, -0.544377, 0.220747, 0.00952127, -0.540453, 0.192239, 1.69968, -0.252699, 0.187639, 1.70489, -0.255032, 0.176571, 1.70388, -0.256517, -0.219618, 1.70169, -0.252062, -0.226326, 1.70035, -0.251956, -0.210658, 0.0100259, -0.549786, 0.211212, 0.0138947, -0.542786)
 
@@ -61,7 +50,7 @@ points = PackedVector3Array(-0.227572, 0.00514787, 0.532605, -0.247072, 0.004643
 [node name="Aset_industrial__M_vh2jfjes_00_lod2" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_gviql")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_sm8l4")
+surface_material_override/0 = ExtResource("1_j05fp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_kfywt")

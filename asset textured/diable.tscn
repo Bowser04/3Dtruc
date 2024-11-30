@@ -1,9 +1,6 @@
-[gd_scene load_steps=16 format=4 uid="uid://ylq8e845jjp0"]
+[gd_scene load_steps=10 format=4 uid="uid://ylq8e845jjp0"]
 
-[ext_resource type="Texture2D" uid="uid://16aruxiuorr4" path="res://asset/virqcfw/virqcfw_2K_Basecolor.JPG" id="1_4u61r"]
-[ext_resource type="Texture2D" uid="uid://brbr8gp7pbo10" path="res://asset/virqcfw/virqcfw_2K_AO.JPG" id="2_hihmi"]
-[ext_resource type="Texture2D" uid="uid://blb1vkqldajgr" path="res://asset/virqcfw/virqcfw_2K_Normal.JPG" id="3_pcyl1"]
-[ext_resource type="Texture2D" uid="uid://buw2c8b7lv2ni" path="res://asset/virqcfw/virqcfw_2K_Roughness.JPG" id="4_obtn8"]
+[ext_resource type="Material" uid="uid://c0k0hse15lvx1" path="res://Texture/diable.tres" id="1_7og1f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ib0bv"]
 resource_name = "MatID_1"
@@ -45,14 +42,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cw24t")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6vxl"]
-albedo_texture = ExtResource("1_4u61r")
-roughness_texture = ExtResource("4_obtn8")
-normal_enabled = true
-normal_texture = ExtResource("3_pcyl1")
-ao_enabled = true
-ao_texture = ExtResource("2_hihmi")
-
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0ixt7"]
 points = PackedVector3Array(0.237795, 0.0311314, 0.366774, -0.155138, 0.0287634, 0.365852, 0.198685, 0.0291752, 0.366651, 0.136802, 0.0251598, 0.366221, 0.172447, 0.0268071, 0.366221, 0.225617, 0.029587, 0.366221, 0.249875, 0.0312344, 0.364376, 0.242152, 0.0326758, 0.36579, 0.227993, 0.965589, -0.134562, -0.219843, 0.0331906, 0.365176, -0.210981, 0.0311314, 0.365237, -0.172613, 0.0285574, 0.364684, -0.144791, 0.0269101, 0.363823, -0.127513, 0.0274249, 0.365237, -0.0768679, 0.0261894, 0.365237, 0.0366999, 0.024645, 0.36493, 0.142297, 0.0241302, 0.359764, 0.182447, 0.0163053, 0.306452, 0.255568, 0.0299989, 0.355767, 0.202844, 0.017129, 0.30307, 0.256509, 0.032161, 0.35546, 0.235369, 0.977121, -0.147967, 0.23027, 0.988446, -0.150365, 0.225468, 0.979798, -0.142556, -0.231873, 0.967031, -0.139789, -0.23514, 0.0345291, 0.361978, -0.231873, 0.032264, 0.363208, -0.194198, 0.0153787, 0.307312, -0.103057, 0.0257775, 0.3629, -0.035629, 0.0250568, 0.363515, 0.183685, 0.0135254, 0.289542, 0.257598, 0.0263953, 0.306267, 0.258043, 0.02969, 0.342854, 0.218191, 0.0183645, 0.300364, 0.210616, 0.0107455, 0.243239, 0.201061, 0.00178803, 0.167113, 0.237647, 0.984431, -0.161188, 0.236013, 0.997919, -0.165246, 0.221012, 0.994315, -0.153317, 0.229528, 1.0041, -0.164631, -0.227813, 0.976194, -0.14643, -0.23519, 0.986593, -0.154547, -0.239843, 0.970531, -0.144339, -0.240982, 0.0319551, 0.356075, -0.243012, 0.958691, -0.140711, -0.241477, 0.0204237, 0.275337, -0.194396, 0.0113632, 0.277981, -0.189545, 0.00775967, 0.249019, -0.190436, -0.00047707, 0.17978, 0.1821, 0.00878926, 0.249265, 0.257647, 0.0208355, 0.222516, 0.237993, 1.01048, -0.188182, 0.181308, 0.00559752, 0.22018, 0.205071, 0.00487681, 0.16164, 0.25334, 0.016923, 0.170495, 0.178437, 0.00302354, 0.194169, 0.174377, 0.000758441, 0.172094, 0.177496, 0.000449563, 0.16453, 0.194675, 0.00199395, 0.163177, 0.202893, 0.0653139, -0.00124961, 0.233538, 1.01789, -0.187137, 0.223438, 1.00791, -0.16746, 0.22522, 1.02108, -0.185661, -0.243556, 0.985049, -0.158113, -0.233655, 1.00471, -0.174408, -0.239299, 0.995242, -0.165123, -0.246824, 0.96456, -0.152087, -0.241823, 0.0338084, 0.351647, -0.241873, 0.0317492, 0.346913, -0.24217, 0.0183645, 0.252093, -0.242269, 0.0149668, 0.223193, -0.240437, 0.0179526, 0.25855, -0.241922, 0.0242331, 0.295814, -0.194248, -6.52329e-05, 0.168404, -0.184842, -0.000168192, 0.164407, -0.16291, -0.000374111, 0.17031, -0.241328, 0.0107455, 0.173815, 0.256608, 0.0196, 0.20413, 0.25735, 0.0193941, 0.185806, 0.257548, 0.0205266, 0.20081, 0.237152, 1.04137, -0.248567, 0.234775, 1.04713, -0.245738, 0.257251, 0.0203207, 0.177074, 0.212992, 0.0678879, 0.000718117, 0.213784, 0.0705648, -0.00493908, 0.187695, 0.0670642, -0.00641486, 0.202893, 0.0719033, -0.0104733, 0.230518, 1.03426, -0.212287, -0.235388, 1.01964, -0.199128, 0.224527, 1.03066, -0.20251, -0.24113, 1.00461, -0.177913, -0.246527, 0.992874, -0.171764, -0.247665, 0.977842, -0.165431, -0.241972, 0.0299989, 0.324345, -0.242566, 0.0131135, 0.175599, -0.236031, 0.0112603, 0.167113, -0.201971, 0.0638724, 0.00121003, -0.213357, 0.072521, -0.00623038, -0.212714, 0.0687115, -0.001926, 0.23626, 1.0356, -0.250104, 0.232399, 1.03056, -0.253055, 0.231953, 1.03272, -0.252502, -0.228506, 1.02345, -0.261418, -0.222516, 1.02942, -0.258651, -0.225536, 1.04106, -0.252625, 0.225072, 1.05002, -0.243832, 0.227003, 1.05135, -0.242417, 0.213042, 0.0788015, -0.00893599, 0.0125902, 0.0710796, -0.0100428, -0.202614, 0.0670642, -0.00555399, -0.0401341, 0.0680938, -0.00733721, -0.0298368, 0.0768453, -0.0121335, -0.238903, 1.02283, -0.261418, 0.224181, 1.02767, -0.25447, -0.241477, 1.01676, -0.198267, -0.231378, 1.03488, -0.227783, -0.238705, 1.04497, -0.248936, 0.219428, 1.05084, -0.241618, -0.245734, 1.00852, -0.191995, -0.247566, 1.00801, -0.200788, -0.247715, 1.03344, -0.255884, -0.202664, 0.0774631, -0.0112726, -0.202961, 0.0723151, -0.0095509, -0.24623, 1.02757, -0.258098, -0.243903, 1.04281, -0.250903, -0.230041, 1.04528, -0.24955, -0.246972, 1.03828, -0.252625)
 
@@ -90,14 +79,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6e2v6")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_brs4c"]
-albedo_texture = ExtResource("1_4u61r")
-roughness_texture = ExtResource("4_obtn8")
-normal_enabled = true
-normal_texture = ExtResource("3_pcyl1")
-ao_enabled = true
-ao_texture = ExtResource("2_hihmi")
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_7d1g4"]
 _surfaces = [{
 "aabb": AABB(-0.257081, -0.000782454, -0.0771044, 0.058621, 0.157464, 0.158571),
@@ -132,20 +113,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7d1g4")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2mvm"]
-albedo_texture = ExtResource("1_4u61r")
-roughness_texture = ExtResource("4_obtn8")
-normal_enabled = true
-normal_texture = ExtResource("3_pcyl1")
-ao_enabled = true
-ao_texture = ExtResource("2_hihmi")
-
 [node name="virqcfw" type="StaticBody3D"]
 
 [node name="virqcfw_LOD0_TIER2_000" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_xbfad")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_j6vxl")
+surface_material_override/0 = ExtResource("1_7og1f")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_0ixt7")
@@ -153,10 +126,10 @@ shape = SubResource("ConvexPolygonShape3D_0ixt7")
 [node name="virqcfw_LOD0_TIER2_001" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_khmei")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_brs4c")
+surface_material_override/0 = ExtResource("1_7og1f")
 
 [node name="virqcfw_LOD0_TIER2_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00149018, 0.0033462, -0.00213623)
 mesh = SubResource("ArrayMesh_ocmfx")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_e2mvm")
+surface_material_override/0 = ExtResource("1_7og1f")

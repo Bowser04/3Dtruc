@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://cynag5sgskdit"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0cttl"]
+load_path = "res://.godot/imported/wdkmabe_2K_Basecolor.JPG-bcbab933e22843ab613c639fd5a3a11f.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8s6kl"]
+load_path = "res://.godot/imported/wdkmabe_2K_AO.JPG-23b37da7b760b4637a97bd61fa008a5c.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bnon5"]
+load_path = "res://.godot/imported/wdkmabe_2K_Normal.JPG-ac99832a2a39cbc5edd8aa7c1b849a75.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lwi7q"]
+load_path = "res://.godot/imported/wdkmabe_2K_Roughness.JPG-342a8c49f80c5b8d3c6e31e2e18f594a.s3tc.ctex"
+
+[resource]
+albedo_texture = SubResource("CompressedTexture2D_0cttl")
+roughness_texture = SubResource("CompressedTexture2D_lwi7q")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_bnon5")
+ao_enabled = true
+ao_texture = SubResource("CompressedTexture2D_8s6kl")
