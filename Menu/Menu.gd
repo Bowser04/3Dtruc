@@ -60,6 +60,7 @@ func StartGame(ennemy):
 	get_tree().root.add_child(Map.duplicate(true))
 	Network_Conection.add_players_to_game.call_deferred(ennemy)
 	UsersStartGame.rpc(ennemy)
+	$Background.hide()
 	self.hide()
 @rpc("any_peer")
 func UsersStartGame(ennemy):
@@ -179,6 +180,7 @@ func _on_option_pressed() -> void:
 	self.hide()
 @rpc("any_peer","call_local")
 func end_game(winner_id):
+	
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if winner_id == Network_Conection.self_id:
 		$End_Screen/Label.text = "You Win"
@@ -189,6 +191,7 @@ func end_game(winner_id):
 	await get_tree().create_timer(0.2).timeout
 	show_end()
 	self.show()
-	await get_tree().create_timer(4).timeout
+	await get_tree().create_timer(2).timeout
+	$Background.show()
 	get_node("/root/Map").queue_free()
 	show_Waiting()
