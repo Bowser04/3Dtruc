@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://bh1nkphhvfr44"]
+[gd_scene load_steps=81 format=3 uid="uid://bh1nkphhvfr44"]
 
 [ext_resource type="Script" path="res://map.gd" id="1_1w7qq"]
 [ext_resource type="Texture2D" uid="uid://cy0sndh6ka7pq" path="res://Texture/Sol/tixmdgdcw_2K_Basecolor.jpg" id="1_rih6c"]
@@ -165,16 +165,6 @@ points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wfu1l"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5p85o"]
-normal_enabled = true
-ao_enabled = true
-uv1_scale = Vector3(0.84, 0.84, 0.84)
-uv1_triplanar = true
-uv1_world_triplanar = true
-
-[sub_resource type="BoxMesh" id="BoxMesh_m3ygj"]
-material = SubResource("StandardMaterial3D_5p85o")
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sev16"]
 load_path = "res://.godot/imported/tmnobhhya_2K_Basecolor.jpg-f95743a5e503bbd7e949095b4ea1693d.s3tc.ctex"
 
@@ -197,6 +187,9 @@ ao_texture = SubResource("CompressedTexture2D_terl6")
 uv1_scale = Vector3(0.84, 0.84, 0.84)
 uv1_triplanar = true
 uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_m3ygj"]
+material = SubResource("StandardMaterial3D_2p1x6")
 
 [sub_resource type="BoxMesh" id="BoxMesh_6oyr2"]
 material = SubResource("StandardMaterial3D_2p1x6")

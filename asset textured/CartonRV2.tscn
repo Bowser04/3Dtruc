@@ -1,18 +1,13 @@
-[gd_scene load_steps=43 format=4 uid="uid://bnb6f8tr7lxrn"]
+[gd_scene load_steps=38 format=4 uid="uid://bnb6f8tr7lxrn"]
 
 [ext_resource type="Material" uid="uid://bcjm0iuex2x7g" path="res://Texture/pallete2.tres" id="1_adddy"]
-[ext_resource type="Texture2D" uid="uid://bi26sul4rueye" path="res://asset/villceo/villceo_2K_Basecolor.JPG" id="7_fkds6"]
-[ext_resource type="Texture2D" uid="uid://c5w0popiniq13" path="res://asset/villceo/villceo_2K_AO.JPG" id="8_rsm76"]
-[ext_resource type="Texture2D" uid="uid://dev1eu6312kqk" path="res://asset/villceo/villceo_2K_Normal.JPG" id="9_edqqb"]
-[ext_resource type="Texture2D" uid="uid://cfqx2h5qv7dvs" path="res://asset/villceo/villceo_2K_Roughness.JPG" id="10_7fcsr"]
+[ext_resource type="Texture2D" uid="uid://bi26sul4rueye" path="res://Texture/enroulleur/villceo_2K_Basecolor.JPG" id="7_fkds6"]
+[ext_resource type="Texture2D" uid="uid://c5w0popiniq13" path="res://Texture/enroulleur/villceo_2K_AO.JPG" id="8_rsm76"]
+[ext_resource type="Texture2D" uid="uid://dev1eu6312kqk" path="res://Texture/enroulleur/villceo_2K_Normal.JPG" id="9_edqqb"]
+[ext_resource type="Texture2D" uid="uid://cfqx2h5qv7dvs" path="res://Texture/enroulleur/villceo_2K_Roughness.JPG" id="10_7fcsr"]
 [ext_resource type="Material" uid="uid://fpbetdr5uk7b" path="res://Texture/bouteille de gaz.tres" id="11_t53pk"]
 [ext_resource type="Material" uid="uid://bv8r42fy3edw8" path="res://Texture/carton2.tres" id="12_evy6y"]
-[ext_resource type="Texture2D" uid="uid://iimo62rhc21h" path="res://asset/wdqqeae/wdqqeae_2K_Basecolor.JPG" id="13_ct7u3"]
 [ext_resource type="Material" uid="uid://c2xpdvxbhurft" path="res://Texture/carton.tres" id="13_qf6n4"]
-[ext_resource type="Texture2D" uid="uid://cb7wfhvjqfq8o" path="res://asset/wdqqeae/wdqqeae_2K_AO.JPG" id="14_kdkqx"]
-[ext_resource type="Texture2D" uid="uid://dhap52i0metat" path="res://asset/wdqqeae/wdqqeae_2K_Metalness.JPG" id="15_qh8km"]
-[ext_resource type="Texture2D" uid="uid://mlf11pstjj0a" path="res://asset/wdqqeae/wdqqeae_2K_Normal.JPG" id="16_vq170"]
-[ext_resource type="Texture2D" uid="uid://5y1uvbdgljma" path="res://asset/wdqqeae/wdqqeae_2K_Roughness.JPG" id="17_ii1i5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qmay"]
 resource_name = "MatID_1"
@@ -95,14 +90,9 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8sd06")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ga0wc"]
-albedo_texture = ExtResource("13_ct7u3")
 metallic = 1.0
-metallic_texture = ExtResource("15_qh8km")
-roughness_texture = ExtResource("17_ii1i5")
 normal_enabled = true
-normal_texture = ExtResource("16_vq170")
 ao_enabled = true
-ao_texture = ExtResource("14_kdkqx")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fgwcq"]
 resource_name = "MatID_1"
