@@ -6,7 +6,6 @@ load_path = "res://.godot/imported/teraccgda_2K_Basecolor.JPG-ca5f9bf298c8bb4cc5
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t5ogb"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qwhor"]
-load_path = "res://.godot/imported/teraccgda_2K_Specular.JPG-6e2aa406850e6203724a33e52a97e6fe.s3tc.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8j6vs"]
 load_path = "res://.godot/imported/teraccgda_2K_Normal.JPG-6cf4d1a94375eeeb88eadee5e168fb36.s3tc.ctex"
