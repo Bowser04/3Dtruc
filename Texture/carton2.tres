@@ -1,11 +1,16 @@
 [gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://bv8r42fy3edw8"]
 
-[ext_resource type="Texture2D" uid="uid://clnunoctfta01" path="res://asset/tkwmdexva/tkwmdexva_2K_Basecolor.JPG" id="1_yli43"]
-[ext_resource type="Texture2D" uid="uid://b7jqd0hbvxqya" path="res://asset/tkwmdexva/tkwmdexva_2K_Normal.JPG" id="2_h6wyj"]
-[ext_resource type="Texture2D" uid="uid://cxskoga8725y4" path="res://asset/tkwmdexva/tkwmdexva_2K_Roughness.JPG" id="3_k22qy"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_awd2w"]
+load_path = "res://.godot/imported/tkwmdexva_2K_Basecolor.JPG-dab36321aa7d51e3ad0e92865556495c.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m4sgy"]
+load_path = "res://.godot/imported/tkwmdexva_2K_Normal.JPG-2853176e684e95b352b7a3748ae59e9b.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_swnkp"]
+load_path = "res://.godot/imported/tkwmdexva_2K_Roughness.JPG-e41d945561f499c848273e3f05e4b2e7.s3tc.ctex"
 
 [resource]
-albedo_texture = ExtResource("1_yli43")
-roughness_texture = ExtResource("3_k22qy")
+albedo_texture = SubResource("CompressedTexture2D_awd2w")
+roughness_texture = SubResource("CompressedTexture2D_swnkp")
 normal_enabled = true
-normal_texture = ExtResource("2_h6wyj")
+normal_texture = SubResource("CompressedTexture2D_m4sgy")

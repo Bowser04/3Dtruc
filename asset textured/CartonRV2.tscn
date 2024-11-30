@@ -1,7 +1,10 @@
-[gd_scene load_steps=38 format=4 uid="uid://bnb6f8tr7lxrn"]
+[gd_scene load_steps=43 format=4 uid="uid://bnb6f8tr7lxrn"]
 
 [ext_resource type="Material" uid="uid://bcjm0iuex2x7g" path="res://Texture/pallete2.tres" id="1_adddy"]
-[ext_resource type="Material" uid="uid://5f3b066jay5a" path="res://Texture/enroulleur.tres" id="10_djuec"]
+[ext_resource type="Texture2D" uid="uid://bi26sul4rueye" path="res://asset/villceo/villceo_2K_Basecolor.JPG" id="7_fkds6"]
+[ext_resource type="Texture2D" uid="uid://c5w0popiniq13" path="res://asset/villceo/villceo_2K_AO.JPG" id="8_rsm76"]
+[ext_resource type="Texture2D" uid="uid://dev1eu6312kqk" path="res://asset/villceo/villceo_2K_Normal.JPG" id="9_edqqb"]
+[ext_resource type="Texture2D" uid="uid://cfqx2h5qv7dvs" path="res://asset/villceo/villceo_2K_Roughness.JPG" id="10_7fcsr"]
 [ext_resource type="Material" uid="uid://fpbetdr5uk7b" path="res://Texture/bouteille de gaz.tres" id="11_t53pk"]
 [ext_resource type="Material" uid="uid://bv8r42fy3edw8" path="res://Texture/carton2.tres" id="12_evy6y"]
 [ext_resource type="Texture2D" uid="uid://iimo62rhc21h" path="res://asset/wdqqeae/wdqqeae_2K_Basecolor.JPG" id="13_ct7u3"]
@@ -140,6 +143,22 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fga4l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwxwi"]
+albedo_texture = ExtResource("7_fkds6")
+roughness_texture = ExtResource("10_7fcsr")
+normal_enabled = true
+normal_texture = ExtResource("9_edqqb")
+ao_enabled = true
+ao_texture = ExtResource("8_rsm76")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uu687"]
+albedo_texture = ExtResource("7_fkds6")
+roughness_texture = ExtResource("10_7fcsr")
+normal_enabled = true
+normal_texture = ExtResource("9_edqqb")
+ao_enabled = true
+ao_texture = ExtResource("8_rsm76")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1sv4f"]
 resource_name = "MatID_1"
@@ -415,13 +434,13 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ga0wc")
 transform = Transform3D(0.999883, -0.0153059, 0, 0.0153059, 0.999883, 0, 0, 0, 1, -0.440266, 0, 0.327877)
 mesh = SubResource("ArrayMesh_11ifi")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("10_djuec")
+surface_material_override/0 = SubResource("StandardMaterial3D_jwxwi")
 
 [node name="villceo_LOD0_TIER2_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.999883, -0.0153059, 0, 0.0153059, 0.999883, 0, 0, 0, 1, -0.182441, 0, 0.478879)
 mesh = SubResource("ArrayMesh_11ifi")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("10_djuec")
+surface_material_override/0 = SubResource("StandardMaterial3D_uu687")
 
 [node name="vizqehw_LOD0_TIER2_000" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.00052355, 1, 0, -1, 0.00052355, 0.145491, 0.099317, -0.117706)

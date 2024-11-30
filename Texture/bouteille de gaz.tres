@@ -1,21 +1,26 @@
 [gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://fpbetdr5uk7b"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jdc6x"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_blmyx"]
+load_path = "res://.godot/imported/vizqehw_2K_Basecolor.JPG-185ea02138f93f55b6cb7bd3e771a4ee.s3tc.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r7eev"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3gu5a"]
+load_path = "res://.godot/imported/vizqehw_2K_AO.JPG-06852369a7f9d77305f02fc4a2e9581a.s3tc.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hwlrf"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gckul"]
+load_path = "res://.godot/imported/vizqehw_2K_Metalness.JPG-207b941967840d142f5a0b699d70b2f2.s3tc.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qv6oj"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mlnoq"]
+load_path = "res://.godot/imported/vizqehw_2K_Normal.JPG-fbb065d8e9cbbe9ed38ea07ac4a8efd2.s3tc.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ik7ko"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j3i21"]
+load_path = "res://.godot/imported/vizqehw_2K_Roughness.JPG-8173b4f6444f25e3437c90a177e13bfe.s3tc.ctex"
 
 [resource]
-albedo_texture = SubResource("CompressedTexture2D_jdc6x")
+albedo_texture = SubResource("CompressedTexture2D_blmyx")
 metallic = 1.0
-metallic_texture = SubResource("CompressedTexture2D_hwlrf")
-roughness_texture = SubResource("CompressedTexture2D_ik7ko")
+metallic_texture = SubResource("CompressedTexture2D_gckul")
+roughness_texture = SubResource("CompressedTexture2D_j3i21")
 normal_enabled = true
-normal_texture = SubResource("CompressedTexture2D_qv6oj")
+normal_texture = SubResource("CompressedTexture2D_mlnoq")
 ao_enabled = true
-ao_texture = SubResource("CompressedTexture2D_r7eev")
+ao_texture = SubResource("CompressedTexture2D_3gu5a")

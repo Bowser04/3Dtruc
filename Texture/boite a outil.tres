@@ -1,17 +1,21 @@
 [gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://clnya8df4jy5b"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i3c7j"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fn5ti"]
+load_path = "res://.godot/imported/ukwteiiaw_2K_Basecolor.JPG-47f34c5354c18c143cdcfbe142f1843e.s3tc.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_285vu"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jhoqs"]
+load_path = "res://.godot/imported/ukwteiiaw_2K_AO.JPG-85ee3b727434d9b5b4be0c32c4bbfbbc.s3tc.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3qdac"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q3qt3"]
+load_path = "res://.godot/imported/ukwteiiaw_2K_Normal.JPG-5df015741802dd6b7867f118c889a499.s3tc.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jfchw"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7uvt5"]
+load_path = "res://.godot/imported/ukwteiiaw_2K_Roughness.JPG-9fda60edcd193dcacf6769d954118e3b.s3tc.ctex"
 
 [resource]
-albedo_texture = SubResource("CompressedTexture2D_i3c7j")
-roughness_texture = SubResource("CompressedTexture2D_jfchw")
+albedo_texture = SubResource("CompressedTexture2D_fn5ti")
+roughness_texture = SubResource("CompressedTexture2D_7uvt5")
 normal_enabled = true
-normal_texture = SubResource("CompressedTexture2D_3qdac")
+normal_texture = SubResource("CompressedTexture2D_q3qt3")
 ao_enabled = true
-ao_texture = SubResource("CompressedTexture2D_285vu")
+ao_texture = SubResource("CompressedTexture2D_jhoqs")
