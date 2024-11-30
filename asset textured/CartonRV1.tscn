@@ -1,12 +1,8 @@
-[gd_scene load_steps=28 format=4 uid="uid://dh2byd3pgroj1"]
+[gd_scene load_steps=23 format=4 uid="uid://dh2byd3pgroj1"]
 
 [ext_resource type="Material" uid="uid://bv8r42fy3edw8" path="res://Texture/carton2.tres" id="1_cj870"]
 [ext_resource type="Material" uid="uid://bcjm0iuex2x7g" path="res://Texture/pallete2.tres" id="2_fwpqf"]
-[ext_resource type="Texture2D" uid="uid://3st1mk8h32mt" path="res://asset/tlbjdbova/tlbjdbova_2K_Basecolor.JPG" id="4_26xfq"]
-[ext_resource type="Texture2D" uid="uid://d1hcvn38unuon" path="res://asset/tlbjdbova/tlbjdbova_2K_AO.JPG" id="5_531p8"]
 [ext_resource type="Material" uid="uid://c2xpdvxbhurft" path="res://Texture/carton.tres" id="6_l1hf4"]
-[ext_resource type="Texture2D" uid="uid://poknawwk2kfw" path="res://asset/tlbjdbova/tlbjdbova_2K_Normal.JPG" id="6_p0uc6"]
-[ext_resource type="Texture2D" uid="uid://b4e5sfn72bj6u" path="res://asset/tlbjdbova/tlbjdbova_2K_Roughness.JPG" id="7_fre6c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_omuvn"]
 resource_name = "MatID_1"
@@ -264,14 +260,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_m08c4")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svcyg"]
-albedo_texture = ExtResource("4_26xfq")
-roughness_texture = ExtResource("7_fre6c")
-normal_enabled = true
-normal_texture = ExtResource("6_p0uc6")
-ao_enabled = true
-ao_texture = ExtResource("5_531p8")
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_d7mxj"]
 _surfaces = [{
 "aabb": AABB(-0.0913582, -0.0362513, -0.0400039, 0.182725, 0.072428, 0.0799869),
@@ -361,18 +349,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.447921, 0.190713, 0.299211
 mesh = SubResource("ArrayMesh_42vut")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("6_l1hf4")
-
-[node name="tlbjdbova_LOD0_TIER2_006" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.2647, 0, 0, 0, 3.2647, 0, 0, 0, 3.2647, 0.16486, 0.0684556, 0.380884)
-mesh = SubResource("ArrayMesh_42vut")
-skeleton = NodePath("")
-surface_material_override/0 = ExtResource("6_l1hf4")
-
-[node name="tlbjdbova_LOD0_TIER2_007" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.2647, 0, 0, 0, 3.2647, 0, 0, 0, 3.2647, 0.16486, 0.0684556, 0.380884)
-mesh = SubResource("ArrayMesh_42vut")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_svcyg")
 
 [node name="tlbjdbova_LOD0_TIER2_008" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.28822, -0.00797519, 0.957531, 0.0276599, 0.999617, 0, -0.957165, 0.0264853, 0.28833, 0.128107, 0.169634, 0.0496459)
